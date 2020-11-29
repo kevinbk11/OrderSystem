@@ -16,7 +16,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import deleteInterface.deleteListItem
 
-class MainActivity : AppCompatActivity(), deleteListItem {
+class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
