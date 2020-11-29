@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name" translatable="false">點餐系統</string>
+    <string name="name" translatable="false">點餐系統</string>
+    <string name="menu_nd" translatable="false">拉麵</string>
+    <string name="menu_rc" translatable="false">蓋飯</string>
+    <string name="menu_sp" translatable="false">湯品</string>
+    <string name="menu_lf" translatable="false">單點</string>
+    <string name="menu_ds" translatable="false">甜點</string>
+    <string name="menu_dk" translatable="false">飲品</string>
 </resources>

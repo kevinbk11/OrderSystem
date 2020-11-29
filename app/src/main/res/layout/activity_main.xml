@@ -17,8 +17,8 @@
 
             <TextView android:layout_width="wrap_content"
                       android:layout_height="wrap_content"
-                      android:text="ppname"
-                      android:textSize="14sp"/>
+                      android:text="@string/name"
+                      android:textSize="20sp"/>
         </LinearLayout>
         <!--餐點種類圖示-->
         <ScrollView
@@ -29,28 +29,128 @@
                 tools:layout_editor_absoluteY="2dp"
                 tools:layout_editor_absoluteX="2dp">
             <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="wrap_content">
-                <ImageButton android:layout_width="100dp"
-                             android:layout_height="100dp"
-                             android:id="@+id/btm1"
-                             android:src="@drawable/thinking"
-                             android:clickable="true"
-                />
-                <ImageButton android:layout_width="100dp"
-                             android:layout_height="100dp"
-                             android:id="@+id/btm2"
-                             android:src="@drawable/thinking"
-                             android:clickable="true"
-                />
-                <ImageButton android:layout_width="100dp"
-                             android:layout_height="100dp"
-                             android:id="@+id/btm3"
-                             android:src="@drawable/thinking"
-                             android:clickable="true"
-                />
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical">
+                <!--第一行圖示-->
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                    <ImageButton android:layout_width="0dp"
+                                 android:layout_height="360px"
+                                 android:background="#FFFFFF"
+                                 android:id="@+id/btm1"
+                                 android:src="@drawable/noodle"
+                                 android:clickable="true"
+                                 android:layout_weight="1"
+                                 android:scaleType="centerCrop"
+                    />
+                    <ImageButton android:layout_width="0dp"
+                                 android:layout_height="360px"
+                                 android:background="#FFFFFF"
+                                 android:id="@+id/btm2"
+                                 android:src="@drawable/rice"
+                                 android:clickable="true"
+                                 android:layout_weight="1"
+                                 android:scaleType="centerCrop"
+                    />
+                    <ImageButton android:layout_width="0dp"
+                                 android:layout_height="360px"
+                                 android:background="#FFFFFF"
+                                 android:id="@+id/btm3"
+                                 android:src="@drawable/soup"
+                                 android:clickable="true"
+                                 android:layout_weight="1"
+                                 android:scaleType="centerCrop"
+                    />
+
+                </LinearLayout>
+                <!--第一行名稱-->
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:background="#d59a5e">
+                    <!--麵-->
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/menu_nd"
+                              android:textSize="24sp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                    />
+                    <!--飯-->
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/menu_rc"
+                              android:textSize="24sp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                    />
+                    <!--湯-->
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/menu_sp"
+                              android:textSize="24sp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                    />
+                </LinearLayout>
+                <!--第二行圖示-->
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content">
+                    <ImageButton android:layout_width="0dp"
+                                 android:layout_height="360px"
+                                 android:background="#FFFFFF"
+                                 android:id="@+id/btm4"
+                                 android:src="@drawable/lightfood"
+                                 android:clickable="true"
+                                 android:layout_weight="1"
+                                 android:scaleType="centerCrop"
+                    />
+                    <ImageButton android:layout_width="0dp"
+                                 android:layout_height="360px"
+                                 android:background="#FFFFFF"
+                                 android:id="@+id/btm5"
+                                 android:src="@drawable/dessert"
+                                 android:clickable="true"
+                                 android:layout_weight="1"
+                                 android:scaleType="centerCrop"
+                    />
+                    <ImageButton android:layout_width="0dp"
+                                 android:layout_height="360px"
+                                 android:background="#FFFFFF"
+                                 android:id="@+id/btm6"
+                                 android:src="@drawable/drink"
+                                 android:clickable="true"
+                                 android:layout_weight="1"
+                                 android:scaleType="centerCrop"
+                    />
+
+                </LinearLayout>
+                <!--第二行名稱-->
+                <LinearLayout android:layout_width="match_parent"
+                              android:layout_height="wrap_content"
+                              android:background="#d59a5e">
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/menu_lf"
+                              android:textSize="24sp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                    />
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/menu_ds"
+                              android:textSize="24sp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                    />
+                    <TextView android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:text="@string/menu_dk"
+                              android:textSize="24sp"
+                              android:layout_weight="1"
+                              android:gravity="center"
+                    />
+                </LinearLayout>
             </LinearLayout>
-
-
         </ScrollView>
         <!--aaaaaa-->
         <LinearLayout android:layout_width="match_parent"
