@@ -34,46 +34,18 @@ class MainActivity : AppCompatActivity(),deleteListItem{
 
         alertDialog.show()*/
     }
-    var foodArr= arrayOf(Food1,Food2,Food3)
-    fun make1(view: View)
-    {
-        var arr = arrayOf(A,B,C)
-        if(!foodArr[0].append(arr))
-        {
-            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物",Toast.LENGTH_LONG)
-        }
 
-    }
-    fun make2(view:View)
-    {
-        var arr = arrayOf(A,B,C)
-        if(!foodArr[1].append(arr))
-        {
-            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物",Toast.LENGTH_LONG)
-        }
-    }
-    fun make3(view:View)
-    {
-        var arr = arrayOf(A,B,C)
-        if(!foodArr[2].append(arr))
-        {
-            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物",Toast.LENGTH_LONG)
-        }
-    }
     fun D1(view:View)
     {
-        var arr = arrayOf(A,B,C)
-        delete(arr[0],foodArr)
-
+        delete(A)
     }
     fun D2(view:View)
     {
-        var arr = arrayOf(A,B,C)
-        delete(arr[1],foodArr)
+        delete(B)
     }
-    fun D3()
+    fun D3(view:View)
     {
-
+        delete(C)
     }
 
     /*fun next()
