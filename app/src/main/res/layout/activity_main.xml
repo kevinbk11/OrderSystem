@@ -6,77 +6,113 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:orientation="vertical" app:layout_constraintTop_toTopOf="parent">
+        <!--標題列-->
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="#c1c1c1">
 
-    <TextView
-            android:text="TextView"
-            android:layout_width="100dp"
-            android:layout_height="32dp" android:id="@+id/C"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.884"/>
-    <Button
-            android:text="-"
-            android:layout_width="42dp"
-            android:layout_height="44dp" android:id="@+id/C2"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.882"/>
-    <Button
-            android:onClick="D2"
-            android:text="-"
-            android:layout_width="42dp"
-            android:layout_height="44dp" android:id="@+id/B2"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.784"/>
-    <Button
-            android:onClick="D1"
-            android:text="-"
-            android:layout_width="42dp"
-            android:layout_height="44dp" android:id="@+id/button12"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
-            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.688"/>
-    <ScrollView
-            android:layout_width="176dp" android:layout_height="726dp"
-            android:scrollbarStyle="insideOverlay" android:scrollbars="vertical" tools:layout_editor_absoluteY="2dp"
-            tools:layout_editor_absoluteX="2dp">
-        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
-                      android:orientation="vertical">
-
-            <ImageButton android:layout_width="107dp" android:layout_height="118dp"
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/appname"
+                      android:textSize="14sp"/>
+        </LinearLayout>
+        <!--餐點種類圖示-->
+        <ScrollView
+                android:layout_width="500dp"
+                android:layout_height="500dp"
+                android:scrollbarStyle="insideOverlay"
+                android:scrollbars="vertical"
+                tools:layout_editor_absoluteY="2dp"
+                tools:layout_editor_absoluteX="2dp"
+                android:orientation="vertical"
+                android:background="#4D4D4D">
+            <ImageButton android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
                          android:id="@+id/btm1"
                          android:src="@drawable/thinking"
                          android:clickable="true"
                          android:onClick="make1"
             />
-            <ImageButton android:layout_width="107dp" android:layout_height="118dp"
+            <ImageButton android:layout_width="match_parent"
+                         android:layout_height="match_parent"
                          android:id="@+id/btm2"
                          android:src="@drawable/thinking"
                          android:clickable="true"
                          android:onClick="make2"
             />
+        </ScrollView>
+        <!--aaaaaa-->
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+
         </LinearLayout>
+        <Button
+                android:text="-"
+                android:layout_width="42dp"
+                android:layout_height="44dp" android:id="@+id/C2"
+                app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.882"
+        />
+        <Button
+                android:onClick="D2"
+                android:text="-"
+                android:layout_width="42dp"
+                android:layout_height="44dp"
+                android:id="@+id/B2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintVertical_bias="0.784"
+        />
+        <Button
+                android:onClick="D1"
+                android:text="-"
+                android:layout_width="42dp"
+                android:layout_height="44dp"
+                android:id="@+id/button12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginEnd="4dp"
+                android:layout_marginRight="4dp"
+                app:layout_constraintVertical_bias="0.688"
+        />
 
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="32dp" android:id="@+id/A"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.693"/>
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="32dp" android:id="@+id/B"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.788"
+        />
+        <TextView
+                android:text="TextView"
+                android:layout_width="100dp"
+                android:layout_height="32dp" android:id="@+id/C"
+                app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.884"
+        />
+        <ImageView
+                android:layout_width="47dp"
+                android:layout_height="70dp" android:id="@+id/imageViewA"
+                tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="191dp"/>
+    </LinearLayout>
 
-    </ScrollView>
-    <TextView
-            android:text="TextView"
-            android:layout_width="100dp"
-            android:layout_height="32dp" android:id="@+id/A"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.693"/>
-    <TextView
-            android:text="TextView"
-            android:layout_width="100dp"
-            android:layout_height="32dp" android:id="@+id/B"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.788"/>
-    <ImageView
-            android:layout_width="47dp"
-            android:layout_height="70dp" android:id="@+id/imageViewA"
-            tools:layout_editor_absoluteY="473dp" tools:layout_editor_absoluteX="191dp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

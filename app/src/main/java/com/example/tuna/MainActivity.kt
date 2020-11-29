@@ -43,7 +43,6 @@ class MainActivity : AppCompatActivity(){
         {
             Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物",Toast.LENGTH_LONG)
         }
-        imageViewA.setImageDrawable(resources)
 
     }
     fun make2(view:View)
