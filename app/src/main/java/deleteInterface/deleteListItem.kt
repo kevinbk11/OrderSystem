@@ -1,16 +1,39 @@
 package deleteInterface
 
+import FoodClass.Food
+import android.widget.TextView
+
 interface deleteListItem {
-    fun D1()
+    fun delete(textView: TextView?,foodArr: Array<Food>)
     {
-
+        for(food in foodArr)
+        {
+            if(food.name==textView!!.text)
+            {
+                food.Del(textView)
+            }
+        }
     }
-    fun D2()
+    fun find(arr:Array<TextView?>,food: Food):Int
     {
-
+        for(y in arr)
+        {
+            if(y!!.text==food.name)
+            {
+                return arr.indexOf(y)
+            }
+        }
+        return -1
     }
-    fun D3()
+    fun find2(textView:TextView?,foodArr:Array<Food>):Int
     {
-
+        for(food in foodArr)
+        {
+            if(food.name==textView!!.text)
+            {
+                return foodArr.indexOf(food)
+            }
+        }
+        return -1
     }
 }
