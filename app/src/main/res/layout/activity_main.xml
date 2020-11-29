@@ -10,7 +10,8 @@
                   android:layout_height="match_parent"
                   android:orientation="vertical"
                   app:layout_constraintTop_toTopOf="parent">
-        <!--標題列-->
+
+        <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏標題列⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content"
                       android:background="#c1c1c1">
@@ -20,7 +21,9 @@
                       android:text="@string/name"
                       android:textSize="20sp"/>
         </LinearLayout>
-        <!--餐點種類圖示-->
+        <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎標題列⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
+
+        <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏餐點種類圖示⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
         <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -152,15 +155,15 @@
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
-        <!--點餐清單-->
+        <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎餐點種類圖示⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
+
+        <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏點餐清單⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
         <RelativeLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:orientation="horizontal">
+                        android:layout_height="wrap_content">
             <LinearLayout android:layout_width="match_parent"
                           android:layout_height="wrap_content"
                           android:layout_alignParentBottom="true"
-                          android:background="#fffd98"
-            >
+                          android:background="#fffd98">
                 <!--點餐數量-->
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
@@ -193,6 +196,7 @@
                             app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.884"
                     />
                 </LinearLayout>
+                <!--減少按鈕-->
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:orientation="vertical"
@@ -200,7 +204,7 @@
                               android:padding="10dp">
                     <ImageButton
                             android:onClick="D1"
-                            android:src="@drawable/delete_btn"
+                            android:src="@drawable/delete_btn_1"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:scaleType="centerCrop"
@@ -212,7 +216,7 @@
                     />
                     <ImageButton
                             android:onClick="D2"
-                            android:src="@drawable/delete_btn"
+                            android:src="@drawable/delete_btn_1"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:scaleType="centerCrop"
@@ -227,7 +231,7 @@
                     />
                     <ImageButton
                             android:onClick="D3"
-                            android:src="@drawable/delete_btn"
+                            android:src="@drawable/delete_btn_1"
                             android:layout_width="32dp"
                             android:layout_height="32dp"
                             android:scaleType="centerCrop"
@@ -241,14 +245,10 @@
                             app:layout_constraintVertical_bias="0.688"
                     />
                 </LinearLayout>
-
             </LinearLayout>
-
-
-
         </RelativeLayout>
+        <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎點餐清單⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
 
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
