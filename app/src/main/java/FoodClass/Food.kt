@@ -1,9 +1,10 @@
 package FoodClass
 
+import android.util.Log
 import android.widget.TextView
 import org.w3c.dom.Text
 
-open class Food(Name:String,Count:Int) {
+open class Food(Name:String,Count:Int):deleteInterface.deleteListItem {
     val originName=Name
     var name=Name
     var count=Count
@@ -33,22 +34,36 @@ open class Food(Name:String,Count:Int) {
         }
         return false
     }
-    fun del(BuyList:Array<TextView?>)
+    fun del(BuyList:Array<TextView?>):Boolean
     {
-        for(place in 0..2)
+        var place = find(BuyList, this)
+        if (place != -1)
         {
-            if(BuyList[place]!!.text==this.name && BuyList[place]!!.text!=this.count.toString())
+            this.count--
+            if (this.count == 0)
             {
-                this.count--
-                if(this.count==0)
-                {
-                    BuyList[place]!!.text="None"
-                    this.name="${originName}:${count}"
-                    break
-                }
-                this.name="${originName}:${count}"
-                BuyList[place]!!.text=this.name
+                BuyList[place]!!.text = "None"
+                this.name = "${originName}"
+                return true
             }
+            this.name = "${originName}:${count}"
+            BuyList[place]!!.text = this.name
+            return true
+        }
+        return false
+    }
+    fun Del(textView: TextView?)
+    {
+        this.count--
+        if(this.count==0)
+        {
+            textView!!.text="None"
+            this.name=originName
+        }
+        else
+        {
+            this.name="${originName}:${this.count.toString()}"
+            textView!!.text=this.name
         }
     }
 }

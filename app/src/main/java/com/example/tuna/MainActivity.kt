@@ -16,7 +16,7 @@ import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -56,12 +56,13 @@ class MainActivity : AppCompatActivity(){
     fun D1(view:View)
     {
         var arr = arrayOf(A,B,C)
-        foodArr[0].del(arr)
+        delete(arr[0],foodArr)
+
     }
     fun D2(view:View)
     {
         var arr = arrayOf(A,B,C)
-        foodArr[1].del(arr)
+        delete(arr[1],foodArr)
     }
     fun D3()
     {
