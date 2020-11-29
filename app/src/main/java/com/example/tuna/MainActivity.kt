@@ -15,7 +15,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
-import deleteInterface.deleteListItem
 
 class MainActivity : AppCompatActivity(){
     override fun onCreate(savedInstanceState: Bundle?) {
