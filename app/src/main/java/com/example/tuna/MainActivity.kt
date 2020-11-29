@@ -71,9 +71,10 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         var arr = arrayOf(A,B,C)
         delete(arr[1],foodArr)
     }
-    fun D3()
+    fun D3(view:View)
     {
-
+        var arr = arrayOf(A,B,C)
+        delete(arr[2],foodArr)
     }
 
     /*fun next()
