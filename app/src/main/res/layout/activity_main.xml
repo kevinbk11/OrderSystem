@@ -44,6 +44,13 @@
                              android:clickable="true"
                              android:onClick="make2"
                 />
+                <ImageButton android:layout_width="100dp"
+                             android:layout_height="100dp"
+                             android:id="@+id/btm3"
+                             android:src="@drawable/thinking"
+                             android:clickable="true"
+                             android:onClick="make3"
+                />
             </LinearLayout>
 
 

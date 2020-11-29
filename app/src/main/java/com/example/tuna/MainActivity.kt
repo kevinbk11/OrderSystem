@@ -1,7 +1,6 @@
 package com.example.tuna
 
-import FoodClass.Food1Page.Food1
-import FoodClass.Food1Page.Food2
+import FoodClass.Food1Page.*
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
@@ -15,8 +14,9 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
+import deleteInterface.deleteListItem
 
-class MainActivity : AppCompatActivity(),deleteListItem{
+class MainActivity : AppCompatActivity(), deleteListItem {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,7 +34,7 @@ class MainActivity : AppCompatActivity(),deleteListItem{
 
         alertDialog.show()*/
     }
-    var foodArr= arrayOf(Food1,Food2)
+    var foodArr= arrayOf(Food1,Food2,Food3)
     fun make1(view: View)
     {
         var arr = arrayOf(A,B,C)
@@ -52,7 +52,14 @@ class MainActivity : AppCompatActivity(),deleteListItem{
             Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物",Toast.LENGTH_LONG)
         }
     }
-
+    fun make3(view:View)
+    {
+        var arr = arrayOf(A,B,C)
+        if(!foodArr[2].append(arr))
+        {
+            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物",Toast.LENGTH_LONG)
+        }
+    }
     fun D1(view:View)
     {
         var arr = arrayOf(A,B,C)
