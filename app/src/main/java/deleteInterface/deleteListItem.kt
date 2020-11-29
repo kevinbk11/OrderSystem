@@ -18,4 +18,15 @@ interface deleteListItem {
             }
         }
     }
+    fun find(arr:Array<TextView?>,food: Food):Int
+    {
+        for(y in arr)
+        {
+            if(y!!.text==food.name)
+            {
+                return arr.indexOf(y)
+            }
+        }
+        return -1
+    }
 }

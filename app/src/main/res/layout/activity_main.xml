@@ -35,21 +35,18 @@
                              android:id="@+id/btm1"
                              android:src="@drawable/thinking"
                              android:clickable="true"
-                             android:onClick="make1"
                 />
                 <ImageButton android:layout_width="100dp"
                              android:layout_height="100dp"
                              android:id="@+id/btm2"
                              android:src="@drawable/thinking"
                              android:clickable="true"
-                             android:onClick="make2"
                 />
                 <ImageButton android:layout_width="100dp"
                              android:layout_height="100dp"
                              android:id="@+id/btm3"
                              android:src="@drawable/thinking"
                              android:clickable="true"
-                             android:onClick="make3"
                 />
             </LinearLayout>
 

@@ -45,12 +45,7 @@ class MainActivity : AppCompatActivity(),deleteListItem{
     }
     fun D3(view:View)
     {
-<<<<<<< HEAD
         delete(C)
-=======
-        var arr = arrayOf(A,B,C)
-        delete(arr[2],foodArr)
->>>>>>> db43ce496ad950a5afb3c8f989980ad611b4a9dc
     }
 
     /*fun next()

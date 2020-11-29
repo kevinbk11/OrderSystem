@@ -51,17 +51,17 @@ class Test : AppCompatActivity(),deleteListItem{
     fun D1(view: View)
     {
         var arr = arrayOf(A,B,C)
-        delete(arr[0],foodArr)
+        delete(arr[0])
 
     }
     fun D2(view: View)
     {
         var arr = arrayOf(A,B,C)
-        delete(arr[1],foodArr)
+        delete(arr[1])
     }
     fun D3(view: View)
     {
         var arr = arrayOf(A,B,C)
-        delete(arr[2],foodArr)
+        delete(arr[2])
     }
 }
