@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".Test">
+    <TextView
+            android:text="TextView"
+            android:layout_width="100dp"
+            android:layout_height="32dp" android:id="@+id/C"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.884"/>
+    <Button
+            android:text="-"
+            android:layout_width="42dp"
+            android:layout_height="44dp" android:id="@+id/C1"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp" app:layout_constraintVertical_bias="0.882" android:textSize="18sp"/>
+    <Button
+            android:text="+"
+            android:layout_width="42dp"
+            android:layout_height="44dp" android:id="@+id/C2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.882"/>
+    <TextView
+            android:text="TextView"
+            android:layout_width="100dp"
+            android:layout_height="32dp" android:id="@+id/A2"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.788"/>
+    <Button
+            android:text="-"
+            android:layout_width="42dp"
+            android:layout_height="44dp" android:id="@+id/B1"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp" app:layout_constraintVertical_bias="0.784" android:textSize="24sp"/>
+    <Button
+            android:text="+"
+            android:layout_width="42dp"
+            android:layout_height="44dp" android:id="@+id/B2"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.784"/>
+    <Button
+            android:text="-"
+            android:layout_width="42dp"
+            android:layout_height="44dp" android:id="@+id/button13"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="180dp"
+            android:layout_marginRight="180dp" app:layout_constraintVertical_bias="0.688" android:textSize="24sp"/>
+    <Button
+            android:text="+"
+            android:layout_width="42dp"
+            android:layout_height="44dp" android:id="@+id/button12"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.688"/>
+    <ScrollView
+            android:layout_width="176dp" android:layout_height="726dp"
+            android:scrollbarStyle="insideOverlay" android:scrollbars="vertical" tools:layout_editor_absoluteY="2dp"
+            tools:layout_editor_absoluteX="2dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:orientation="vertical">
+
+            <ImageButton android:layout_width="107dp" android:layout_height="118dp"
+                         android:id="@+id/btm1"
+                         android:src="@drawable/thinking"
+                         android:clickable="true"
+                         android:onClick="make"
+            />
+        </LinearLayout>
+
+
+    </ScrollView>
+    <TextView
+            android:text="TextView"
+            android:layout_width="100dp"
+            android:layout_height="32dp" android:id="@+id/A"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.693"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

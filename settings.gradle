@@ -1,0 +1,2 @@
+rootProject.name='tuna'
+include ':app'
