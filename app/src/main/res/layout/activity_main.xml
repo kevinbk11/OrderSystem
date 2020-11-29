@@ -12,12 +12,9 @@
                   app:layout_constraintTop_toTopOf="parent">
 
         <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏標題列⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
+        <LinearLayout style="@style/max_width_style"
                       android:background="#c1c1c1">
-
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
+            <TextView style="@style/max_width_style"
                       android:text="@string/name"
                       android:textSize="20sp"/>
         </LinearLayout>
@@ -25,225 +22,122 @@
 
         <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏餐點種類圖示⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
         <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                style="@style/max_width_style"
                 android:scrollbarStyle="insideOverlay"
                 android:scrollbars="vertical"
                 tools:layout_editor_absoluteY="2dp"
                 tools:layout_editor_absoluteX="2dp">
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
+            <LinearLayout style="@style/max_width_style"
                           android:orientation="vertical">
                 <!--第一行圖示-->
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="wrap_content">
-                    <ImageButton android:layout_width="0dp"
-                                 android:layout_height="360px"
-                                 android:background="#00000000"
+                <LinearLayout style="@style/max_width_style">
+
+                    <ImageButton style="@style/MenuBtn_style"
                                  android:id="@+id/btm_nd"
                                  android:src="@drawable/noodle"
-                                 android:clickable="true"
-                                 android:layout_weight="1"
-                                 android:scaleType="centerCrop"
-                    />
-                    <ImageButton android:layout_width="0dp"
-                                 android:layout_height="360px"
-                                 android:background="#00000000"
+                                 android:clickable="true"/>
+
+                    <ImageButton style="@style/MenuBtn_style"
                                  android:id="@+id/btm_rc"
                                  android:src="@drawable/rice"
-                                 android:clickable="true"
-                                 android:layout_weight="1"
-                                 android:scaleType="centerCrop"
-                    />
-                    <ImageButton android:layout_width="0dp"
-                                 android:layout_height="360px"
-                                 android:background="#00000000"
+                                 android:clickable="true"/>
+
+                    <ImageButton style="@style/MenuBtn_style"
                                  android:id="@+id/btm_sp"
                                  android:src="@drawable/soup"
-                                 android:clickable="true"
-                                 android:layout_weight="1"
-                                 android:scaleType="centerCrop"
-                    />
+                                 android:clickable="true"/>
 
                 </LinearLayout>
                 <!--第一行名稱-->
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:background="#d59a5e">
+                <LinearLayout style="@style/max_width_style">
                     <!--麵-->
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="@string/menu_nd"
-                              android:textSize="24sp"
-                              android:layout_weight="1"
-                              android:gravity="center"
-                    />
+                    <TextView style="@style/MenuText_style"
+                              android:text="@string/menu_nd"/>
                     <!--飯-->
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="@string/menu_rc"
-                              android:textSize="24sp"
-                              android:layout_weight="1"
-                              android:gravity="center"
-                    />
+                    <TextView style="@style/MenuText_style"
+                              android:text="@string/menu_rc"/>
                     <!--湯-->
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="@string/menu_sp"
-                              android:textSize="24sp"
-                              android:layout_weight="1"
-                              android:gravity="center"
-                    />
+                    <TextView style="@style/MenuText_style"
+                              android:text="@string/menu_sp"/>
+
                 </LinearLayout>
                 <!--第二行圖示-->
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="wrap_content">
-                    <ImageButton android:layout_width="0dp"
-                                 android:layout_height="360px"
-                                 android:background="#00000000"
+                <LinearLayout style="@style/max_width_style">
+
+                    <ImageButton style="@style/MenuBtn_style"
                                  android:id="@+id/btm_lf"
                                  android:src="@drawable/lightfood"
-                                 android:clickable="true"
-                                 android:layout_weight="1"
-                                 android:scaleType="centerCrop"
-                    />
-                    <ImageButton android:layout_width="0dp"
-                                 android:layout_height="360px"
-                                 android:background="#00000000"
+                                 android:clickable="true"/>
+
+                    <ImageButton style="@style/MenuBtn_style"
                                  android:id="@+id/btm_ds"
                                  android:src="@drawable/dessert"
-                                 android:clickable="true"
-                                 android:layout_weight="1"
-                                 android:scaleType="centerCrop"
-                    />
-                    <ImageButton android:layout_width="0dp"
-                                 android:layout_height="360px"
-                                 android:background="#00000000"
+                                 android:clickable="true"/>
+
+                    <ImageButton style="@style/MenuBtn_style"
                                  android:id="@+id/btm_dk"
                                  android:src="@drawable/drink"
-                                 android:clickable="true"
-                                 android:layout_weight="1"
-                                 android:scaleType="centerCrop"
-                    />
+                                 android:clickable="true"/>
 
                 </LinearLayout>
                 <!--第二行名稱-->
-                <LinearLayout android:layout_width="match_parent"
-                              android:layout_height="wrap_content"
-                              android:background="#d59a5e">
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="@string/menu_lf"
-                              android:textSize="24sp"
-                              android:layout_weight="1"
-                              android:gravity="center"
-                    />
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="@string/menu_ds"
-                              android:textSize="24sp"
-                              android:layout_weight="1"
-                              android:gravity="center"
-                    />
-                    <TextView android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:text="@string/menu_dk"
-                              android:textSize="24sp"
-                              android:layout_weight="1"
-                              android:gravity="center"
-                    />
+                <LinearLayout style="@style/max_width_style">
+                    <!--單-->
+                    <TextView style="@style/MenuText_style"
+                              android:text="@string/menu_lf"/>
+                    <!--甜-->
+                    <TextView style="@style/MenuText_style"
+                              android:text="@string/menu_ds"/>
+                    <!--飲-->
+                    <TextView style="@style/MenuText_style"
+                              android:text="@string/menu_dk"/>
+
                 </LinearLayout>
             </LinearLayout>
         </ScrollView>
         <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎餐點種類圖示⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
 
         <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏點餐清單⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
-        <RelativeLayout android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-            <LinearLayout android:layout_width="match_parent"
-                          android:layout_height="wrap_content"
+        <RelativeLayout style="@style/max_width_style">
+            <LinearLayout style="@style/max_width_style"
                           android:layout_alignParentBottom="true"
                           android:background="#fffd98">
                 <!--點餐數量-->
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:orientation="vertical"
-                              android:padding="10dp">
+                              android:paddingHorizontal ="10dp"
+                              android:paddingVertical = "4dp">
                     <TextView
-                            android:text="TextView"
-                            android:gravity="center"
-                            android:layout_width="100dp"
-                            android:layout_height="32dp" android:id="@+id/A"
-                            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.693"/>
+                            style="@style/Amount_food"
+                            android:id="@+id/A"/>
                     <TextView
-                            android:text="TextView"
-                            android:gravity="center"
-                            android:layout_width="100dp"
-                            android:layout_height="32dp" android:id="@+id/B"
-                            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.788"
-                    />
+                            style="@style/Amount_food"
+                            android:id="@+id/B"/>
                     <TextView
-                            android:text="TextView"
-                            android:gravity="center"
-                            android:layout_width="100dp"
-                            android:layout_height="32dp" android:id="@+id/C"
-                            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintHorizontal_bias="0.797" app:layout_constraintVertical_bias="0.884"
-                    />
+                            style="@style/Amount_food"
+                            android:id="@+id/C"/>
                 </LinearLayout>
                 <!--減少按鈕-->
                 <LinearLayout android:layout_width="wrap_content"
                               android:layout_height="wrap_content"
                               android:orientation="vertical"
                               android:gravity="center"
-                              android:padding="10dp">
+                              android:paddingVertical = "4dp">
+                    <!--微調對齊文字-->
                     <ImageButton
+                            style="@style/Amount_delete"
+                            android:layout_marginTop="3dp"
                             android:onClick="D1"
-                            android:src="@drawable/delete_btn_1"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:scaleType="centerCrop"
-                            android:background="#00000000"
-                            android:id="@+id/A2"
-                            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginEnd="4dp"
-                            android:layout_marginRight="4dp" app:layout_constraintVertical_bias="0.882"
-                    />
+                            android:id="@+id/A2"/>
                     <ImageButton
+                            style="@style/Amount_delete"
                             android:onClick="D2"
-                            android:src="@drawable/delete_btn_1"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:scaleType="centerCrop"
-                            android:background="#00000000"
-                            android:id="@+id/B2"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginEnd="4dp"
-                            android:layout_marginRight="4dp"
-                            app:layout_constraintVertical_bias="0.784"
-                    />
+                            android:id="@+id/B2"/>
                     <ImageButton
+                            style="@style/Amount_delete"
                             android:onClick="D3"
-                            android:src="@drawable/delete_btn_1"
-                            android:layout_width="32dp"
-                            android:layout_height="32dp"
-                            android:scaleType="centerCrop"
-                            android:background="#00000000"
-                            android:id="@+id/C2"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            android:layout_marginEnd="4dp"
-                            android:layout_marginRight="4dp"
-                            app:layout_constraintVertical_bias="0.688"
-                    />
+                            android:id="@+id/C2"/>
                 </LinearLayout>
             </LinearLayout>
         </RelativeLayout>
