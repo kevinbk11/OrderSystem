@@ -10,8 +10,8 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_test.*
-import kotlinx.android.synthetic.main.activity_test.A
-import kotlinx.android.synthetic.main.activity_test.C
+import kotlinx.android.synthetic.main.activity_test.*
+import kotlinx.android.synthetic.main.activity_test.*
 import deleteInterface.deleteListItem
 class Test : AppCompatActivity(),deleteListItem{
 

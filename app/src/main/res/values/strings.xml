@@ -7,4 +7,12 @@
     <string name="menu_lf" translatable="false">單點</string>
     <string name="menu_ds" translatable="false">甜點</string>
     <string name="menu_dk" translatable="false">飲品</string>
+    <!--麵系列-->
+    <string name="nd_1" translatable="false">鹽味拉麵</string>
+    <string name="nd_2" translatable="false">醬油拉麵</string>
+    <string name="nd_3" translatable="false">味噌拉麵</string>
+    <string name="nd_4" translatable="false">豚骨拉麵</string>
+    <string name="nd_5" translatable="false">叉燒拉麵</string>
+    <string name="nd_6" translatable="false">海鮮番茄義大利麵</string>
+    <string name="nd_7" translatable="false">泰式酸辣海鮮麵</string>
 </resources>
