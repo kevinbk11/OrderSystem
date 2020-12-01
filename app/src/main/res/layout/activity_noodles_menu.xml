@@ -111,7 +111,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_7"
-                                     android:onClick="last"
+                                     android:onClick="make7"
                                      android:src="@drawable/nd_7"
                                      android:clickable="true" android:focusable="true"/>
                         <TextView android:layout_width="0dp"
