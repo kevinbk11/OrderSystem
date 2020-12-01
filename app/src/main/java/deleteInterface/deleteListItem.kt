@@ -7,6 +7,7 @@ import FoodClass.Food1Page.Food3
 import android.widget.TextView
 
 interface deleteListItem {
+
     fun delete(textView: TextView?)
     {
         var foodArr= arrayOf(Food1, Food2, Food3)
