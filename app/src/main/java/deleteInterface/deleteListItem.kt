@@ -2,6 +2,8 @@ package deleteInterface
 
 import FoodClass.Food
 import android.widget.TextView
+import kotlinx.android.synthetic.main.activity_main.*
+import java.io.Serializable
 
 interface deleteListItem {
 
@@ -28,3 +30,4 @@ interface deleteListItem {
     }
 
 }
+

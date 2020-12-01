@@ -15,16 +15,43 @@ import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import deleteInterface.deleteListItem
-import kotlinx.android.synthetic.main.activity_noodles.*
+import kotlinx.android.synthetic.main.activity_noodles_menu.*
+import java.io.Serializable
 
 class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        A.text="None"
-        B.text="None"
-        C.text="None"
-        setContentView(R.layout.activity_noodles)
+        var a=intent.getStringExtra("A")
+        var b=intent.getStringExtra("B")
+        var c=intent.getStringExtra("C")
+        if(a==null)
+        {
+            A.text="None"
+        }
+        else
+        {
+            A.text=a
+        }
+        if(b==null)
+        {
+            B.text="None"
+        }
+        else
+        {
+            B.text=b
+        }
+
+        if(c==null)
+        {
+            C.text="None"
+        }
+        else
+        {
+            C.text=c
+        }
+
+
         /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
@@ -37,10 +64,6 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         alertDialog.show()*/
     }
 
-    fun test(View:View)
-    {
-        Log.v("TEST","test")
-    }
     fun D1(view:View)
     {
         delete(A, Foodarr)
@@ -54,17 +77,17 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         delete(C,Foodarr)
     }
 
-    /*fun next()
+    fun next(view:View)
     {
-        val intent = Intent(this@MainActivity, Test::class.java)
-
-
+        val intent = Intent(this@MainActivity, NoodlesMenu::class.java)
         val bundle = Bundle()
 
-        bundle.putString("num", 5.toString())
-        intent.putExtras(bundle)
+
+        bundle.putString("A",A.text.toString())
+        bundle.putString("B",B.text.toString())
+        bundle.putString("C",C.text.toString())
         intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+        intent.putExtras(bundle)
         startActivity(intent)
-        Toast.makeText(applicationContext, "test", Toast.LENGTH_LONG).show()
-    }*/
+    }
 }

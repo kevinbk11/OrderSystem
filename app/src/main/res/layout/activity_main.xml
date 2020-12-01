@@ -43,6 +43,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_nd"
+                                     android:onClick="next"
                                      android:src="@drawable/noodle"
                                      android:clickable="true" android:focusable="true"/>
 

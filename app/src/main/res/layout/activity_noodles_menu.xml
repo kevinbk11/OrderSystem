@@ -5,7 +5,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".Noodles">
+        tools:context=".NoodlesMenu">
     <RelativeLayout android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
@@ -41,8 +41,8 @@
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_1"
                                      android:src="@drawable/nd_1"
-                                     android:onClick="test"
-                                     android:clickable="true" android:focusable="true" android:contentDescription="TODO"
+                                     android:onClick="make1"
+                                     android:clickable="true" android:focusable="true"
                                      tools:ignore="OnClick"/>
 
                         <ImageButton style="@style/MenuBtn_style"
@@ -111,7 +111,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_7"
-                                     android:onClick="make7"
+                                     android:onClick="last"
                                      android:src="@drawable/nd_7"
                                      android:clickable="true" android:focusable="true"/>
                         <TextView android:layout_width="0dp"
@@ -148,13 +148,13 @@
                           android:paddingVertical = "4dp">
                 <TextView
                         style="@style/Amount_food"
-                        android:id="@+id/A0"/>
+                        android:id="@+id/A1"/>
                 <TextView
                         style="@style/Amount_food"
-                        android:id="@+id/B0"/>
+                        android:id="@+id/B1"/>
                 <TextView
                         style="@style/Amount_food"
-                        android:id="@+id/C0"/>
+                        android:id="@+id/C1"/>
             </LinearLayout>
             <!--減少按鈕-->
             <LinearLayout android:layout_width="wrap_content"
@@ -166,16 +166,15 @@
                 <ImageButton
                         style="@style/Amount_delete"
                         android:layout_marginTop="3dp"
-                        android:onClick="D1"
-                        android:id="@+id/A2"/>
+                        android:onClick="D1"/>
                 <ImageButton
                         style="@style/Amount_delete"
                         android:onClick="D2"
-                        android:id="@+id/B2" android:layout_height="38dp"/>
+                />
                 <ImageButton
                         style="@style/Amount_delete"
                         android:onClick="D3"
-                        android:id="@+id/C2"/>
+                />
             </LinearLayout>
         </LinearLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->

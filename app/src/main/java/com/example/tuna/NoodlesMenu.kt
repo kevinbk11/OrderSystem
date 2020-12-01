@@ -1,77 +1,85 @@
 package com.example.tuna
 
-import FoodClass.*
+import FoodClass.Foodarr
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.service.autofill.TextValueSanitizer
 import android.util.Log
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
 import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_noodles.*
+import kotlinx.android.synthetic.main.activity_noodles_menu.*
+import org.w3c.dom.Text
+import java.io.Serializable
 
-
-class Noodles : AppCompatActivity(),deleteListItem {
-
+class NoodlesMenu : AppCompatActivity(),deleteListItem {
+    var arr:Array<TextView?> = arrayOf()
+    var toast:Toast? = null
+    val full="購物車已滿!請刪除其他食物"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_noodles)
-        /*val bundle = intent.extras
-        var S=bundle?.getString("num")
-        A.text=S*/
+        setContentView(R.layout.activity_noodles_menu)
+
+        arr = arrayOf(A1,B1,C1)
+
+        A1.text=intent.getStringExtra("A")
+        B1.text=intent.getStringExtra("B")
+        C1.text=intent.getStringExtra("C")
+
+        toast=Toast.makeText(applicationContext,full,Toast.LENGTH_LONG)
     }
-    val toast=Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物", Toast.LENGTH_LONG)
-    fun make1(view:View)
+
+    fun make1(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle1"]?.append(arr,toast)
     }
     fun make2(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle2"]!!.append(arr,toast)
     }
     fun make3(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle3"]!!.append(arr,toast)
     }
     fun make4(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle4"]!!.append(arr,toast)
     }
     fun make5(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle5"]!!.append(arr,toast)
     }
     fun make6(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle6"]!!.append(arr,toast)
     }
     fun make7(view: View)
     {
-        var arr = arrayOf(A,B,C)
         Foodarr["Noodle7"]!!.append(arr,toast)
     }
-
-
     fun D1(view: View)
     {
-        Log.v("click","true")
-        var arr = arrayOf(A0,B0,C0)
         delete(arr[0], Foodarr)
     }
     fun D2(view: View)
     {
-        var arr = arrayOf(A0,B0,C0)
         delete(arr[1], Foodarr)
     }
     fun D3(view: View)
     {
-        var arr = arrayOf(A0,B0,C0)
         delete(arr[2], Foodarr)
+    }
+    fun last(view:View)
+    {
+        val intent = Intent(this@NoodlesMenu, MainActivity::class.java)
+        var bundle=Bundle()
+        bundle.putString("A",A1.text.toString())
+        bundle.putString("B",B1.text.toString())
+        bundle.putString("C",C1.text.toString())
+        intent.putExtras(bundle)
+        startActivity(intent)
     }
 }

@@ -15,7 +15,7 @@ open class Food(Name:String):deleteInterface.deleteListItem {
         name = "${originName}:${count}"
         Text?.text = name
     }
-    fun append(BuyList:Array<TextView?>,toast: Toast):Boolean
+    fun append(BuyList:Array<TextView?>,toast: Toast?):Boolean
     {
         for (Place in 0..2)
         {
@@ -33,7 +33,7 @@ open class Food(Name:String):deleteInterface.deleteListItem {
                 return true
             }
         }
-        toast.show()
+        toast?.show()
         return false
     }
     fun del(BuyList:Array<TextView?>):Boolean
