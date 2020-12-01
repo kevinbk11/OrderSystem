@@ -1,5 +1,6 @@
 package FoodClass
 
+import FoodClass.Noodles.*
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
@@ -69,4 +70,13 @@ open class Food(Name:String):deleteInterface.deleteListItem {
     }
 }
 
+var Foodarr= mapOf<String,Food>(
+    "Noodle1" to Noodle_1,
+    "Noodle2" to Noodle_2,
+    "Noodle3" to Noodle_3,
+    "Noodle4" to Noodle_4,
+    "Noodle5" to Noodle_5,
+    "Noodle6" to Noodle_6,
+    "Noodle7" to Noodle_7
+)
 

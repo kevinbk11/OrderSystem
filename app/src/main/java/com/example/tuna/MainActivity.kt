@@ -1,5 +1,6 @@
 package com.example.tuna
 
+import FoodClass.Foodarr
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
@@ -36,15 +37,15 @@ class MainActivity : AppCompatActivity(),deleteListItem{
 
     fun D1(view:View)
     {
-        delete(A)
+        delete(A, Foodarr)
     }
     fun D2(view:View)
     {
-        delete(B)
+        delete(B,Foodarr)
     }
     fun D3(view:View)
     {
-        delete(C)
+        delete(C,Foodarr)
     }
 
     /*fun next()

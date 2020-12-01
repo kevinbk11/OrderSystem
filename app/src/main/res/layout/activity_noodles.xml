@@ -42,16 +42,19 @@
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_1"
                                      android:src="@drawable/nd_1"
+                                     android:onClick="make1"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_2"
                                      android:src="@drawable/nd_2"
+                                     android:onClick="make2"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_3"
                                      android:src="@drawable/nd_3"
+                                     android:onClick="make3"
                                      android:clickable="true" android:focusable="true"/>
 
                     </LinearLayout>
@@ -73,16 +76,19 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_4"
+                                     android:onClick="make4"
                                      android:src="@drawable/nd_4"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_5"
+                                     android:onClick="make5"
                                      android:src="@drawable/nd_5"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_6"
+                                     android:onClick="make6"
                                      android:src="@drawable/nd_6"
                                      android:clickable="true" android:focusable="true"/>
 
@@ -105,6 +111,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_7"
+                                     android:onClick="make7"
                                      android:src="@drawable/nd_7"
                                      android:clickable="true" android:focusable="true"/>
                         <TextView android:layout_width="0dp"

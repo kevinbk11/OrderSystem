@@ -5,9 +5,9 @@ import android.widget.TextView
 
 interface deleteListItem {
 
-    fun delete(textView: TextView?,foodArr:Array<Food>)
+    fun delete(textView: TextView?,foodArr:Map<String,Food>)
     {
-        for(food in foodArr)
+        for((Number,food) in foodArr)
         {
             if(food.name==textView!!.text)
             {
