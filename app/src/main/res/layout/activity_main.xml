@@ -139,14 +139,17 @@
                 <ImageButton
                         style="@style/Amount_delete"
                         android:layout_marginTop="3dp"
+                        android:clickable="true"
                         android:onClick="D1"
                         android:id="@+id/A2"/>
                 <ImageButton
                         style="@style/Amount_delete"
+                        android:clickable="true"
                         android:onClick="D2"
                         android:id="@+id/B2"/>
                 <ImageButton
                         style="@style/Amount_delete"
+                        android:clickable="true"
                         android:onClick="D3"
                         android:id="@+id/C2"/>
             </LinearLayout>

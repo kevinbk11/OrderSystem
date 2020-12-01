@@ -1,14 +1,15 @@
 package com.example.tuna
 
-import FoodClass.Food
-import FoodClass.Foodarr
-import FoodClass.Noodles.*
+import FoodClass.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_noodles.*
+
 
 class Noodles : AppCompatActivity(),deleteListItem {
 
@@ -20,11 +21,10 @@ class Noodles : AppCompatActivity(),deleteListItem {
         A.text=S*/
     }
     val toast=Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物", Toast.LENGTH_LONG)
-
-    fun make1(view: View)
+    fun make1(view:View)
     {
         var arr = arrayOf(A,B,C)
-        Foodarr["Noodle1"]!!.append(arr,toast)
+        Foodarr["Noodle1"]?.append(arr,toast)
     }
     fun make2(view: View)
     {
@@ -56,19 +56,22 @@ class Noodles : AppCompatActivity(),deleteListItem {
         var arr = arrayOf(A,B,C)
         Foodarr["Noodle7"]!!.append(arr,toast)
     }
+
+
     fun D1(view: View)
     {
-        var arr = arrayOf(A,B,C)
+        Log.v("click","true")
+        var arr = arrayOf(A0,B0,C0)
         delete(arr[0], Foodarr)
     }
     fun D2(view: View)
     {
-        var arr = arrayOf(A,B,C)
+        var arr = arrayOf(A0,B0,C0)
         delete(arr[1], Foodarr)
     }
     fun D3(view: View)
     {
-        var arr = arrayOf(A,B,C)
+        var arr = arrayOf(A0,B0,C0)
         delete(arr[2], Foodarr)
     }
 }

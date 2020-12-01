@@ -6,7 +6,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".Noodles">
-
     <RelativeLayout android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:orientation="vertical"
@@ -42,8 +41,9 @@
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_1"
                                      android:src="@drawable/nd_1"
-                                     android:onClick="make1"
-                                     android:clickable="true" android:focusable="true"/>
+                                     android:onClick="test"
+                                     android:clickable="true" android:focusable="true" android:contentDescription="TODO"
+                                     tools:ignore="OnClick"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/nd_2"
@@ -148,13 +148,13 @@
                           android:paddingVertical = "4dp">
                 <TextView
                         style="@style/Amount_food"
-                        android:id="@+id/A"/>
+                        android:id="@+id/A0"/>
                 <TextView
                         style="@style/Amount_food"
-                        android:id="@+id/B"/>
+                        android:id="@+id/B0"/>
                 <TextView
                         style="@style/Amount_food"
-                        android:id="@+id/C"/>
+                        android:id="@+id/C0"/>
             </LinearLayout>
             <!--減少按鈕-->
             <LinearLayout android:layout_width="wrap_content"
@@ -171,7 +171,7 @@
                 <ImageButton
                         style="@style/Amount_delete"
                         android:onClick="D2"
-                        android:id="@+id/B2"/>
+                        android:id="@+id/B2" android:layout_height="38dp"/>
                 <ImageButton
                         style="@style/Amount_delete"
                         android:onClick="D3"

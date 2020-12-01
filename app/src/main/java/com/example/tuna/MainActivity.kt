@@ -5,6 +5,7 @@ import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
@@ -14,6 +15,7 @@ import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 import deleteInterface.deleteListItem
+import kotlinx.android.synthetic.main.activity_noodles.*
 
 class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,10 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         alertDialog.show()*/
     }
 
+    fun test(View:View)
+    {
+        Log.v("TEST","test")
+    }
     fun D1(view:View)
     {
         delete(A, Foodarr)
