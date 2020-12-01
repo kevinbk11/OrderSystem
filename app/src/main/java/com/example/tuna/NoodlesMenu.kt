@@ -1,6 +1,7 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
+import MainSystem.SendTextToActivity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -75,11 +76,7 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
     fun last(view:View)
     {
         val intent = Intent(this@NoodlesMenu, MainActivity::class.java)
-        var bundle=Bundle()
-        bundle.putString("A",A1.text.toString())
-        bundle.putString("B",B1.text.toString())
-        bundle.putString("C",C1.text.toString())
-        intent.putExtras(bundle)
+        SendTextToActivity(A1,B1,C1,intent)
         startActivity(intent)
     }
 }
