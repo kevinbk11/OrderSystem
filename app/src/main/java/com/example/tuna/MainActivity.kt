@@ -1,6 +1,5 @@
 package com.example.tuna
 
-import FoodClass.Food1Page.*
 import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent

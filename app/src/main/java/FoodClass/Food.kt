@@ -2,19 +2,19 @@ package FoodClass
 
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
-
-open class Food(Name:String,Count:Int):deleteInterface.deleteListItem {
+open class Food(Name:String):deleteInterface.deleteListItem {
     val originName=Name
     var name=Name
-    var count=Count
+    var count=0
     private fun add(Text:TextView?)
     {
         count++
         name = "${originName}:${count}"
         Text?.text = name
     }
-    fun append(BuyList:Array<TextView?>):Boolean
+    fun append(BuyList:Array<TextView?>,toast: Toast):Boolean
     {
         for (Place in 0..2)
         {
@@ -32,6 +32,7 @@ open class Food(Name:String,Count:Int):deleteInterface.deleteListItem {
                 return true
             }
         }
+        toast.show()
         return false
     }
     fun del(BuyList:Array<TextView?>):Boolean

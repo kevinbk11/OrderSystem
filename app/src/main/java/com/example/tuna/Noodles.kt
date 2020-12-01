@@ -1,8 +1,6 @@
 package com.example.tuna
 
-import FoodClass.Food1Page.Food1
-import FoodClass.Food1Page.Food2
-import FoodClass.Food1Page.Food3
+import FoodClass.Noodles.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,35 +13,33 @@ class Noodles : AppCompatActivity(),deleteListItem {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles)
-        /*val bundle = intent.extras
+        val bundle = intent.extras
         var S=bundle?.getString("num")
-        A.text=S*/
+        A.text=S
     }
-    var foodArr= arrayOf(Food1, Food2, Food3)
+    val toast=Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物", Toast.LENGTH_LONG)
+    var foodArr= arrayOf(Noodle_1,Noodle_2,Noodle_3,Noodle_4,Noodle_5,Noodle_6,Noodle_7)
     fun make1(view: View)
     {
         var arr = arrayOf(A,B,C)
-        if(!foodArr[0].append(arr))
-        {
-            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物", Toast.LENGTH_LONG)
-        }
-
+        foodArr[0].append(arr,toast)
     }
     fun make2(view: View)
     {
         var arr = arrayOf(A,B,C)
-        if(!foodArr[1].append(arr))
-        {
-            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物", Toast.LENGTH_LONG)
-        }
+        foodArr[1].append(arr,toast)
     }
     fun make3(view: View)
     {
         var arr = arrayOf(A,B,C)
-        if(!foodArr[2].append(arr))
-        {
-            Toast.makeText(applicationContext,"購物車已滿!請刪除其他食物", Toast.LENGTH_LONG)
-        }
+        foodArr[2].append(arr,toast)
+
+    }
+    fun make4(view: View)
+    {
+        var arr = arrayOf(A,B,C)
+        foodArr[3].append(arr,toast)
+
     }
     fun D1(view: View)
     {
