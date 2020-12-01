@@ -18,10 +18,11 @@ import deleteInterface.deleteListItem
 class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_test)
+        setContentView(R.layout.activity_main)
         A.text="None"
         B.text="None"
         C.text="None"
+        setContentView(R.layout.activity_noodles)
         /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
