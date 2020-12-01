@@ -22,7 +22,6 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         A.text="None"
         B.text="None"
         C.text="None"
-        setContentView(R.layout.activity_page2)
         /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
