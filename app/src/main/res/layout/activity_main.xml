@@ -6,31 +6,36 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-    <LinearLayout android:layout_width="match_parent"
-                  android:layout_height="match_parent"
-                  android:orientation="vertical"
-                  app:layout_constraintTop_toTopOf="parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
 
-        <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏標題列⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
+        <!--▽▽▽▽▽▽▽▽▽▽標題列▽▽▽▽▽▽▽▽▽▽-->
         <LinearLayout style="@style/max_width_style"
-                      android:background="#c1c1c1">
+                      android:background="#c1c1c1"
+                      android:id="@+id/top_title">
             <TextView style="@style/max_width_style"
                       android:text="@string/name"
                       android:textSize="20sp"/>
         </LinearLayout>
-        <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎標題列⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
+        <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
-        <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏餐點種類圖示⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
+
+        <!--▽▽▽▽▽▽▽▽▽▽餐點種類圖示▽▽▽▽▽▽▽▽▽▽-->
         <RelativeLayout android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-            <!--⋏⋏⋏⋏⋏主選單圖示⋏⋏⋏⋏⋏-->
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/top_title"
+                        android:layout_above="@id/bottom_title">
+            <!--▽▽▽▽▽主選單圖示▽▽▽▽▽-->
             <ScrollView
-                    style="@style/max_width_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
                     android:scrollbarStyle="insideOverlay"
                     android:scrollbars="vertical"
                     tools:layout_editor_absoluteY="2dp"
                     tools:layout_editor_absoluteX="2dp">
-
                 <LinearLayout style="@style/max_width_style"
                               android:orientation="vertical">
                     <!--第一行圖示-->
@@ -99,60 +104,55 @@
                     </LinearLayout>
                 </LinearLayout>
             </ScrollView>
-
-
-
-
-
         </RelativeLayout>
-        <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎餐點種類圖示⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
+        <!--△△△△△△△△△△餐點種類圖示△△△△△△△△△△-->
 
-        <!--⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏點餐清單⋏⋏⋏⋏⋏⋏⋏⋏⋏⋏-->
-        <RelativeLayout style="@style/max_width_style">
-            <LinearLayout style="@style/max_width_style"
-                          android:layout_alignParentBottom="true"
-                          android:background="#fffd98">
-                <!--點餐數量-->
-                <LinearLayout android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical"
-                              android:paddingHorizontal ="10dp"
-                              android:paddingVertical = "4dp">
-                    <TextView
-                            style="@style/Amount_food"
-                            android:id="@+id/A"/>
-                    <TextView
-                            style="@style/Amount_food"
-                            android:id="@+id/B"/>
-                    <TextView
-                            style="@style/Amount_food"
-                            android:id="@+id/C"/>
-                </LinearLayout>
-                <!--減少按鈕-->
-                <LinearLayout android:layout_width="wrap_content"
-                              android:layout_height="wrap_content"
-                              android:orientation="vertical"
-                              android:gravity="center"
-                              android:paddingVertical = "4dp">
-                    <!--微調對齊文字-->
-                    <ImageButton
-                            style="@style/Amount_delete"
-                            android:layout_marginTop="3dp"
-                            android:onClick="D1"
-                            android:id="@+id/A2"/>
-                    <ImageButton
-                            style="@style/Amount_delete"
-                            android:onClick="D2"
-                            android:id="@+id/B2"/>
-                    <ImageButton
-                            style="@style/Amount_delete"
-                            android:onClick="D3"
-                            android:id="@+id/C2"/>
-                </LinearLayout>
+
+        <!--▽▽▽▽▽▽▽▽▽▽點餐清單▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:layout_alignParentBottom="true"
+                      android:background="#fffd98"
+                      android:id="@+id/bottom_title">
+            <!--點餐數量-->
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:paddingHorizontal ="10dp"
+                          android:paddingVertical = "4dp">
+                <TextView
+                        style="@style/Amount_food"
+                        android:id="@+id/A"/>
+                <TextView
+                        style="@style/Amount_food"
+                        android:id="@+id/B"/>
+                <TextView
+                        style="@style/Amount_food"
+                        android:id="@+id/C"/>
             </LinearLayout>
-        </RelativeLayout>
-        <!--⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎點餐清單⋎⋎⋎⋎⋎⋎⋎⋎⋎⋎-->
+            <!--減少按鈕-->
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:gravity="center"
+                          android:paddingVertical = "4dp">
+                <!--微調對齊文字-->
+                <ImageButton
+                        style="@style/Amount_delete"
+                        android:layout_marginTop="3dp"
+                        android:onClick="D1"
+                        android:id="@+id/A2"/>
+                <ImageButton
+                        style="@style/Amount_delete"
+                        android:onClick="D2"
+                        android:id="@+id/B2"/>
+                <ImageButton
+                        style="@style/Amount_delete"
+                        android:onClick="D3"
+                        android:id="@+id/C2"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
 
 
-    </LinearLayout>
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
