@@ -2,14 +2,13 @@ package com.example.tuna
 
 import FoodClass.Food1Page.*
 import android.content.Context
+import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
@@ -23,6 +22,7 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         A.text="None"
         B.text="None"
         C.text="None"
+        setContentView(R.layout.activity_page2)
         /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
