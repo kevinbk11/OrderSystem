@@ -17,7 +17,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
     </style>
-    <!-- 選單按鈕造型 -->
+    <!-- 選單圖片按鈕造型 -->
     <style name="MenuBtn_style" >
         <item name="android:layout_width">1dp</item>
         <item name="android:layout_height">360px</item>
