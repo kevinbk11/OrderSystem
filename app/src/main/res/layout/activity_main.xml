@@ -10,6 +10,11 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:src="@drawable/blackbackground"
+                   android:scaleType="center"/>
+
 
         <!--▽▽▽▽▽▽▽▽▽▽標題列▽▽▽▽▽▽▽▽▽▽-->
         <LinearLayout style="@style/max_width_style"
@@ -17,7 +22,7 @@
                       android:id="@+id/top_title">
             <TextView style="@style/max_width_style"
                       android:text="@string/name"
-                      android:textSize="20sp"/>
+                      android:textSize="18sp"/>
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
