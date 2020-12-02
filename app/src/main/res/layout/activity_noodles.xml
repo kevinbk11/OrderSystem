@@ -129,13 +129,14 @@
 
 
         <!--▽▽▽▽▽▽▽▽▽▽點餐清單▽▽▽▽▽▽▽▽▽▽-->
-        <LinearLayout style="@style/max_width_style"
+        <RelativeLayout style="@style/max_width_style"
                       android:layout_alignParentBottom="true"
                       android:background="#fffd98"
                       android:id="@+id/bottom_title">
             <!--點餐數量-->
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
+                          android:id="@+id/food_amount"
                           android:orientation="vertical"
                           android:paddingHorizontal ="10dp"
                           android:paddingVertical = "4dp">
@@ -152,9 +153,11 @@
             <!--減少按鈕-->
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
+                          android:id="@+id/delete"
                           android:orientation="vertical"
+                          android:layout_toRightOf="@id/food_amount"
                           android:gravity="center"
-                          android:paddingVertical = "4dp">
+                          android:paddingVertical = "4dp" >
                 <!--微調對齊文字-->
                 <ImageButton
                         style="@style/Amount_delete"
@@ -170,7 +173,13 @@
                         android:onClick="D3"
                         android:id="@+id/C2"/>
             </LinearLayout>
-        </LinearLayout>
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/delete"
+                    android:id="@+id/givefood"
+                    android:text="@string/give_food"
+                    android:textSize="22sp"/>
+        </RelativeLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
 
 
