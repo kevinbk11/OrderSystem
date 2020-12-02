@@ -1,20 +1,21 @@
 package FoodClass
 
+import FoodClass.Noodles.*
 import android.util.Log
 import android.widget.TextView
+import android.widget.Toast
 import org.w3c.dom.Text
-
-open class Food(Name:String,Count:Int):deleteInterface.deleteListItem {
+open class Food(Name:String):deleteInterface.deleteListItem {
     val originName=Name
     var name=Name
-    var count=Count
+    var count=0
     private fun add(Text:TextView?)
     {
         count++
         name = "${originName}:${count}"
         Text?.text = name
     }
-    fun append(BuyList:Array<TextView?>):Boolean
+    fun append(BuyList:Array<TextView?>,toast: Toast?):Boolean
     {
         for (Place in 0..2)
         {
@@ -32,6 +33,7 @@ open class Food(Name:String,Count:Int):deleteInterface.deleteListItem {
                 return true
             }
         }
+        toast?.show()
         return false
     }
     fun del(BuyList:Array<TextView?>):Boolean
@@ -68,4 +70,13 @@ open class Food(Name:String,Count:Int):deleteInterface.deleteListItem {
     }
 }
 
+var Foodarr= mapOf<String,Food>(
+    "Noodle1" to Noodle_1,
+    "Noodle2" to Noodle_2,
+    "Noodle3" to Noodle_3,
+    "Noodle4" to Noodle_4,
+    "Noodle5" to Noodle_5,
+    "Noodle6" to Noodle_6,
+    "Noodle7" to Noodle_7
+)
 

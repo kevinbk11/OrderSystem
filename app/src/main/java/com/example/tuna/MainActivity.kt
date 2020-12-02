@@ -1,28 +1,24 @@
 package com.example.tuna
 
-import FoodClass.Food1Page.*
-import android.content.Context
-import android.content.DialogInterface
+import FoodClass.*
+import MainSystem.CheckNull
+import MainSystem.SendTextToActivity
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.View
-import android.view.ViewGroup
-import android.widget.*
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginTop
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.*
 import deleteInterface.deleteListItem
 
 class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        A.text="None"
-        B.text="None"
-        C.text="None"
-        setContentView(R.layout.activity_noodles)
+        var a=intent.getStringExtra("A")
+        var b=intent.getStringExtra("B")
+        var c=intent.getStringExtra("C")
+        CheckNull(A,B,C,a,b,c)
         /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
@@ -37,28 +33,21 @@ class MainActivity : AppCompatActivity(),deleteListItem{
 
     fun D1(view:View)
     {
-        delete(A)
+        delete(A, Foodarr)
     }
     fun D2(view:View)
     {
-        delete(B)
+        delete(B,Foodarr)
     }
     fun D3(view:View)
     {
-        delete(C)
+        delete(C,Foodarr)
     }
 
-    /*fun next()
+    fun next(view:View)
     {
-        val intent = Intent(this@MainActivity, Test::class.java)
-
-
-        val bundle = Bundle()
-
-        bundle.putString("num", 5.toString())
-        intent.putExtras(bundle)
-        intent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
+        val intent = Intent(this@MainActivity, NoodlesMenu::class.java)
+        SendTextToActivity(A,B,C,intent)
         startActivity(intent)
-        Toast.makeText(applicationContext, "test", Toast.LENGTH_LONG).show()
-    }*/
+    }
 }
