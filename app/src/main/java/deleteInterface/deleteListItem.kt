@@ -1,6 +1,8 @@
 package deleteInterface
 
 import FoodClass.Food
+import FoodClass.Foodarr
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
@@ -29,4 +31,5 @@ interface deleteListItem {
         return -1
     }
 }
+
 

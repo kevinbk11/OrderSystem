@@ -171,11 +171,11 @@
                                 android:paddingHorizontal="10dp">
                     <TextView
                             style="@style/Amount_food"
-                            android:id="@+id/A1"/>
+                            android:id="@+id/A3"/>
                     <ImageButton
                             style="@style/Amount_delete"
                             android:onClick="D1"
-                            android:layout_toRightOf="@+id/A1"/>
+                            android:layout_toRightOf="@+id/A3"/>
                 </RelativeLayout>
                 <RelativeLayout style="@style/foodamount"
                                 android:id="@+id/food_amount2"
@@ -183,11 +183,11 @@
                                 android:paddingHorizontal="10dp">
                     <TextView
                             style="@style/Amount_food"
-                            android:id="@+id/B1"/>
+                            android:id="@+id/B3"/>
                     <ImageButton
                             style="@style/Amount_delete"
                             android:onClick="D2"
-                            android:layout_toRightOf="@id/B1"/>
+                            android:layout_toRightOf="@id/B3"/>
                 </RelativeLayout>
                 <RelativeLayout style="@style/foodamount"
                                 android:id="@+id/food_amount3"
@@ -195,12 +195,12 @@
                                 android:paddingHorizontal="10dp">
                     <TextView
                             style="@style/Amount_food"
-                            android:id="@+id/C1"/>
+                            android:id="@+id/C3"/>
 
                     <ImageButton
                             style="@style/Amount_delete"
                             android:onClick="D3"
-                            android:layout_toRightOf="@id/C1"/>
+                            android:layout_toRightOf="@id/C3"/>
                 </RelativeLayout>
 
                 <RelativeLayout style="@style/foodamount"
@@ -209,12 +209,12 @@
                                 android:paddingHorizontal="10dp">
                     <TextView
                             style="@style/Amount_food"
-                            android:id="@+id/D1"/>
+                            android:id="@+id/D3"/>
 
                     <ImageButton
                             style="@style/Amount_delete"
                             android:onClick="D4"
-                            android:layout_toRightOf="@id/D1"/>
+                            android:layout_toRightOf="@id/D3"/>
                 </RelativeLayout>
             </LinearLayout>
             <!--送餐按鈕-->

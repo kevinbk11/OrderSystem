@@ -160,7 +160,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/rc_10"
-                                     android:onClick="make4"
+                                     android:onClick="make10"
                                      android:src="@drawable/rc_10"
                                      android:clickable="true" android:focusable="true"/>
 

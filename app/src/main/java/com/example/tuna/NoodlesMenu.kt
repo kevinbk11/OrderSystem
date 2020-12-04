@@ -32,6 +32,12 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
 
     }
 
+    override fun onBackPressed() {
+        var intent= Intent(this,MainActivity::class.java)
+        SendTextToActivity(A1,B1,C1,D1,intent)
+        startActivity(intent)
+    }
+
     fun make1(view: View)
     {
         Foodarr["Noodle1"]?.append(arr,toast)

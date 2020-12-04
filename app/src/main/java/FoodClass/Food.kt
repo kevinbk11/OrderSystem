@@ -2,6 +2,7 @@ package FoodClass
 
 import FoodClass.Noodles.*
 import FoodClass.Rice.*
+import FoodClass.Soup.*
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
@@ -59,6 +60,7 @@ var Foodarr= mapOf<String,Food>(
     "Noodle3" to Noodle_3,
     "Noodle4" to Noodle_4,
     "Noodle5" to Noodle_5,
+
     "Rice1" to Rice_1,
     "Rice2" to Rice_2,
     "Rice3" to Rice_3,
@@ -69,5 +71,12 @@ var Foodarr= mapOf<String,Food>(
     "Rice8" to Rice_8,
     "Rice9" to Rice_9,
     "Rice10" to Rice_10,
+
+    "Soup1" to Soup_1,
+    "Soup2" to Soup_2,
+    "Soup3" to Soup_3,
+    "Soup4" to Soup_4,
+    "Soup5" to Soup_5,
+    "Soup6" to Soup_6,
 )
 
