@@ -49,19 +49,19 @@
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_nd"
                                      android:onClick="ToNoodles"
-                                     android:src="@drawable/noodle"
+                                     android:src="@drawable/nd_1"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_rc"
                                      android:onClick="ToRice"
-                                     android:src="@drawable/rice"
+                                     android:src="@drawable/rc_11"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_sp"
                                      android:onClick="ToSoup"
-                                     android:src="@drawable/soup"
+                                     android:src="@drawable/sp_1"
                                      android:clickable="true" android:focusable="true"/>
 
                     </LinearLayout>
@@ -83,18 +83,20 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_lf"
-                                     android:src="@drawable/lightfood"
+                                     android:onClick="ToLightFood"
+                                     android:src="@drawable/lf_1"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_ds"
-                                     android:src="@drawable/dessert"
+                                     android:onClick="ToDessert"
+                                     android:src="@drawable/ds_4"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_dk"
                                      android:onClick="ToDrink"
-                                     android:src="@drawable/drink"
+                                     android:src="@drawable/dk_8"
                                      android:clickable="true" android:focusable="true"/>
 
                     </LinearLayout>

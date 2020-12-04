@@ -53,6 +53,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_centerVertical">true</item>
+        <item name="android:textColor">@color/colorDown</item>
     </style>
     <!-- 餐點數量減少 -->
     <style name="Amount_delete">

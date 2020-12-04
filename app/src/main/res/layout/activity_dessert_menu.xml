@@ -6,4 +6,225 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".DessertMenu">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent">
+        <ImageView android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:background="@drawable/blackbackground"
+                   android:scaleType="center"/>
+
+        <!--▽▽▽▽▽▽▽▽▽▽標題列▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:background="#c1c1c1"
+                      android:id="@+id/top_title">
+            <TextView style="@style/max_width_style"
+                      android:text="@string/name"
+                      android:textSize="16sp"/>
+        </LinearLayout>
+        <!--△△△△△△△△△△標題列△△△△△△△△△△-->
+
+        <!--▽▽▽▽▽▽▽▽▽▽類別列▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:id="@+id/menu_name"
+                      android:layout_below="@id/top_title"
+                      android:background="#9969491A">
+            <TextView style="@style/max_width_style"
+                      android:text="甜點"
+                      android:textSize="18sp"
+                      android:textColor="@color/colorDown"/>
+        </LinearLayout>
+        <!--△△△△△△△△△△類別列△△△△△△△△△△-->
+
+        <!--▽▽▽▽▽▽▽▽▽▽湯種類圖示▽▽▽▽▽▽▽▽▽▽-->
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/menu_name"
+                        android:layout_above="@id/bottom_title">
+            <ScrollView
+                    style="@style/max_width_style"
+                    android:scrollbarStyle="insideOverlay"
+                    android:scrollbars="vertical"
+                    tools:layout_editor_absoluteY="2dp"
+                    tools:layout_editor_absoluteX="2dp">
+                <LinearLayout style="@style/max_width_style"
+                              android:orientation="vertical">
+                    <!--第一行圖示-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_1"
+                                     android:src="@drawable/ds_1"
+                                     android:onClick="make1"
+                                     android:clickable="true" android:focusable="true"
+                                     tools:ignore="OnClick"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/sd_2"
+                                     android:src="@drawable/ds_2"
+                                     android:onClick="make2"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_3"
+                                     android:src="@drawable/ds_3"
+                                     android:onClick="make3"
+                                     android:clickable="true" android:focusable="true"/>
+
+                    </LinearLayout>
+                    <!--第一行名稱-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_1"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_2"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_3"/>
+
+                    </LinearLayout>
+                    <!--第二行圖示-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_4"
+                                     android:onClick="make4"
+                                     android:src="@drawable/ds_4"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_5"
+                                     android:onClick="make5"
+                                     android:src="@drawable/ds_5"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_6"
+                                     android:onClick="make5"
+                                     android:src="@drawable/ds_6"
+                                     android:clickable="true" android:focusable="true"/>
+                    </LinearLayout>
+                    <!--第二行名稱-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_4"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_5"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_6"/>
+                    </LinearLayout>
+                    <!--第三行圖示-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_7"
+                                     android:onClick="make4"
+                                     android:src="@drawable/ds_7"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/ds_8"
+                                     android:onClick="make5"
+                                     android:src="@drawable/ds_8"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                        />
+
+                    </LinearLayout>
+                    <!--第三行名稱-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_7"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/ds_8"/>
+
+                        <TextView android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+        <!--△△△△△△△△△△種類圖示△△△△△△△△△△-->
+
+        <!--▽▽▽▽▽▽▽▽▽▽點餐清單▽▽▽▽▽▽▽▽▽▽-->
+        <RelativeLayout style="@style/DownMenu"
+                        android:id="@+id/bottom_title">
+            <LinearLayout android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:orientation="vertical"
+                          android:layout_centerVertical="true">
+                <RelativeLayout style="@style/foodamount"
+                                android:id="@+id/food_amount1"
+                                android:layout_centerVertical="true"
+                                android:paddingHorizontal="10dp">
+                    <TextView
+                            style="@style/Amount_food"
+                            android:id="@+id/A1"/>
+                    <ImageButton
+                            style="@style/Amount_delete"
+                            android:onClick="D1"
+                            android:layout_toRightOf="@+id/A1"/>
+                </RelativeLayout>
+                <RelativeLayout style="@style/foodamount"
+                                android:id="@+id/food_amount2"
+                                android:layout_centerVertical="true"
+                                android:paddingHorizontal="10dp">
+                    <TextView
+                            style="@style/Amount_food"
+                            android:id="@+id/B1"/>
+                    <ImageButton
+                            style="@style/Amount_delete"
+                            android:onClick="D2"
+                            android:layout_toRightOf="@id/B1"/>
+                </RelativeLayout>
+                <RelativeLayout style="@style/foodamount"
+                                android:id="@+id/food_amount3"
+                                android:layout_centerVertical="true"
+                                android:paddingHorizontal="10dp">
+                    <TextView
+                            style="@style/Amount_food"
+                            android:id="@+id/C1"/>
+
+                    <ImageButton
+                            style="@style/Amount_delete"
+                            android:onClick="D3"
+                            android:layout_toRightOf="@id/C1"/>
+                </RelativeLayout>
+
+                <RelativeLayout style="@style/foodamount"
+                                android:id="@+id/food_amount4"
+                                android:layout_centerVertical="true"
+                                android:paddingHorizontal="10dp">
+                    <TextView
+                            style="@style/Amount_food"
+                            android:id="@+id/D1"/>
+
+                    <ImageButton
+                            style="@style/Amount_delete"
+                            android:onClick="D4"
+                            android:layout_toRightOf="@id/D1"/>
+                </RelativeLayout>
+            </LinearLayout>
+            <!--送餐按鈕-->
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/givefood"
+                    android:text="@string/give_food"
+                    android:textSize="22sp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+        <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -24,7 +24,7 @@
     <string name="rc_4" translatable="false">炸豬排蓋飯</string>
     <string name="rc_5" translatable="false">醬汁豬排蓋飯</string>
     <string name="rc_6" translatable="false">海鮮丼</string>
-    <string name="rc_7" translatable="false">紫菜鮪魚丼</string>
+    <string name="rc_7" translatable="false">鐵火丼</string>
     <string name="rc_8" translatable="false">醃鰤魚丼</string>
     <string name="rc_9" translatable="false">海膽丼</string>
     <string name="rc_10" translatable="false">鮭魚卵特盛</string>
@@ -46,4 +46,24 @@
     <string name="dk_6" translatable="false">香品茶</string>
     <string name="dk_7" translatable="false">發泡酒</string>
     <string name="dk_8" translatable="false">西班牙水果酒</string>
+
+    <!--單點系列-->
+    <string name="lf_1" translatable="false">唐揚雞</string>
+    <string name="lf_2" translatable="false">揚出豆腐</string>
+    <string name="lf_3" translatable="false">炸薯條</string>
+    <string name="lf_4" translatable="false">鮮蝦茶碗蒸</string>
+    <string name="lf_5" translatable="false">厚切火腿排</string>
+    <string name="lf_6" translatable="false">咖哩可樂餅</string>
+    <string name="lf_7" translatable="false">玉米可樂餅</string>
+    <string name="lf_8" translatable="false">鮮蝦可樂餅</string>
+
+    <!--甜點系列-->
+    <string name="ds_1" translatable="false">草莓芭菲</string>
+    <string name="ds_2" translatable="false">抹茶芭菲</string>
+    <string name="ds_3" translatable="false">巧克力芭菲</string>
+    <string name="ds_4" translatable="false">巧克力慕斯蛋糕</string>
+    <string name="ds_5" translatable="false">草莓慕斯蛋糕</string>
+    <string name="ds_6" translatable="false">薄荷巧克力蛋糕</string>
+    <string name="ds_7" translatable="false">奶油千層蛋糕</string>
+    <string name="ds_8" translatable="false">長崎牛奶冰沙</string>
 </resources>

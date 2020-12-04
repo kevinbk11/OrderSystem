@@ -75,16 +75,16 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         startActivity(intent)
     }
 
-    /* ToLightFood(view:View)
+    fun ToLightFood(view:View)
     {
-        val intent = Intent(this@MainActivity, RiceMenu::class.java)
+        val intent = Intent(this@MainActivity, LightFoodMenu::class.java)
         SendTextToActivity(A,B,C,D,intent)
         startActivity(intent)
     }
     fun ToDessert(view:View)
     {
-        val intent = Intent(this@MainActivity, NoodlesMenu::class.java)
+        val intent = Intent(this@MainActivity, DessertMenu::class.java)
         SendTextToActivity(A,B,C,D,intent)
         startActivity(intent)
-    }*/
+    }
 }

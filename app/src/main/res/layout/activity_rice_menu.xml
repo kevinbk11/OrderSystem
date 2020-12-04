@@ -25,11 +25,22 @@
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
+        <!--▽▽▽▽▽▽▽▽▽▽類別列▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:id="@+id/menu_name"
+                      android:layout_below="@id/top_title"
+                      android:background="#9969491A">
+            <TextView style="@style/max_width_style"
+                      android:text="蓋飯"
+                      android:textSize="18sp"
+                      android:textColor="@color/colorDown"/>
+        </LinearLayout>
+        <!--△△△△△△△△△△類別列△△△△△△△△△△-->
 
         <!--▽▽▽▽▽▽▽▽▽▽飯種類圖示▽▽▽▽▽▽▽▽▽▽-->
         <RelativeLayout android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_below="@id/top_title"
+                        android:layout_below="@id/menu_name"
                         android:layout_above="@id/bottom_title">
             <ScrollView
                     style="@style/max_width_style"
