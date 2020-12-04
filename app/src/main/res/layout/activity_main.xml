@@ -48,17 +48,19 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_nd"
-                                     android:onClick="next"
+                                     android:onClick="ToNoodles"
                                      android:src="@drawable/noodle"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_rc"
+                                     android:onClick="ToRice"
                                      android:src="@drawable/rice"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_sp"
+                                     android:onClick="ToSoup"
                                      android:src="@drawable/soup"
                                      android:clickable="true" android:focusable="true"/>
 
@@ -91,6 +93,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/btm_dk"
+                                     android:onClick="ToDrink"
                                      android:src="@drawable/drink"
                                      android:clickable="true" android:focusable="true"/>
 

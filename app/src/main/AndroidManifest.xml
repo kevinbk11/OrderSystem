@@ -10,9 +10,18 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".DessertMenu">
+        </activity>
+        <activity android:name=".LightFoodMenu">
+        </activity>
+        <activity android:name=".SoupMenu">
+        </activity>
+        <activity android:name=".DrinkMenu">
+        </activity>
+        <activity android:name=".RiceMenu">
+        </activity>
         <activity android:name=".NoodlesMenu">
         </activity>
-
         <activity
                 android:name=".MainActivity"
                 android:screenOrientation="portrait"

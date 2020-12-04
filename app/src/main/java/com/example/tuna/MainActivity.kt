@@ -49,10 +49,42 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         delete(D, Foodarr)
     }
 
-    fun next(view:View)
+    fun ToNoodles(view:View)
     {
         val intent = Intent(this@MainActivity, NoodlesMenu::class.java)
         SendTextToActivity(A,B,C,D,intent)
         startActivity(intent)
     }
+
+    fun ToRice(view:View)
+    {
+        val intent = Intent(this@MainActivity, RiceMenu::class.java)
+        SendTextToActivity(A,B,C,D,intent)
+        startActivity(intent)
+    }
+    fun ToSoup(view:View)
+    {
+        val intent = Intent(this@MainActivity, SoupMenu::class.java)
+        SendTextToActivity(A,B,C,D,intent)
+        startActivity(intent)
+    }
+    fun ToDrink(view:View)
+    {
+        val intent = Intent(this@MainActivity, DrinkMenu::class.java)
+        SendTextToActivity(A,B,C,D,intent)
+        startActivity(intent)
+    }
+
+    /* ToLightFood(view:View)
+    {
+        val intent = Intent(this@MainActivity, RiceMenu::class.java)
+        SendTextToActivity(A,B,C,D,intent)
+        startActivity(intent)
+    }
+    fun ToDessert(view:View)
+    {
+        val intent = Intent(this@MainActivity, NoodlesMenu::class.java)
+        SendTextToActivity(A,B,C,D,intent)
+        startActivity(intent)
+    }*/
 }

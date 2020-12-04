@@ -25,17 +25,8 @@
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
-        <!--▽▽▽▽▽▽▽▽▽▽標題列▽▽▽▽▽▽▽▽▽▽-->
-        <LinearLayout style="@style/max_width_style"
-                      android:background="#c1c1c1"
-                      android:id="@+id/menu_name">
-            <TextView style="@style/max_width_style"
-                      android:text="@string/name"
-                      android:textSize="16sp"/>
-        </LinearLayout>
-        <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
-        <!--▽▽▽▽▽▽▽▽▽▽湯種類圖示▽▽▽▽▽▽▽▽▽▽-->
+        <!--▽▽▽▽▽▽▽▽▽▽飲料種類圖示▽▽▽▽▽▽▽▽▽▽-->
         <RelativeLayout android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_below="@id/top_title"
@@ -52,21 +43,21 @@
                     <LinearLayout style="@style/max_width_style">
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/sp_1"
-                                     android:src="@drawable/sp_1"
+                                     android:id="@+id/dk_1"
+                                     android:src="@drawable/dk_1"
                                      android:onClick="make1"
                                      android:clickable="true" android:focusable="true"
                                      tools:ignore="OnClick"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/sp_2"
-                                     android:src="@drawable/sp_2"
+                                     android:id="@+id/dk_2"
+                                     android:src="@drawable/dk_2"
                                      android:onClick="make2"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/sp_3"
-                                     android:src="@drawable/sp_3"
+                                     android:id="@+id/dk_3"
+                                     android:src="@drawable/dk_3"
                                      android:onClick="make3"
                                      android:clickable="true" android:focusable="true"/>
 
@@ -75,53 +66,86 @@
                     <LinearLayout style="@style/max_width_style">
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/sp_1"/>
+                                  android:text="@string/dk_1"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/sp_2"/>
+                                  android:text="@string/dk_2"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/sp_3"/>
+                                  android:text="@string/dk_3"/>
 
                     </LinearLayout>
                     <!--第二行圖示-->
                     <LinearLayout style="@style/max_width_style">
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/sp_4"
+                                     android:id="@+id/dk_4"
                                      android:onClick="make4"
-                                     android:src="@drawable/sp_4"
+                                     android:src="@drawable/dk_4"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/sp_5"
+                                     android:id="@+id/dk_5"
                                      android:onClick="make5"
-                                     android:src="@drawable/sp_5"
+                                     android:src="@drawable/dk_5"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/sp_6"
-                                     android:onClick="make5"
-                                     android:src="@drawable/sp_6"
+                                     android:id="@+id/dk_6"
+                                     android:src="@drawable/dk_6"
                                      android:clickable="true" android:focusable="true"/>
+
                     </LinearLayout>
                     <!--第二行名稱-->
                     <LinearLayout style="@style/max_width_style">
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/sp_4"/>
+                                  android:text="@string/dk_4"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/sp_5"/>
+                                  android:text="@string/dk_5"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/sp_6"/>
+                                  android:text="@string/dk_6"/>
+                    </LinearLayout>
+                    <!--第三行圖示-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/dk_7"
+                                     android:onClick="make4"
+                                     android:src="@drawable/dk_7"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/dk_8"
+                                     android:onClick="make5"
+                                     android:src="@drawable/dk_8"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     />
+
+                    </LinearLayout>
+                    <!--第三行名稱-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/dk_7"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/dk_8"/>
+
+                        <TextView android:layout_width="0dp"
+                                  android:layout_height="wrap_content"
+                                  android:layout_weight="1"/>
                     </LinearLayout>
 
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>
-        <!--△△△△△△△△△△種類圖示△△△△△△△△△△-->
+        <!--△△△△△△△△△△飲料種類圖示△△△△△△△△△△-->
+
 
         <!--▽▽▽▽▽▽▽▽▽▽點餐清單▽▽▽▽▽▽▽▽▽▽-->
         <RelativeLayout style="@style/DownMenu"
@@ -192,6 +216,7 @@
                     android:layout_alignParentRight="true"/>
         </RelativeLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
+
 
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -36,4 +36,14 @@
     <string name="sp_4" translatable="false">菇菇味噌湯</string>
     <string name="sp_5" translatable="false">魷魚蔬菜湯</string>
     <string name="sp_6" translatable="false">豬肉野菜湯</string>
+
+    <!--飲料系列-->
+    <string name="dk_1" translatable="false">蜂蜜檸檬汁</string>
+    <string name="dk_2" translatable="false">奶蓋紅茶</string>
+    <string name="dk_3" translatable="false">珍珠奶茶</string>
+    <string name="dk_4" translatable="false">可樂</string>
+    <string name="dk_5" translatable="false">茉莉花茶</string>
+    <string name="dk_6" translatable="false">香品茶</string>
+    <string name="dk_7" translatable="false">發泡酒</string>
+    <string name="dk_8" translatable="false">西班牙水果酒</string>
 </resources>
