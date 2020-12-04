@@ -1,6 +1,7 @@
 package FoodClass
 
 import FoodClass.Noodles.*
+import FoodClass.Rice.*
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
@@ -58,5 +59,15 @@ var Foodarr= mapOf<String,Food>(
     "Noodle3" to Noodle_3,
     "Noodle4" to Noodle_4,
     "Noodle5" to Noodle_5,
+    "Rice1" to Rice_1,
+    "Rice2" to Rice_2,
+    "Rice3" to Rice_3,
+    "Rice4" to Rice_4,
+    "Rice5" to Rice_5,
+    "Rice6" to Rice_6,
+    "Rice7" to Rice_7,
+    "Rice8" to Rice_8,
+    "Rice9" to Rice_9,
+    "Rice10" to Rice_10,
 )
 

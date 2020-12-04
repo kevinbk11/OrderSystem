@@ -104,6 +104,7 @@
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/rc_6"
                                      android:src="@drawable/rc_6"
+                                     android:onClick="make6"
                                      android:clickable="true" android:focusable="true"/>
 
                     </LinearLayout>
@@ -124,19 +125,20 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/rc_7"
-                                     android:onClick="make4"
+                                     android:onClick="make7"
                                      android:src="@drawable/rc_7"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/rc_8"
-                                     android:onClick="make5"
+                                     android:onClick="make8"
                                      android:src="@drawable/rc_8"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/rc_9"
                                      android:src="@drawable/rc_9"
+                                     android:onClick="make9"
                                      android:clickable="true" android:focusable="true"/>
 
                     </LinearLayout>
@@ -214,7 +216,7 @@
                             android:id="@+id/B1"/>
                     <ImageButton
                             style="@style/Amount_delete"
-                            android:onClick="D1"
+                            android:onClick="D2"
                             android:layout_toRightOf="@id/B1"/>
                 </RelativeLayout>
                 <RelativeLayout style="@style/foodamount"

@@ -2,11 +2,11 @@ package deleteInterface
 
 import FoodClass.Food
 import android.widget.TextView
+import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.Serializable
 
 interface deleteListItem {
-
     fun delete(textView: TextView?,foodArr:Map<String,Food>)
     {
         for((Number,food) in foodArr)
@@ -28,6 +28,5 @@ interface deleteListItem {
         }
         return -1
     }
-
 }
 

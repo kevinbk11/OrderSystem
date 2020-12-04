@@ -2,6 +2,9 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.SendTextToActivity
+import MainSystem.full
+import MainSystem.recive
+import MainSystem.toast
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,20 +21,15 @@ import java.io.Serializable
 
 class NoodlesMenu : AppCompatActivity(),deleteListItem {
     var arr:Array<TextView?> = arrayOf()
-    var toast:Toast? = null
-    val full="購物車已滿!請刪除其他食物"
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles_menu)
 
         arr = arrayOf(A1,B1,C1,D1)
-
-        A1.text=intent.getStringExtra("A")
-        B1.text=intent.getStringExtra("B")
-        C1.text=intent.getStringExtra("C")
-        D1.text=intent.getStringExtra("D")
-
+        recive(arr,intent)
         toast=Toast.makeText(applicationContext,full,Toast.LENGTH_LONG)
+
     }
 
     fun make1(view: View)

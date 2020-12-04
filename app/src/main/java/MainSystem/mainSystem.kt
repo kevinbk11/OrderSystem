@@ -3,8 +3,10 @@ package MainSystem
 import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
+import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_noodles_menu.*
 
 fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:String?,d:String?)
 {
@@ -53,3 +55,12 @@ fun SendTextToActivity(A: TextView,B: TextView,C: TextView,D: TextView,i:Intent)
     i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
     i.putExtras(bundle)
 }
+fun recive(arr:Array<TextView?>,intent:Intent)
+{
+    arr[0]?.text=intent.getStringExtra("A")
+    arr[1]?.text=intent.getStringExtra("B")
+    arr[2]?.text=intent.getStringExtra("C")
+    arr[3]?.text=intent.getStringExtra("D")
+}
+var toast:Toast? = null
+val full="購物車已滿!請刪除其他食物"
