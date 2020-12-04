@@ -203,7 +203,7 @@
                             android:id="@+id/B1"/>
                     <ImageButton
                             style="@style/Amount_delete"
-                            android:onClick="D2"
+                            android:onClick="D1"
                             android:layout_toRightOf="@id/B1"/>
                 </RelativeLayout>
                 <RelativeLayout style="@style/foodamount"
