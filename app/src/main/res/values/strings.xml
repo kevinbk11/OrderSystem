@@ -21,11 +21,19 @@
     <string name="rc_1" translatable="false">鯛魚茶泡飯</string>
     <string name="rc_2" translatable="false">鰻魚茶泡飯</string>
     <string name="rc_3" translatable="false">叉燒蓋飯</string>
-    <string name="rc_4" translatable="false">豬排蓋飯</string>
-    <string name="rc_5" translatable="false">叉燒拉麵</string>
+    <string name="rc_4" translatable="false">炸豬排蓋飯</string>
+    <string name="rc_5" translatable="false">醬汁豬排蓋飯</string>
     <string name="rc_6" translatable="false">海鮮丼</string>
     <string name="rc_7" translatable="false">紫菜鮪魚丼</string>
     <string name="rc_8" translatable="false">醃鰤魚丼</string>
     <string name="rc_9" translatable="false">海膽丼</string>
     <string name="rc_10" translatable="false">鮭魚卵特盛</string>
+
+    <!--湯系列-->
+    <string name="sp_1" translatable="false">白豆腐味噌湯</string>
+    <string name="sp_2" translatable="false">油豆腐味噌湯</string>
+    <string name="sp_3" translatable="false">蛤蠣味噌湯</string>
+    <string name="sp_4" translatable="false">菇菇味噌湯</string>
+    <string name="sp_5" translatable="false">魷魚蔬菜湯</string>
+    <string name="sp_6" translatable="false">豬肉野菜湯</string>
 </resources>
