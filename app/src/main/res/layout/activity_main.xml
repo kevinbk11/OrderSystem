@@ -12,7 +12,7 @@
                     app:layout_constraintTop_toTopOf="parent">
         <ImageView android:layout_width="match_parent"
                    android:layout_height="match_parent"
-                   android:src="@drawable/blackbackground"
+                   android:background="@drawable/blackbackground"
                    android:scaleType="center"/>
 
 
@@ -22,7 +22,7 @@
                       android:id="@+id/top_title">
             <TextView style="@style/max_width_style"
                       android:text="@string/name"
-                      android:textSize="18sp"/>
+                      android:textSize="16sp"/>
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
@@ -114,10 +114,7 @@
         <!--△△△△△△△△△△餐點種類圖示△△△△△△△△△△-->
 
         <!--▽▽▽▽▽▽▽▽▽▽點餐清單▽▽▽▽▽▽▽▽▽▽-->
-        <RelativeLayout style="@style/max_width_style"
-                        android:layout_height="180dp"
-                        android:layout_alignParentBottom="true"
-                        android:background="#fffd98"
+        <RelativeLayout style="@style/DownMenu"
                         android:id="@+id/bottom_title">
             <LinearLayout android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
@@ -159,6 +156,19 @@
                             style="@style/Amount_delete"
                             android:onClick="D3"
                             android:layout_toRightOf="@id/C"/>
+                </RelativeLayout>
+                <RelativeLayout style="@style/foodamount"
+                                android:id="@+id/food_amount4"
+                                android:layout_centerVertical="true"
+                                android:paddingHorizontal="10dp">
+                    <TextView
+                            style="@style/Amount_food"
+                            android:id="@+id/D"/>
+
+                    <ImageButton
+                            style="@style/Amount_delete"
+                            android:onClick="D4"
+                            android:layout_toRightOf="@id/D"/>
                 </RelativeLayout>
             </LinearLayout>
             <!--送餐按鈕-->

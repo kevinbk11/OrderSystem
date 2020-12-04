@@ -17,7 +17,7 @@ open class Food(Name:String):deleteInterface.deleteListItem {
     }
     fun append(BuyList:Array<TextView?>,toast: Toast?):Boolean
     {
-        for (Place in 0..2)
+        for (Place in 0..3)
         {
             if (BuyList[Place]!!.text == "${originName}:${count}")
             {
@@ -25,7 +25,7 @@ open class Food(Name:String):deleteInterface.deleteListItem {
                 return true
             }
         }
-        for (Place in 0..2)
+        for (Place in 0..3)
         {
             if (BuyList[Place]!!.text == "None")
             {
@@ -34,24 +34,6 @@ open class Food(Name:String):deleteInterface.deleteListItem {
             }
         }
         toast?.show()
-        return false
-    }
-    fun del(BuyList:Array<TextView?>):Boolean
-    {
-        var place = find(BuyList, this)
-        if (place != -1)
-        {
-            this.count--
-            if (this.count == 0)
-            {
-                BuyList[place]!!.text = "None"
-                this.name = "${originName}"
-                return true
-            }
-            this.name = "${originName}:${count}"
-            BuyList[place]!!.text = this.name
-            return true
-        }
         return false
     }
     fun Del(textView: TextView?)
@@ -76,7 +58,5 @@ var Foodarr= mapOf<String,Food>(
     "Noodle3" to Noodle_3,
     "Noodle4" to Noodle_4,
     "Noodle5" to Noodle_5,
-    "Noodle6" to Noodle_6,
-    "Noodle7" to Noodle_7
 )
 

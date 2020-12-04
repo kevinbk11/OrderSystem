@@ -6,7 +6,7 @@ import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
-fun CheckNull(A:TextView,B:TextView,C:TextView,a:String?,b:String?,c:String?)
+fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:String?,d:String?)
 {
     if(a==null)
     {
@@ -33,13 +33,23 @@ fun CheckNull(A:TextView,B:TextView,C:TextView,a:String?,b:String?,c:String?)
     {
         C.text=c
     }
+
+    if(d==null)
+    {
+        D.text="None"
+    }
+    else
+    {
+        D.text=d
+    }
 }
-fun SendTextToActivity(A: TextView,B: TextView,C: TextView,i:Intent)
+fun SendTextToActivity(A: TextView,B: TextView,C: TextView,D: TextView,i:Intent)
 {
     val bundle = Bundle()
     bundle.putString("A",A.text.toString())
     bundle.putString("B",B.text.toString())
     bundle.putString("C",C.text.toString())
+    bundle.putString("D",D.text.toString())
     i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
     i.putExtras(bundle)
 }

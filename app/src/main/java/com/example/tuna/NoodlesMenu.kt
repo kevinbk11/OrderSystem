@@ -24,11 +24,12 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles_menu)
 
-        arr = arrayOf(A1,B1,C1)
+        arr = arrayOf(A1,B1,C1,D1)
 
         A1.text=intent.getStringExtra("A")
         B1.text=intent.getStringExtra("B")
         C1.text=intent.getStringExtra("C")
+        D1.text=intent.getStringExtra("D")
 
         toast=Toast.makeText(applicationContext,full,Toast.LENGTH_LONG)
     }
@@ -53,14 +54,7 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
     {
         Foodarr["Noodle5"]!!.append(arr,toast)
     }
-    fun make6(view: View)
-    {
-        Foodarr["Noodle6"]!!.append(arr,toast)
-    }
-    fun make7(view: View)
-    {
-        Foodarr["Noodle7"]!!.append(arr,toast)
-    }
+
     fun D1(view: View)
     {
         delete(arr[0], Foodarr)
@@ -73,10 +67,14 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
     {
         delete(arr[2], Foodarr)
     }
+    fun D4(view: View)
+    {
+        delete(arr[3], Foodarr)
+    }
     fun last(view:View)
     {
         val intent = Intent(this@NoodlesMenu, MainActivity::class.java)
-        SendTextToActivity(A1,B1,C1,intent)
+        SendTextToActivity(A1,B1,C1,D1,intent)
         startActivity(intent)
     }
 }

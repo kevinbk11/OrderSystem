@@ -43,21 +43,21 @@
                     <LinearLayout style="@style/max_width_style">
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/nd_1"
-                                     android:src="@drawable/nd_1"
+                                     android:id="@+id/rc_1"
+                                     android:src="@drawable/rc_1"
                                      android:onClick="make1"
                                      android:clickable="true" android:focusable="true"
                                      tools:ignore="OnClick"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/nd_2"
-                                     android:src="@drawable/nd_2"
+                                     android:id="@+id/rc_2"
+                                     android:src="@drawable/rc_2"
                                      android:onClick="make2"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/nd_3"
-                                     android:src="@drawable/nd_3"
+                                     android:id="@+id/rc_3"
+                                     android:src="@drawable/rc_3"
                                      android:onClick="make3"
                                      android:clickable="true" android:focusable="true"/>
 
@@ -66,31 +66,33 @@
                     <LinearLayout style="@style/max_width_style">
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/nd_1"/>
+                                  android:text="@string/rc_1"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/nd_2"/>
+                                  android:text="@string/rc_2"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/nd_3"/>
+                                  android:text="@string/rc_3"/>
 
                     </LinearLayout>
                     <!--第二行圖示-->
                     <LinearLayout style="@style/max_width_style">
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/nd_4"
+                                     android:id="@+id/rc_4"
                                      android:onClick="make4"
-                                     android:src="@drawable/nd_4"
+                                     android:src="@drawable/rc_4"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/nd_5"
+                                     android:id="@+id/rc_5"
                                      android:onClick="make5"
-                                     android:src="@drawable/nd_5"
+                                     android:src="@drawable/rc_5"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/rc_6"
+                                     android:src="@drawable/rc_6"
                                      android:clickable="true" android:focusable="true"/>
 
                     </LinearLayout>
@@ -98,15 +100,74 @@
                     <LinearLayout style="@style/max_width_style">
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/nd_4"/>
+                                  android:text="@string/rc_4"/>
 
                         <TextView style="@style/MenuLittle_Text_style"
-                                  android:text="@string/nd_5"/>
+                                  android:text="@string/rc_5"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/rc_6"/>
+                    </LinearLayout>
+                    <!--第三行圖示-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/rc_7"
+                                     android:onClick="make4"
+                                     android:src="@drawable/rc_7"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/rc_8"
+                                     android:onClick="make5"
+                                     android:src="@drawable/rc_8"
+                                     android:clickable="true" android:focusable="true"/>
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/rc_9"
+                                     android:src="@drawable/rc_9"
+                                     android:clickable="true" android:focusable="true"/>
+
+                    </LinearLayout>
+                    <!--第三行名稱-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/rc_7"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/rc_8"/>
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/rc_9"/>
+                    </LinearLayout>
+
+                    <!--第四行圖示-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:id="@+id/rc_10"
+                                     android:onClick="make4"
+                                     android:src="@drawable/rc_10"
+                                     android:clickable="true" android:focusable="true"/>
+
+
+                        <ImageButton style="@style/MenuBtn_style"
+                                     android:layout_weight="2"/>
+
+
+                    </LinearLayout>
+                    <!--第四行名稱-->
+                    <LinearLayout style="@style/max_width_style">
+
+                        <TextView style="@style/MenuLittle_Text_style"
+                                  android:text="@string/rc_10"/>
 
                         <TextView android:layout_width="0dp"
                                   android:layout_height="wrap_content"
-                                  android:layout_weight="1"/>
+                                  android:layout_weight="2"/>
                     </LinearLayout>
+
 
                 </LinearLayout>
             </ScrollView>

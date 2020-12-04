@@ -18,7 +18,8 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         var a=intent.getStringExtra("A")
         var b=intent.getStringExtra("B")
         var c=intent.getStringExtra("C")
-        CheckNull(A,B,C,a,b,c)
+        var d=intent.getStringExtra("D")
+        CheckNull(A,B,C,D,a,b,c,d)
         /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
@@ -43,11 +44,15 @@ class MainActivity : AppCompatActivity(),deleteListItem{
     {
         delete(C,Foodarr)
     }
+    fun D4(view:View)
+    {
+        delete(D, Foodarr)
+    }
 
     fun next(view:View)
     {
         val intent = Intent(this@MainActivity, NoodlesMenu::class.java)
-        SendTextToActivity(A,B,C,intent)
+        SendTextToActivity(A,B,C,D,intent)
         startActivity(intent)
     }
 }
