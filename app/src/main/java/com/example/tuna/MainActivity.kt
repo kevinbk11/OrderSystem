@@ -6,6 +6,7 @@ import MainSystem.SendTextToActivity
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputType
 import android.util.Log
 import android.view.View
 import android.widget.EditText
@@ -28,34 +29,52 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         var c=intent.getStringExtra("C")
         var d=intent.getStringExtra("D")
         CheckNull(A,B,C,D,a,b,c,d)
-        val alertDialog = AlertDialog.Builder(this@MainActivity)
-        alertDialog.setTitle("輸入桌號")
-        val input = EditText(this)
-        alertDialog.setView(input)
-        var tableNumber="X"
-        alertDialog.setCancelable(false)
-                .setPositiveButton("確定", DialogInterface.OnClickListener { _, _ ->
-                    tableNumber =input.text.toString()
 
-                })
-
-        alertDialog.show()
         Thread{
-            while (tableNumber == "X")
-            {
-                Thread.sleep(1000)
-            }
-            var Client = Socket("192.168.1.101", 5006)
-            Log.v("HI","?")
-            val input = Client?.getInputStream()
+            val client=Socket("192.168.1.101",5004)
+            val input = client?.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
-            val output = Client.getOutputStream()
-            var writer = PrintWriter(output, true)
-            writer.print(tableNumber.toInt())
+            val output=client.getOutputStream()
+            val writer = PrintWriter(output,true)
+            var tableNumber=reader.readLine()
         }.start()
 
+        /*if(a==null)
+        {
+            val alertDialog = AlertDialog.Builder(this@MainActivity)
+            alertDialog.setTitle("輸入桌號")
+            val input = EditText(this)
+            input.inputType=InputType.TYPE_CLASS_NUMBER
+            alertDialog.setView(input)
+            var tableNumber=""
+            alertDialog.setCancelable(false)
+            alertDialog.setPositiveButton("確定", DialogInterface.OnClickListener { _, _ ->
+                    tableNumber =input.text.toString()
+                    if(tableNumber.toInt()>8 || tableNumber.toInt()<0)
+                    {
+                        val s=alertDialog.create()
+                        s.show()
+                    }
+                    else
+                    {
+                        Thread{
+                            val client=Socket("192.168.1.101",5004)
+                            val input = client?.getInputStream()
+                            val reader = BufferedReader(InputStreamReader(input))
+                            val output=client.getOutputStream()
+                            val writer = PrintWriter(output,true)
+                            writer?.println(tableNumber)
+                        }.start()
+                    }
 
-    }
+
+                    /*val Client=connect()
+                    Client.start()
+                    Client.printToServer(tableNumber.toInt())*/
+                })
+            alertDialog.show()*/
+        }
+
 
     fun D1(view:View)
     {
