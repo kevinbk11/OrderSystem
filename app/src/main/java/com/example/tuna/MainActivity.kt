@@ -1,8 +1,7 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.CheckNull
-import MainSystem.SendTextToActivity
+import MainSystem.*
 import android.content.Intent
 import android.os.Bundle
 import android.text.InputType
@@ -10,16 +9,14 @@ import android.util.Log
 
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
-class MainActivity : AppCompatActivity(),deleteListItem{
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+class MainActivity : AppCompatActivity(),deleteListItem,send{
+    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var a=intent.getStringExtra("A")
@@ -41,7 +38,6 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         }.start()
 
     }
-
 
     fun D1(view:View)
     {

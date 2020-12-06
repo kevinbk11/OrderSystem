@@ -1,10 +1,7 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.SendTextToActivity
-import MainSystem.full
-import MainSystem.recive
-import MainSystem.toast
+import MainSystem.*
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,12 +10,11 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
 import java.io.Serializable
 
-class NoodlesMenu : AppCompatActivity(),deleteListItem {
+class NoodlesMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,13 +1,54 @@
 package MainSystem
 
+import FoodClass.Food
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
+import org.w3c.dom.Text
 
+interface deleteListItem {
+    fun delete(textView: TextView?,foodArr:Map<String, Food>)
+    {
+        for((Number,food) in foodArr)
+        {
+            if(food.name==textView!!.text)
+            {
+                food.Del(textView)
+            }
+        }
+    }
+    fun find(arr:Array<TextView?>,food: Food):Int
+    {
+        for(y in arr)
+        {
+            if(y!!.text==food.name)
+            {
+                return arr.indexOf(y)
+            }
+        }
+        return -1
+    }
+}
+interface send{
+    var NowList:Array<TextView>
+    fun sendBuyList(view:View)
+    {
+        for(food in NowList)
+        {
+
+        }
+    }
+    fun updata(FoodArray:Array<TextView>)
+    {
+        NowList=FoodArray
+    }
+}
 fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:String?,d:String?)
 {
     if(a==null)
@@ -62,5 +103,6 @@ fun recive(arr:Array<TextView?>,intent:Intent)
     arr[2]?.text=intent.getStringExtra("C")
     arr[3]?.text=intent.getStringExtra("D")
 }
+
 var toast:Toast? = null
 val full="購物車已滿!請刪除其他食物"

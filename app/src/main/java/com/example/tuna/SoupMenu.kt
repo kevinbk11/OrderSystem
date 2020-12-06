@@ -1,20 +1,16 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.SendTextToActivity
-import MainSystem.full
-import MainSystem.recive
-import MainSystem.toast
+import MainSystem.*
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_soup_menu.*
 
-class SoupMenu : AppCompatActivity(),deleteListItem {
+class SoupMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
