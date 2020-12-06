@@ -22,15 +22,34 @@
                       android:id="@+id/top_title">
             <TextView style="@style/max_width_style"
                       android:text="@string/name"
-                      android:textSize="16sp"/>
+                      android:textSize="15sp"/>
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
+        <!--▽▽▽▽▽▽▽▽▽▽類別列▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:id="@+id/menu_name"
+                      android:layout_below="@id/top_title"
+                      android:background="#9969491A">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="桌號:"
+                      android:textSize="18sp"
+                      android:textColor="@color/colorDown"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/TableNumber"
+                      android:text="0"
+                      android:textSize="18sp"
+                      android:textColor="@color/colorDown"/>
+
+        </LinearLayout>
+        <!--△△△△△△△△△△類別列△△△△△△△△△△-->
 
         <!--▽▽▽▽▽▽▽▽▽▽餐點種類圖示▽▽▽▽▽▽▽▽▽▽-->
         <RelativeLayout android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_below="@id/top_title"
+                        android:layout_below="@id/menu_name"
                         android:layout_above="@id/bottom_title">
             <!--▽▽▽▽▽主選單圖示▽▽▽▽▽-->
             <ScrollView

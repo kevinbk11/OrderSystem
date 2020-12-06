@@ -21,7 +21,7 @@
                       android:id="@+id/top_title">
             <TextView style="@style/max_width_style"
                       android:text="@string/name"
-                      android:textSize="16sp"/>
+                      android:textSize="15sp"/>
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
@@ -103,6 +103,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/dk_6"
+                                     android:onClick="make6"
                                      android:src="@drawable/dk_6"
                                      android:clickable="true" android:focusable="true"/>
 
