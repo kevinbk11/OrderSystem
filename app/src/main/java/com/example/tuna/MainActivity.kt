@@ -8,6 +8,7 @@ import android.text.InputType
 import android.util.Log
 
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
@@ -16,6 +17,8 @@ import java.io.PrintWriter
 import java.net.Socket
 
 class MainActivity : AppCompatActivity(),deleteListItem,send{
+    var arr:Array<TextView?> = arrayOf()
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -25,17 +28,25 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
         var d=intent.getStringExtra("D")
         CheckNull(A,B,C,D,a,b,c,d)
 
+
         Thread{
             val client=Socket("192.168.1.101",5004)
             val input = client?.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
             val output=client.getOutputStream()
             val writer = PrintWriter(output,true)
-            Log.v("START","TEST")
+
             var tableNumber=reader.readLine().toString()
-            Log.v("h",tableNumber)
+
             runOnUiThread {TableNumber.text=tableNumber}
         }.start()
+
+        arr=arrayOf(A,B,C,D)
+        updata(arr)
+    }
+
+    override fun onBackPressed() {
+
 
     }
 

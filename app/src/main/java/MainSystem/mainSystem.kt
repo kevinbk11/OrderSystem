@@ -11,6 +11,10 @@ import androidx.core.content.ContextCompat.startActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.io.PrintWriter
+import java.net.Socket
 
 interface deleteListItem {
     fun delete(textView: TextView?,foodArr:Map<String, Food>)
@@ -36,15 +40,24 @@ interface deleteListItem {
     }
 }
 interface send{
-    var NowList:Array<TextView>
+    var NowList:Array<TextView?>
     fun sendBuyList(view:View)
     {
-        for(food in NowList)
-        {
-
+        Thread{
+            val client= Socket("192.168.1.101",5004)
+            val input = client?.getInputStream()
+            val reader = BufferedReader(InputStreamReader(input))
+            val output=client.getOutputStream()
+            val writer = PrintWriter(output,true)
+            Log.v("hi","go")
+            for(food in NowList)
+            {
+                Log.v("hi",food!!.text.toString())
+                writer.println(food!!.text.toString())
+            }
         }
     }
-    fun updata(FoodArray:Array<TextView>)
+    fun updata(FoodArray:Array<TextView?>)
     {
         NowList=FoodArray
     }

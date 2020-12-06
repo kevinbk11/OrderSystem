@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_drink_menu.*
 
 class DrinkMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
-
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drink_menu)
@@ -20,6 +20,7 @@ class DrinkMenu : AppCompatActivity(), deleteListItem,send {
         arr = arrayOf(A5,B5,C5,D5)
         recive(arr,intent)
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
+        updata(arr)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)

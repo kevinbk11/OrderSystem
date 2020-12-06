@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_noodles_menu.*
 
 class RiceMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rice_menu)
@@ -21,6 +20,7 @@ class RiceMenu : AppCompatActivity(), deleteListItem,send {
         recive(arr,intent)
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
     }
+    override var NowList: Array<TextView?> = arr
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
         SendTextToActivity(A1,B1,C1,D1,intent)
