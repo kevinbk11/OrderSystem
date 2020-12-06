@@ -10,9 +10,9 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_dessert_menu.*
 
-class DessertMenu : AppCompatActivity(), deleteListItem{
+class DessertMenu : AppCompatActivity(), deleteListItem,send{
     var arr:Array<TextView?> = arrayOf()
-
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dessert_menu)
@@ -20,6 +20,7 @@ class DessertMenu : AppCompatActivity(), deleteListItem{
         arr = arrayOf(A4,B4,C4,D4)
         recive(arr,intent)
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
+        updata(arr)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
