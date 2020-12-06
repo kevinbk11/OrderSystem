@@ -1,16 +1,14 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.CheckNull
-import MainSystem.SendTextToActivity
+import MainSystem.*
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity(),deleteListItem{
+class MainActivity : AppCompatActivity(),deleteListItem,send{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -32,7 +30,6 @@ class MainActivity : AppCompatActivity(),deleteListItem{
 
         alertDialog.show()*/
     }
-
     fun D1(view:View)
     {
         delete(A, Foodarr)

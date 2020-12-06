@@ -201,6 +201,8 @@
                     android:id="@+id/givefood"
                     android:text="@string/give_food"
                     android:textSize="22sp"
+                    android:onClick="sendBuyList"
+                    tools:ignore="OnClick"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"/>
         </RelativeLayout>

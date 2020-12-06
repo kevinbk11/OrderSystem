@@ -6,11 +6,13 @@ import FoodClass.LightFood.*
 import FoodClass.Noodles.*
 import FoodClass.Rice.*
 import FoodClass.Soup.*
+import MainSystem.deleteListItem
+import MainSystem.send
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import org.w3c.dom.Text
-open class Food(Name:String,Price:Int):deleteInterface.deleteListItem {
+open class Food(Name:String,Price:Int):deleteListItem, send {
     val originName=Name
     val price=Price
     var name=Name
@@ -28,6 +30,7 @@ open class Food(Name:String,Price:Int):deleteInterface.deleteListItem {
             if (BuyList[Place]!!.text == "${originName}:${count}")
             {
                 this.add(BuyList[Place])
+                updata(BuyList)
                 return true
             }
         }
