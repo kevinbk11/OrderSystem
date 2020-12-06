@@ -10,7 +10,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_dessert_menu.*
 
-class DessertMenu : AppCompatActivity(), deleteListItem,send {
+class DessertMenu : AppCompatActivity(), deleteListItem {
     var arr:Array<TextView?> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {
