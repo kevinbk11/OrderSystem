@@ -1,20 +1,15 @@
 package com.example.tuna
 
-import FoodClass.*
+import FoodClass.Foodarr
 import MainSystem.CheckNull
 import MainSystem.SendTextToActivity
-import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
-import android.text.InputType
 import android.util.Log
 import android.view.View
-import android.widget.EditText
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
 import deleteInterface.deleteListItem
+import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
@@ -32,7 +27,7 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         CheckNull(A,B,C,D,a,b,c,d)
 
         Thread{
-            val client=Socket("192.168.1.101",5004)
+            val client=Socket("192.168.1.104",5004)
             val input = client?.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
             val output=client.getOutputStream()
