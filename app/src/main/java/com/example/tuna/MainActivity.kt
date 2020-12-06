@@ -12,6 +12,10 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_main.*
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.io.PrintWriter
+import java.net.Socket
 
 class MainActivity : AppCompatActivity(),deleteListItem{
     override fun onCreate(savedInstanceState: Bundle?)
