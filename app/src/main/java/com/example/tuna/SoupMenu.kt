@@ -28,7 +28,7 @@ class SoupMenu : AppCompatActivity(),deleteListItem {
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
         SendTextToActivity(A2,B2,C2,D2,intent)
-        startActivity(intent)
+        startActivity(intent) 
     }
 
     fun make1(view: View)
