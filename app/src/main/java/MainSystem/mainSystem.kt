@@ -36,7 +36,7 @@ interface deleteListItem {
     }
 }
 interface send{
-    var NowList:Array<TextView>
+    var NowList:Array<TextView?>
     fun sendBuyList(view:View)
     {
         for(food in NowList)
@@ -44,7 +44,7 @@ interface send{
 
         }
     }
-    fun updata(FoodArray:Array<TextView>)
+    fun updata(FoodArray:Array<TextView?>)
     {
         NowList=FoodArray
     }
