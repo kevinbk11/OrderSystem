@@ -10,22 +10,31 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_light_food_menu.*
+import java.net.Socket
 
 class LightFoodMenu : AppCompatActivity(), deleteListItem,send{
     var arr:Array<TextView?> = arrayOf()
     override var NowList: Array<TextView?> = arrayOf()
+    var e:String?=null
+    override var ThisTableNumber:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_light_food_menu)
 
         arr = arrayOf(A3,B3,C3,D3)
+
+
         recive(arr,intent)
+
+        e=intent.getStringExtra("E")
+
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
+        ThisTableNumber=e
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
-        SendTextToActivity(A3,B3,C3,D3,intent)
+        SendTextToActivity(A3,B3,C3,D3,e,intent)
         startActivity(intent)
     }
     fun D1(view: View)

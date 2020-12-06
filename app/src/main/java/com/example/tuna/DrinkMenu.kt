@@ -9,22 +9,30 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_drink_menu.*
+import java.net.Socket
 
 class DrinkMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
+    var e:String?=null
+    override var ThisTableNumber:String?=null
     override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drink_menu)
 
         arr = arrayOf(A5,B5,C5,D5)
+
         recive(arr,intent)
+
+        e=intent.getStringExtra("E")
+
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
+        ThisTableNumber=e
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
-        SendTextToActivity(A5,B5,C5,D5,intent)
+        SendTextToActivity(A5,B5,C5,D5,e,intent)
         startActivity(intent)
     }
 

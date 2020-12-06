@@ -13,8 +13,10 @@ import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
 import java.io.BufferedReader
 import java.io.InputStreamReader
+import java.io.OutputStream
 import java.io.PrintWriter
 import java.net.Socket
+import kotlin.concurrent.thread
 
 interface deleteListItem {
     fun delete(textView: TextView?,foodArr:Map<String, Food>)
@@ -41,26 +43,28 @@ interface deleteListItem {
 }
 interface send{
     var NowList:Array<TextView?>
+    var ThisTableNumber:String?
     fun sendBuyList(view:View)
     {
         Thread{
-            val client= Socket("192.168.1.101",5004)
-            val input = client?.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output=client.getOutputStream()
+            var ThisClient=Socket("192.168.1.101",5004)
+            val input = ThisClient.getInputStream()
+            var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
-            Log.v("hi","go")
+            writer.println(false)
+            writer.println(ThisTableNumber)
             for(food in NowList)
             {
                 Log.v("hi",food!!.text.toString())
-                writer.println(food!!.text.toString())
+                writer.println(food?.text.toString())
             }
-        }
+        }.start()
     }
     fun updata(FoodArray:Array<TextView?>)
     {
         NowList=FoodArray
     }
+
 }
 fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:String?,d:String?)
 {
@@ -99,13 +103,14 @@ fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:
         D.text=d
     }
 }
-fun SendTextToActivity(A: TextView,B: TextView,C: TextView,D: TextView,i:Intent)
+fun SendTextToActivity(A: TextView,B: TextView,C: TextView,D: TextView,E:String?,i:Intent)
 {
     val bundle = Bundle()
     bundle.putString("A",A.text.toString())
     bundle.putString("B",B.text.toString())
     bundle.putString("C",C.text.toString())
     bundle.putString("D",D.text.toString())
+    bundle.putString("E",E)
     i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
     i.putExtras(bundle)
 }

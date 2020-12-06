@@ -13,22 +13,27 @@ import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
 import java.io.Serializable
+import java.net.Socket
 
 class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
     var arr:Array<TextView?> = arrayOf()
     override var NowList: Array<TextView?> = arrayOf()
+    var e:String?=null
+    override var ThisTableNumber:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles_menu)
 
         arr = arrayOf(A1,B1,C1,D1)
         recive(arr,intent)
+        e=intent.getStringExtra("E")
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
+        ThisTableNumber=e
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
-        SendTextToActivity(A1,B1,C1,D1,intent)
+        SendTextToActivity(A1,B1,C1,D1,e,intent)
         startActivity(intent)
     }
     fun D1(view: View)
@@ -70,10 +75,4 @@ class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
     }
 
 
-    fun last(view:View)
-    {
-        val intent = Intent(this@NoodlesMenu, MainActivity::class.java)
-        SendTextToActivity(A1,B1,C1,D1,intent)
-        startActivity(intent)
-    }
 }
