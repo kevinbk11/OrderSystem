@@ -1,5 +1,8 @@
 package FoodClass
 
+import FoodClass.Dessert.*
+import FoodClass.Drink.*
+import FoodClass.LightFood.*
 import FoodClass.Noodles.*
 import FoodClass.Rice.*
 import FoodClass.Soup.*
@@ -79,5 +82,32 @@ var Foodarr= mapOf<String,Food>(
     "Soup4" to Soup_4,
     "Soup5" to Soup_5,
     "Soup6" to Soup_6,
+
+    "LightFood1" to LightFood_1,
+    "LightFood2" to LightFood_2,
+    "LightFood3" to LightFood_3,
+    "LightFood4" to LightFood_4,
+    "LightFood5" to LightFood_5,
+    "LightFood6" to LightFood_6,
+    "LightFood7" to LightFood_7,
+    "LightFood8" to LightFood_8,
+
+    "Dessert1" to Dessert_1,
+    "Dessert2" to Dessert_2,
+    "Dessert3" to Dessert_3,
+    "Dessert4" to Dessert_4,
+    "Dessert5" to Dessert_5,
+    "Dessert6" to Dessert_6,
+    "Dessert7" to Dessert_7,
+    "Dessert8" to Dessert_8,
+
+    "Drink1" to Drink_1,
+    "Drink2" to Drink_2,
+    "Drink3" to Drink_3,
+    "Drink4" to Drink_4,
+    "Drink5" to Drink_5,
+    "Drink6" to Drink_6,
+    "Drink7" to Drink_7,
+    "Drink8" to Drink_8,
 )
 

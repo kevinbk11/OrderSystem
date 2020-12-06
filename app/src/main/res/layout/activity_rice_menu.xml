@@ -57,8 +57,7 @@
                                      android:id="@+id/rc_1"
                                      android:src="@drawable/rc_1"
                                      android:onClick="make1"
-                                     android:clickable="true" android:focusable="true"
-                                     tools:ignore="OnClick"/>
+                                     android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/rc_2"
