@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         var c=intent.getStringExtra("C")
         var d=intent.getStringExtra("D")
         CheckNull(A,B,C,D,a,b,c,d)
-        val alertDialog = AlertDialog.Builder(this@MainActivity)
+        /*val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
         alertDialog.setView(input)
@@ -39,20 +39,8 @@ class MainActivity : AppCompatActivity(),deleteListItem{
 
                 })
 
-        alertDialog.show()
-        Thread{
-            while (tableNumber == "X")
-            {
-                Thread.sleep(1000)
-            }
-            var Client = Socket("192.168.1.101", 5006)
-            Log.v("HI","?")
-            val input = Client?.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output = Client.getOutputStream()
-            var writer = PrintWriter(output, true)
-            writer.print(tableNumber.toInt())
-        }.start()
+        alertDialog.show()*/
+
 
 
     }
