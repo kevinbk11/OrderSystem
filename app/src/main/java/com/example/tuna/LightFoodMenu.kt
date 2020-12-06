@@ -11,7 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_light_food_menu.*
 
-class LightFoodMenu : AppCompatActivity(), deleteListItem,send {
+class LightFoodMenu : AppCompatActivity(), deleteListItem{
     var arr:Array<TextView?> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {

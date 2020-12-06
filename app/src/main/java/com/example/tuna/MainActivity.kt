@@ -5,10 +5,13 @@ import MainSystem.*
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(),deleteListItem,send{
+    var arr:Array<TextView?> = arrayOf()
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -17,18 +20,12 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
         var c=intent.getStringExtra("C")
         var d=intent.getStringExtra("D")
         CheckNull(A,B,C,D,a,b,c,d)
-        /*val alertDialog = AlertDialog.Builder(this@MainActivity)
-        alertDialog.setTitle("輸入桌號")
-        val input = EditText(this)
-        alertDialog.setView(input)
-        var tableNumber="X"
-        alertDialog.setCancelable(false)
-                .setPositiveButton("確定", DialogInterface.OnClickListener { _, _ ->
-                    tableNumber =input.text.toString()
+        arr=arrayOf(A,B,C,D)
+        updata(arr)
+    }
 
-                })
+    override fun onBackPressed() {
 
-        alertDialog.show()*/
     }
     fun D1(view:View)
     {

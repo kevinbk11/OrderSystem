@@ -14,7 +14,7 @@ import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
 import java.io.Serializable
 
-class NoodlesMenu : AppCompatActivity(), deleteListItem,send {
+class NoodlesMenu : AppCompatActivity(), deleteListItem{
     var arr:Array<TextView?> = arrayOf()
 
     override fun onCreate(savedInstanceState: Bundle?) {

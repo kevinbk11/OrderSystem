@@ -39,9 +39,10 @@ interface send{
     var NowList:Array<TextView?>
     fun sendBuyList(view:View)
     {
+        Log.v("hi","go")
         for(food in NowList)
         {
-
+            Log.v("food",food!!.text.toString())
         }
     }
     fun updata(FoodArray:Array<TextView?>)

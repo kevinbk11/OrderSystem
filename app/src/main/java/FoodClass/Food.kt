@@ -12,11 +12,12 @@ import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import org.w3c.dom.Text
-open class Food(Name:String,Price:Int):deleteListItem, send {
+open class Food(Name:String,Price:Int):deleteListItem {
     val originName=Name
     val price=Price
     var name=Name
     var count=0
+
     private fun add(Text:TextView?)
     {
         count++
@@ -30,7 +31,6 @@ open class Food(Name:String,Price:Int):deleteListItem, send {
             if (BuyList[Place]!!.text == "${originName}:${count}")
             {
                 this.add(BuyList[Place])
-                updata(BuyList)
                 return true
             }
         }
