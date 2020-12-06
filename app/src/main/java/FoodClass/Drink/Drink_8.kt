@@ -2,5 +2,5 @@ package FoodClass.Drink
 
 import FoodClass.Food
 
-object Drink_1: Food("蜂蜜檸檬汁",60) {
+object Drink_8: Food("西班牙水果酒",80) {
 }

@@ -10,60 +10,60 @@
     <string name="give_food" translatable="false">送餐</string>
 
     <!--麵系列-->
-    <string name="nd_1" translatable="false">鹽味拉麵</string>
-    <string name="nd_2" translatable="false">醬油拉麵</string>
-    <string name="nd_3" translatable="false">味噌拉麵</string>
-    <string name="nd_4" translatable="false">豚骨拉麵</string>
-    <string name="nd_5" translatable="false">叉燒拉麵</string>
+    <string name="nd_1" translatable="false">鹽味拉麵\nNT$80</string>
+    <string name="nd_2" translatable="false">醬油拉麵\nNT$80</string>
+    <string name="nd_3" translatable="false">味噌拉麵\nNT$90</string>
+    <string name="nd_4" translatable="false">豚骨拉麵\nNT$90</string>
+    <string name="nd_5" translatable="false">叉燒拉麵\nNT$110</string>
 
 
     <!--飯系列-->
-    <string name="rc_1" translatable="false">鯛魚茶泡飯</string>
-    <string name="rc_2" translatable="false">鰻魚茶泡飯</string>
-    <string name="rc_3" translatable="false">叉燒蓋飯</string>
-    <string name="rc_4" translatable="false">炸豬排蓋飯</string>
-    <string name="rc_5" translatable="false">醬汁豬排蓋飯</string>
-    <string name="rc_6" translatable="false">海鮮丼</string>
-    <string name="rc_7" translatable="false">鐵火丼</string>
-    <string name="rc_8" translatable="false">醃鰤魚丼</string>
-    <string name="rc_9" translatable="false">海膽丼</string>
-    <string name="rc_10" translatable="false">鮭魚卵特盛</string>
+    <string name="rc_1" translatable="false">鯛魚茶泡飯\nNT$80</string>
+    <string name="rc_2" translatable="false">鰻魚茶泡飯\nNT$140</string>
+    <string name="rc_3" translatable="false">叉燒蓋飯\nNT$80</string>
+    <string name="rc_4" translatable="false">炸豬排蓋飯\nNT$120</string>
+    <string name="rc_5" translatable="false">醬汁豬排蓋飯\nNT$120</string>
+    <string name="rc_6" translatable="false">海鮮丼\nNT$170</string>
+    <string name="rc_7" translatable="false">鐵火丼\nNT$180</string>
+    <string name="rc_8" translatable="false">醃鰤魚丼\nNT$180</string>
+    <string name="rc_9" translatable="false">海膽丼\nNT$270</string>
+    <string name="rc_10" translatable="false">鮭魚卵特盛\nNT$300</string>
 
     <!--湯系列-->
-    <string name="sp_1" translatable="false">白豆腐味噌湯</string>
-    <string name="sp_2" translatable="false">油豆腐味噌湯</string>
-    <string name="sp_3" translatable="false">蛤蠣味噌湯</string>
-    <string name="sp_4" translatable="false">菇菇味噌湯</string>
-    <string name="sp_5" translatable="false">魷魚蔬菜湯</string>
-    <string name="sp_6" translatable="false">豬肉野菜湯</string>
+    <string name="sp_1" translatable="false">白豆腐味噌湯\nNT$50</string>
+    <string name="sp_2" translatable="false">油豆腐味噌湯\nNT$50</string>
+    <string name="sp_3" translatable="false">蛤蠣味噌湯\nNT$60</string>
+    <string name="sp_4" translatable="false">菇菇味噌湯\nNT$50</string>
+    <string name="sp_5" translatable="false">魷魚蔬菜湯\nNT$60</string>
+    <string name="sp_6" translatable="false">豬肉野菜湯\nNT$50</string>
 
     <!--飲料系列-->
-    <string name="dk_1" translatable="false">蜂蜜檸檬汁</string>
-    <string name="dk_2" translatable="false">奶蓋紅茶</string>
-    <string name="dk_3" translatable="false">珍珠奶茶</string>
-    <string name="dk_4" translatable="false">可樂</string>
-    <string name="dk_5" translatable="false">茉莉花茶</string>
-    <string name="dk_6" translatable="false">香品茶</string>
-    <string name="dk_7" translatable="false">發泡酒</string>
-    <string name="dk_8" translatable="false">西班牙水果酒</string>
+    <string name="dk_1" translatable="false">蜂蜜檸檬汁\nNT$60</string>
+    <string name="dk_2" translatable="false">奶蓋紅茶\nNT$50</string>
+    <string name="dk_3" translatable="false">珍珠奶茶\nNT$60</string>
+    <string name="dk_4" translatable="false">可樂\nNT$40</string>
+    <string name="dk_5" translatable="false">茉莉花茶\nNT$30</string>
+    <string name="dk_6" translatable="false">香品茶\nNT$30</string>
+    <string name="dk_7" translatable="false">發泡酒\nNT$40</string>
+    <string name="dk_8" translatable="false">西班牙水果酒\nNT$80</string>
 
     <!--單點系列-->
-    <string name="lf_1" translatable="false">唐揚雞</string>
-    <string name="lf_2" translatable="false">揚出豆腐</string>
-    <string name="lf_3" translatable="false">炸薯條</string>
-    <string name="lf_4" translatable="false">鮮蝦茶碗蒸</string>
-    <string name="lf_5" translatable="false">厚切火腿排</string>
-    <string name="lf_6" translatable="false">咖哩可樂餅</string>
-    <string name="lf_7" translatable="false">玉米可樂餅</string>
-    <string name="lf_8" translatable="false">鮮蝦可樂餅</string>
+    <string name="lf_1" translatable="false">唐揚雞\nNT$80</string>
+    <string name="lf_2" translatable="false">揚出豆腐\nNT$80</string>
+    <string name="lf_3" translatable="false">炸薯條\nNT$70</string>
+    <string name="lf_4" translatable="false">鮮蝦茶碗蒸\nNT$70</string>
+    <string name="lf_5" translatable="false">厚切火腿排\nNT$70</string>
+    <string name="lf_6" translatable="false">咖哩可樂餅\nNT$60</string>
+    <string name="lf_7" translatable="false">玉米可樂餅\nNT$60</string>
+    <string name="lf_8" translatable="false">鮮蝦可樂餅\nNT$80</string>
 
     <!--甜點系列-->
-    <string name="ds_1" translatable="false">草莓芭菲</string>
-    <string name="ds_2" translatable="false">抹茶芭菲</string>
-    <string name="ds_3" translatable="false">巧克力芭菲</string>
-    <string name="ds_4" translatable="false">巧克力慕斯蛋糕</string>
-    <string name="ds_5" translatable="false">草莓慕斯蛋糕</string>
-    <string name="ds_6" translatable="false">薄荷巧克力蛋糕</string>
-    <string name="ds_7" translatable="false">奶油千層蛋糕</string>
-    <string name="ds_8" translatable="false">長崎牛奶冰沙</string>
+    <string name="ds_1" translatable="false">草莓芭菲\nNT$130</string>
+    <string name="ds_2" translatable="false">抹茶芭菲\nNT$120</string>
+    <string name="ds_3" translatable="false">巧克力芭菲\nNT$120</string>
+    <string name="ds_4" translatable="false">巧克力慕斯蛋糕\nNT$80</string>
+    <string name="ds_5" translatable="false">草莓慕斯蛋糕\nNT$90</string>
+    <string name="ds_6" translatable="false">薄荷巧克力蛋糕\nNT$80</string>
+    <string name="ds_7" translatable="false">奶油千層蛋糕\nNT$90</string>
+    <string name="ds_8" translatable="false">長崎牛奶冰沙\nNT$100</string>
 </resources>

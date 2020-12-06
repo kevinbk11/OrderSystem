@@ -14,7 +14,6 @@ import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import deleteInterface.deleteListItem
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
 import java.io.Serializable
@@ -28,14 +27,28 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
 
         arr = arrayOf(A1,B1,C1,D1)
         recive(arr,intent)
-        toast=Toast.makeText(applicationContext,full,Toast.LENGTH_LONG)
-
+        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
     }
-
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
         SendTextToActivity(A1,B1,C1,D1,intent)
         startActivity(intent)
+    }
+    fun D1(view: View)
+    {
+        delete(arr[0], Foodarr)
+    }
+    fun D2(view: View)
+    {
+        delete(arr[1], Foodarr)
+    }
+    fun D3(view: View)
+    {
+        delete(arr[2], Foodarr)
+    }
+    fun D4(view: View)
+    {
+        delete(arr[3], Foodarr)
     }
 
     fun make1(view: View)
@@ -59,22 +72,7 @@ class NoodlesMenu : AppCompatActivity(),deleteListItem {
         Foodarr["Noodle5"]!!.append(arr,toast)
     }
 
-    fun D1(view: View)
-    {
-        delete(arr[0], Foodarr)
-    }
-    fun D2(view: View)
-    {
-        delete(arr[1], Foodarr)
-    }
-    fun D3(view: View)
-    {
-        delete(arr[2], Foodarr)
-    }
-    fun D4(view: View)
-    {
-        delete(arr[3], Foodarr)
-    }
+
     fun last(view:View)
     {
         val intent = Intent(this@NoodlesMenu, MainActivity::class.java)

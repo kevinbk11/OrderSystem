@@ -2,5 +2,5 @@ package FoodClass.LightFood
 
 import FoodClass.Food
 
-object LightFood_1: Food("唐揚雞",80) {
+object LightFood_4: Food("鮮蝦茶碗蒸",70) {
 }
