@@ -21,7 +21,8 @@ import java.io.PrintWriter
 import java.net.Socket
 
 class MainActivity : AppCompatActivity(),deleteListItem{
-    override fun onCreate(savedInstanceState: Bundle?) {
+    override fun onCreate(savedInstanceState: Bundle?)
+    {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         var a=intent.getStringExtra("A")
@@ -36,44 +37,12 @@ class MainActivity : AppCompatActivity(),deleteListItem{
             val reader = BufferedReader(InputStreamReader(input))
             val output=client.getOutputStream()
             val writer = PrintWriter(output,true)
-            var tableNumber=reader.readLine()
+            Log.v("START","TEST")
+            var tableNumber=reader.readLine().toString()
+            Log.v("h",tableNumber)
+            runOnUiThread {TableNumber.text=tableNumber}
         }.start()
-
-        /*if(a==null)
-        {
-            val alertDialog = AlertDialog.Builder(this@MainActivity)
-            alertDialog.setTitle("輸入桌號")
-            val input = EditText(this)
-            input.inputType=InputType.TYPE_CLASS_NUMBER
-            alertDialog.setView(input)
-            var tableNumber=""
-            alertDialog.setCancelable(false)
-            alertDialog.setPositiveButton("確定", DialogInterface.OnClickListener { _, _ ->
-                    tableNumber =input.text.toString()
-                    if(tableNumber.toInt()>8 || tableNumber.toInt()<0)
-                    {
-                        val s=alertDialog.create()
-                        s.show()
-                    }
-                    else
-                    {
-                        Thread{
-                            val client=Socket("192.168.1.101",5004)
-                            val input = client?.getInputStream()
-                            val reader = BufferedReader(InputStreamReader(input))
-                            val output=client.getOutputStream()
-                            val writer = PrintWriter(output,true)
-                            writer?.println(tableNumber)
-                        }.start()
-                    }
-
-
-                    /*val Client=connect()
-                    Client.start()
-                    Client.printToServer(tableNumber.toInt())*/
-                })
-            alertDialog.show()*/
-        }
+    }
 
 
     fun D1(view:View)
