@@ -6,17 +6,17 @@ import MainSystem.full
 import MainSystem.recive
 import MainSystem.toast
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import deleteInterface.deleteListItem
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
 
 class RiceMenu : AppCompatActivity(),deleteListItem {
     var arr:Array<TextView?> = arrayOf()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rice_menu)

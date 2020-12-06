@@ -21,7 +21,7 @@
                       android:id="@+id/top_title">
             <TextView style="@style/max_width_style"
                       android:text="@string/name"
-                      android:textSize="16sp"/>
+                      android:textSize="15sp"/>
         </LinearLayout>
         <!--△△△△△△△△△△標題列△△△△△△△△△△-->
 
@@ -57,8 +57,7 @@
                                      android:id="@+id/lf_1"
                                      android:src="@drawable/lf_1"
                                      android:onClick="make1"
-                                     android:clickable="true" android:focusable="true"
-                                     tools:ignore="OnClick"/>
+                                     android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/lf_2"
@@ -103,6 +102,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/lf_6"
+                                     android:onClick="make6"
                                      android:src="@drawable/lf_6"
                                      android:clickable="true" android:focusable="true"/>
 
@@ -124,13 +124,13 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/lf_7"
-                                     android:onClick="make4"
+                                     android:onClick="make7"
                                      android:src="@drawable/lf_7"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/lf_8"
-                                     android:onClick="make5"
+                                     android:onClick="make8"
                                      android:src="@drawable/lf_8"
                                      android:clickable="true" android:focusable="true"/>
 
