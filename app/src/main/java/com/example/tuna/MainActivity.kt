@@ -31,21 +31,30 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         val alertDialog = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("輸入桌號")
         val input = EditText(this)
-        var tableNumber =input.text.toString()
         alertDialog.setView(input)
+        var tableNumber="X"
         alertDialog.setCancelable(false)
                 .setPositiveButton("確定", DialogInterface.OnClickListener { _, _ ->
+                    tableNumber =input.text.toString()
+
                 })
 
         alertDialog.show()
         Thread{
-            var Client= Socket("192.168.1.101",5006)
+            while (tableNumber == "X")
+            {
+                Thread.sleep(1000)
+            }
+            var Client = Socket("192.168.1.101", 5006)
+            Log.v("HI","?")
             val input = Client?.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
-            val output=Client.getOutputStream()
-            var writer= PrintWriter(output,true)
+            val output = Client.getOutputStream()
+            var writer = PrintWriter(output, true)
             writer.print(tableNumber.toInt())
-        }
+        }.start()
+
+
     }
 
     fun D1(view:View)
