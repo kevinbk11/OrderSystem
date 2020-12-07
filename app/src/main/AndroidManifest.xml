@@ -3,6 +3,9 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.tuna">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -10,6 +13,10 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
+        <activity android:name=".EndEat">
+        </activity>
+        <activity android:name=".End_Eat">
+        </activity>
         <activity android:name=".FoodRecord">
         </activity>
         <activity android:name=".Food_Record">
@@ -37,6 +44,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 </manifest>
