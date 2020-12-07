@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity(),deleteListItem{
         CheckNull(A,B,C,D,a,b,c,d)
 
         Thread{
-            val client=Socket("192.168.1.104",5004)
+            val client=Socket("192.168.43.114",5004)
             val input = client?.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
             val output=client.getOutputStream()
