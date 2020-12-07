@@ -13,10 +13,14 @@ import java.net.Socket
 
 class RiceMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
+<<<<<<< HEAD
 
     override var NowList: Array<TextView?> = arrayOf()
     var e:String?=null
     override var ThisTableNumber:String?=null
+=======
+    override var NowList: Array<TextView?> = arrayOf()
+>>>>>>> 0bfe2002706536a0c52fd0f89e99da35a4f76ba1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rice_menu)
@@ -27,7 +31,10 @@ class RiceMenu : AppCompatActivity(), deleteListItem,send {
 
         e=intent.getStringExtra("E")
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
+<<<<<<< HEAD
         ThisTableNumber=e
+=======
+>>>>>>> 0bfe2002706536a0c52fd0f89e99da35a4f76ba1
         updata(arr)
     }
     override fun onBackPressed() {
@@ -56,7 +63,6 @@ class RiceMenu : AppCompatActivity(), deleteListItem,send {
     {
         Foodarr["Rice1"]?.append(arr,toast)
     }
-
     fun make2(view:View)
     {
         Foodarr["Rice2"]?.append(arr,toast)

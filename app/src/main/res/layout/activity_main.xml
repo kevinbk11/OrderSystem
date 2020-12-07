@@ -205,6 +205,17 @@
                     tools:ignore="OnClick"
                     android:layout_alignParentBottom="true"
                     android:layout_alignParentRight="true"/>
+
+            <Button android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorMenuText"
+                    android:id="@+id/End_eat"
+                    android:text="@string/end_eat"
+                    android:textSize="18sp"
+                    android:textColor="@color/colorMenuBD"
+                    android:onClick="sendBuyList"
+                    tools:ignore="OnClick"
+                    android:layout_alignParentRight="true"/>
         </RelativeLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
 

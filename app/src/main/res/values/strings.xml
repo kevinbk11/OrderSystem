@@ -8,6 +8,7 @@
     <string name="menu_ds" translatable="false">甜點</string>
     <string name="menu_dk" translatable="false">飲品</string>
     <string name="give_food" translatable="false">送餐</string>
+    <string name="end_eat" translatable="false">結帳</string>
 
     <!--麵系列-->
     <string name="nd_1" translatable="false">鹽味拉麵\nNT$80</string>
