@@ -102,7 +102,7 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/sp_6"
-                                     android:onClick="make5"
+                                     android:onClick="make6"
                                      android:src="@drawable/sp_6"
                                      android:clickable="true" android:focusable="true"/>
                     </LinearLayout>
@@ -190,7 +190,9 @@
                     android:text="@string/give_food"
                     android:textSize="22sp"
                     android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"/>
+                    android:layout_alignParentRight="true"
+                    android:onClick="sendBuyList"
+                    tools:ignore="OnClick"/>
         </RelativeLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
 

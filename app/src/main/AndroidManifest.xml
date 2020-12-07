@@ -3,6 +3,9 @@
           xmlns:tools="http://schemas.android.com/tools"
           package="com.example.tuna">
 
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
     <application
             android:allowBackup="true"
             android:icon="@mipmap/ic_launcher"
@@ -10,21 +13,34 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
+
+        <activity android:name=".EndEat">
+        </activity>
+        <activity android:name=".End_Eat">
+        </activity>
         <activity android:name=".FoodRecord">
+
         </activity>
-        <activity android:name=".Food_Record">
+        <activity android:name=".Food_Record"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DessertMenu">
+        <activity android:name=".DessertMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".LightFoodMenu">
+        <activity android:name=".LightFoodMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".SoupMenu">
+        <activity android:name=".SoupMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DrinkMenu">
+        <activity android:name=".DrinkMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".RiceMenu">
+        <activity android:name=".RiceMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NoodlesMenu">
+        <activity android:name=".NoodlesMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".MainActivity"
@@ -37,6 +53,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.INTERNET"/>
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
 </manifest>

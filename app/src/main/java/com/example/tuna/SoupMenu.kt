@@ -1,33 +1,39 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.SendTextToActivity
-import MainSystem.full
-import MainSystem.recive
-import MainSystem.toast
+import MainSystem.*
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import deleteInterface.deleteListItem
 import kotlinx.android.synthetic.main.activity_soup_menu.*
+import java.net.Socket
 
-class SoupMenu : AppCompatActivity(),deleteListItem {
+class SoupMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
 
+    var e:String?=null
+    override var ThisTableNumber:String?=null
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_soup_menu)
 
         arr = arrayOf(A2,B2,C2,D2)
+
         recive(arr,intent)
+
+        e=intent.getStringExtra("E")
+
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
+        updata(arr)
+        ThisTableNumber=e
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
-        SendTextToActivity(A2,B2,C2,D2,intent)
+        SendTextToActivity(A2,B2,C2,D2,e,intent)
         startActivity(intent) 
     }
     fun D1(view: View)

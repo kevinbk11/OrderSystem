@@ -6,15 +6,18 @@ import FoodClass.LightFood.*
 import FoodClass.Noodles.*
 import FoodClass.Rice.*
 import FoodClass.Soup.*
+import MainSystem.deleteListItem
+import MainSystem.send
 import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
 import org.w3c.dom.Text
-open class Food(Name:String,Price:Int):deleteInterface.deleteListItem {
+open class Food(Name:String,Price:Int):deleteListItem {
     val originName=Name
     val price=Price
     var name=Name
     var count=0
+
     private fun add(Text:TextView?)
     {
         count++
