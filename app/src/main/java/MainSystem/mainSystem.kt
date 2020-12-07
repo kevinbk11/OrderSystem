@@ -54,7 +54,7 @@ interface send{
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
-            writer.println(false)
+            writer.println(1)
             writer.println(ThisTableNumber)
             var Cost=0
             for(FoodText in NowList)

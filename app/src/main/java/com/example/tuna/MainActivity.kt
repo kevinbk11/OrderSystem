@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
                 val reader = BufferedReader(InputStreamReader(input))
                 val output = ThisClient.getOutputStream()
                 var writer = PrintWriter(output, true)
-                writer.println(true)
+                writer.println(0)
                 e=reader.readLine()
                 TableNumber.text=e
             }.start()
