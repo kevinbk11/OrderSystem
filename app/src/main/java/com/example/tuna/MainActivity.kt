@@ -2,6 +2,7 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.DialogInterface
 import android.content.Intent
 import android.icu.util.Output
 import android.os.Bundle
@@ -10,6 +11,7 @@ import android.util.Log
 
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
@@ -57,7 +59,20 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
 
 
     }
+    fun end(view:View)
+    {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("結帳")
+            .setCancelable(false)
+            .setPositiveButton("確定",DialogInterface.OnClickListener{dialog,i->
+                val intent = Intent(this@MainActivity, EndEat::class.java)
+                startActivity(intent)
+            })
+            .setNeutralButton("取消",DialogInterface.OnClickListener{dialog,i->
 
+            })
+        builder.show()
+    }
     fun D1(view:View)
     {
         delete(A, Foodarr)

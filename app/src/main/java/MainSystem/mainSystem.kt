@@ -56,7 +56,7 @@ interface send{
             val writer = PrintWriter(output,true)
             writer.println(false)
             writer.println(ThisTableNumber)
-            var AllCount=0
+            var Cost=0
             for(FoodText in NowList)
             {
                 var FoodList = FoodText!!.text.toString().split(":")
@@ -64,22 +64,21 @@ interface send{
                 {
                     if(food.name.split(":")[0]==FoodList[0])
                     {
-                        AllCount+=food.price*FoodList[1].toInt()
+                        Cost=food.price*FoodList[1].toInt()
+                        break
                     }
+                    Cost=0
                 }
                 writer.println(FoodText?.text.toString())
-                Thread{
-                    val input = ThisClient.getInputStream()
-                    val reader=BufferedReader(InputStreamReader(input))
-                    var exit=reader.readLine().toBoolean()
-                    print(exit.toString())
-                    if(exit)
-                    {
-                        Log.v("exit","yes")
-                    }
-                }.start()
+                if(Cost==0)
+                {
+                    writer.println(0)
+                }
+                else
+                {
+                    writer.println(Cost)
+                }
             }
-            writer.println(AllCount)
         }.start()
     }
     fun updata(FoodArray:Array<TextView?>)
