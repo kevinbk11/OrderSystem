@@ -10,21 +10,29 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".FoodRecord">
+        <activity android:name=".FoodRecord"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".Food_Record">
+        <activity android:name=".Food_Record"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DessertMenu">
+        <activity android:name=".DessertMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".LightFoodMenu">
+        <activity android:name=".LightFoodMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".SoupMenu">
+        <activity android:name=".SoupMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DrinkMenu">
+        <activity android:name=".DrinkMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".RiceMenu">
+        <activity android:name=".RiceMenu"
+            android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".NoodlesMenu">
+        <activity android:name=".NoodlesMenu"
+            android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".MainActivity"

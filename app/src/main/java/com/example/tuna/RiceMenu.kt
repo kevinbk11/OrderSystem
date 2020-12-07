@@ -13,6 +13,7 @@ import java.net.Socket
 
 class RiceMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
+
     override var NowList: Array<TextView?> = arrayOf()
     var e:String?=null
     override var ThisTableNumber:String?=null
@@ -27,6 +28,7 @@ class RiceMenu : AppCompatActivity(), deleteListItem,send {
         e=intent.getStringExtra("E")
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         ThisTableNumber=e
+        updata(arr)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)

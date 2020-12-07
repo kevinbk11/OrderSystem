@@ -1,8 +1,10 @@
 package MainSystem
 
 import FoodClass.Food
+import FoodClass.Foodarr
 import android.content.Intent
 import android.os.Bundle
+import android.text.InputFilter
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -47,17 +49,37 @@ interface send{
     fun sendBuyList(view:View)
     {
         Thread{
+            Log.v("CLICK","TRUE")
             var ThisClient=Socket("192.168.1.101",5004)
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
             writer.println(false)
             writer.println(ThisTableNumber)
-            for(food in NowList)
+            var AllCount=0
+            for(FoodText in NowList)
             {
-                Log.v("hi",food!!.text.toString())
-                writer.println(food?.text.toString())
+                var FoodList = FoodText!!.text.toString().split(":")
+                for((number,food) in Foodarr)
+                {
+                    if(food.name.split(":")[0]==FoodList[0])
+                    {
+                        AllCount+=food.price*FoodList[1].toInt()
+                    }
+                }
+                writer.println(FoodText?.text.toString())
+                Thread{
+                    val input = ThisClient.getInputStream()
+                    val reader=BufferedReader(InputStreamReader(input))
+                    var exit=reader.readLine().toBoolean()
+                    print(exit.toString())
+                    if(exit)
+                    {
+                        Log.v("exit","yes")
+                    }
+                }.start()
             }
+            writer.println(AllCount)
         }.start()
     }
     fun updata(FoodArray:Array<TextView?>)
