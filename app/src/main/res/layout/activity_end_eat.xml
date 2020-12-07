@@ -11,7 +11,7 @@
                   android:layout_height="wrap_content"
                   android:layout_centerInParent="true"
                   android:text="請稍後..."
-                  android:textSize="30sp"
-        />
+                  android:textSize="18sp"
+                  android:id="@+id/wait"/>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

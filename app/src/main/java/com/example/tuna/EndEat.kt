@@ -1,7 +1,9 @@
 package com.example.tuna
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import kotlinx.android.synthetic.main.activity_end_eat.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
@@ -18,6 +20,10 @@ class EndEat : AppCompatActivity() {
             val output = ThisClient.getOutputStream()
             var writer = PrintWriter(output, true)
             writer.println(2)
+            var tablenumber=reader.readLine()
+            Log.v("HI",tablenumber)
+            wait.text="感謝您的消費,該次用餐共消費了${reader.readLine()}元"
+            Log.v("TEST","HI")
         }.start()
     }
 

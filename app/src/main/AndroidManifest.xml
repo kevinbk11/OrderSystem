@@ -14,7 +14,8 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".EndEat">
+        <activity android:name=".EndEat"
+                  android:screenOrientation="portrait">
         </activity>
         <activity android:name=".End_Eat">
         </activity>
