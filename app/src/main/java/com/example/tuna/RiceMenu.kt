@@ -48,7 +48,6 @@ class RiceMenu : AppCompatActivity(), deleteListItem,send {
     {
         Foodarr["Rice1"]?.append(arr,toast)
     }
-
     fun make2(view:View)
     {
         Foodarr["Rice2"]?.append(arr,toast)

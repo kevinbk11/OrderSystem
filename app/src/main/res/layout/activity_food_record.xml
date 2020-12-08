@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".NoodlesMenu">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:background="#FFFFFF">
+         <ImageView android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/blackbackground"
+                    android:scaleType="center"/>
+
+        <!--▽▽▽▽▽▽▽▽▽▽標題列▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:background="#c1c1c1"
+                      android:id="@+id/top_title">
+            <TextView style="@style/max_width_style"
+                      android:text="@string/name"
+                      android:textSize="15sp"/>
+        </LinearLayout>
+        <!--△△△△△△△△△△標題列△△△△△△△△△△-->
+
+        <!--▽▽▽▽▽▽▽▽▽▽類別列▽▽▽▽▽▽▽▽▽▽-->
+        <LinearLayout style="@style/max_width_style"
+                      android:id="@+id/menu_name"
+                      android:layout_below="@id/top_title"
+                      android:background="#9969491A">
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="總計金額:"
+                      android:textSize="18sp"
+                      android:textColor="@color/colorDown"/>
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/Food_Total"
+                      android:text="0"
+                      android:textSize="18sp"
+                      android:textColor="@color/colorDown"/>
+
+        </LinearLayout>
+        <!--△△△△△△△△△△類別列△△△△△△△△△△-->
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
