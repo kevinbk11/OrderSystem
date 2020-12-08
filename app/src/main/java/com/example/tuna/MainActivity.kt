@@ -1,19 +1,20 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.*
+import MainSystem.CheckNull
+import MainSystem.SendTextToActivity
+import MainSystem.deleteListItem
+import MainSystem.send
+import android.content.DialogInterface
 import android.content.Intent
-import android.icu.util.Output
 import android.os.Bundle
-import android.util.Log
-
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.io.OutputStream
 import java.io.PrintWriter
 import java.net.Socket
 
@@ -40,7 +41,7 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
                 val reader = BufferedReader(InputStreamReader(input))
                 val output = ThisClient.getOutputStream()
                 var writer = PrintWriter(output, true)
-                writer.println(true)
+                writer.println(0)
                 e=reader.readLine()
                 TableNumber.text=e
             }.start()
@@ -55,7 +56,20 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
 
 
     }
+    fun end(view:View)
+    {
+        val builder = AlertDialog.Builder(this)
+        builder.setTitle("結帳")
+            .setCancelable(false)
+            .setPositiveButton("確定",DialogInterface.OnClickListener{dialog,i->
+                val intent = Intent(this@MainActivity, EndEat::class.java)
+                startActivity(intent)
+            })
+            .setNeutralButton("取消",DialogInterface.OnClickListener{dialog,i->
 
+            })
+        builder.show()
+    }
     fun D1(view:View)
     {
         delete(A, Foodarr)

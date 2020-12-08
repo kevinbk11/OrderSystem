@@ -8,8 +8,6 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import java.io.BufferedReader
-import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
@@ -47,9 +45,9 @@ interface send{
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
-            writer.println(false)
+            writer.println(1)
             writer.println(ThisTableNumber)
-            var AllCount=0
+            var Cost=0
             for(FoodText in NowList)
             {
                 var FoodList = FoodText!!.text.toString().split(":")
@@ -57,22 +55,27 @@ interface send{
                 {
                     if(food.name.split(":")[0]==FoodList[0])
                     {
-                        AllCount+=food.price*FoodList[1].toInt()
+                        Cost=food.price*FoodList[1].toInt()
+                        food.name=food.originName
+                        food.count=0
+                        break
                     }
+                    Cost=0
                 }
                 writer.println(FoodText?.text.toString())
-                Thread{
-                    val input = ThisClient.getInputStream()
-                    val reader=BufferedReader(InputStreamReader(input))
-                    var exit=reader.readLine().toBoolean()
-                    print(exit.toString())
-                    if(exit)
-                    {
-                        Log.v("exit","yes")
-                    }
-                }.start()
+                if(Cost==0)
+                {
+                    writer.println(0)
+                }
+                else
+                {
+                    writer.println(Cost)
+                }
             }
-            writer.println(AllCount)
+            NowList[0]!!.text="None"
+            NowList[1]!!.text="None"
+            NowList[2]!!.text="None"
+            NowList[3]!!.text="None"
         }.start()
     }
     fun updata(FoodArray:Array<TextView?>)

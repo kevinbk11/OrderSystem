@@ -213,7 +213,7 @@
                     android:text="@string/end_eat"
                     android:textSize="18sp"
                     android:textColor="@color/colorMenuBD"
-                    android:onClick="sendBuyList"
+                    android:onClick="end"
                     tools:ignore="OnClick"
                     android:layout_alignParentRight="true"/>
         </RelativeLayout>
