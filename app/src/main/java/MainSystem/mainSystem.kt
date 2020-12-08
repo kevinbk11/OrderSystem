@@ -43,7 +43,7 @@ interface send{
     {
         Thread{
             Log.v("CLICK","TRUE")
-            var ThisClient=Socket("192.168.42.129",5004)
+            var ThisClient=Socket("192.168.43.114",5004)
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
