@@ -12,6 +12,9 @@ import android.widget.TextView
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_noodles_menu.*
 import org.w3c.dom.Text
+import java.io.BufferedReader
+import java.io.InputStreamReader
+import java.io.PrintWriter
 import java.io.Serializable
 import java.net.Socket
 
@@ -31,6 +34,25 @@ class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
         ThisTableNumber=e
+
+        Thread{
+            var ThisClient=Socket("192.168.1.101",5006)
+            Log.v("connect","success")
+            val input = ThisClient!!.getInputStream()
+            val reader = BufferedReader(InputStreamReader(input))
+            val output = ThisClient.getOutputStream()
+            var writer = PrintWriter(output, true)
+            while(e==null)
+            {
+                Thread.sleep(1000)
+            }
+            writer.println(e)
+            while(true)
+            {
+                Log.v("test",reader.readLine())
+            }
+
+        }.start()
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)

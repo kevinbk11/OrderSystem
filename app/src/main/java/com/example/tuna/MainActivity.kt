@@ -35,10 +35,11 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
         var d=intent.getStringExtra("D")
         e=intent.getStringExtra("E")
         CheckNull(A,B,C,D,a,b,c,d)
-        if(a==null)
+        Log.v("test",e.toString())
+        if(a==null && e==null)
         {
             Thread{
-                var ThisClient=Socket("192.168.1.101",5004)
+                var ThisClient:Socket?=Socket("192.168.1.101",5004)
                 val input = ThisClient!!.getInputStream()
                 val reader = BufferedReader(InputStreamReader(input))
                 val output = ThisClient.getOutputStream()
@@ -48,6 +49,31 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
                 TableNumber.text=e
             }.start()
         }
+        else if(a==null && e!=null)
+        {
+            A.text="None"
+            B.text="None"
+            C.text="None"
+            D.text="None"
+        }
+        Thread{
+            var ThisClient=Socket("192.168.1.101",5006)
+            Log.v("connect","success")
+            val input = ThisClient!!.getInputStream()
+            val reader = BufferedReader(InputStreamReader(input))
+            val output = ThisClient.getOutputStream()
+            var writer = PrintWriter(output, true)
+            while(e==null)
+            {
+                Thread.sleep(1000)
+            }
+            writer.println(e)
+            while(true)
+            {
+                Log.v("test",reader.readLine())
+            }
+
+        }.start()
         TableNumber.text=e
         ThisTableNumber=e
         arr=arrayOf(A,B,C,D)

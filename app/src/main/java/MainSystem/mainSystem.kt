@@ -65,10 +65,13 @@ interface send{
                     if(food.name.split(":")[0]==FoodList[0])
                     {
                         Cost=food.price*FoodList[1].toInt()
+                        food.name=food.originName
+                        food.count=0
                         break
                     }
                     Cost=0
                 }
+                Log.v(FoodText?.text.toString(),"??")
                 writer.println(FoodText?.text.toString())
                 if(Cost==0)
                 {
@@ -79,6 +82,13 @@ interface send{
                     writer.println(Cost)
                 }
             }
+            view.post{
+                NowList[0]!!.text="None"
+                NowList[1]!!.text="None"
+                NowList[2]!!.text="None"
+                NowList[3]!!.text="None"
+            }
+
         }.start()
     }
     fun updata(FoodArray:Array<TextView?>)
