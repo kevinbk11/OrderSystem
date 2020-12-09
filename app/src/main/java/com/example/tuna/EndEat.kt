@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.renderscript.ScriptGroup
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_end_eat.*
 import kotlinx.android.synthetic.main.activity_light_food_menu.*
@@ -39,6 +40,6 @@ class EndEat : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-
+        val t= Toast.makeText(applicationContext,"請至櫃台結帳",Toast.LENGTH_LONG).show()
     }
 }

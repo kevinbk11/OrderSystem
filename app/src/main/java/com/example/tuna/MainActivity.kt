@@ -85,6 +85,12 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
 
 
     }
+    fun Check(view:View)
+    {
+        val intent=Intent(this@MainActivity, FoodRecord::class.java)
+        SendTextToActivity(A,B,C,D,e,intent)
+        startActivity(intent)
+    }
     fun end(view:View)
     {
         val builder = AlertDialog.Builder(this)
