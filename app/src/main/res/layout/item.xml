@@ -24,7 +24,7 @@
             android:id="@+id/item_text"
             android:text="name"
             android:textSize="18sp"
-            android:layout_weight="2"/>
+            android:layout_weight="3"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,5 +40,5 @@
             android:id="@+id/info_money"
             android:text="10"
             android:textSize="20sp"
-            android:layout_weight="4"/>
+            android:layout_weight="2"/>
 </LinearLayout>

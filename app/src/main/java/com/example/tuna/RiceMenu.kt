@@ -38,24 +38,7 @@ class RiceMenu : AppCompatActivity(), deleteListItem,send {
 
         updata(arr)
 
-        Thread{
-            var ThisClient=Socket("192.168.1.101",5006)
-            Log.v("connect","success")
-            val input = ThisClient!!.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output = ThisClient.getOutputStream()
-            var writer = PrintWriter(output, true)
-            while(e==null)
-            {
-                Thread.sleep(1000)
-            }
-            writer.println(e)
-            while(true)
-            {
-                Log.v("test",reader.readLine())
-            }
-
-        }.start()
+        waitReturn(e)
     }
 
     override fun onBackPressed() {

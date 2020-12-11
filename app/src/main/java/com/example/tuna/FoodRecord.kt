@@ -4,6 +4,7 @@ import FoodClass.Foodarr
 import MainSystem.DataAdapter
 import MainSystem.FoodListItem
 import MainSystem.SendTextToActivity
+import MainSystem.ip
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -31,7 +32,7 @@ class FoodRecord : AppCompatActivity() {
         C=intent.getStringExtra("C")
         D=intent.getStringExtra("D")
         Thread{
-            val client= Socket("192.168.43.114",5010)
+            val client= Socket(ip,5010)
             Log.v("e",e)
             val output = client.getOutputStream()
             val writer = PrintWriter(output,true)

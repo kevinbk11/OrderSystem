@@ -9,6 +9,8 @@ import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import java.io.BufferedReader
+import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
@@ -36,6 +38,27 @@ interface deleteListItem {
         return -1
     }
 }
+fun waitReturn(e:String?)
+{
+    Thread{
+        var ThisClient=Socket(ip,5006)
+        Log.v("connect","success")
+        val input = ThisClient!!.getInputStream()
+        val reader = BufferedReader(InputStreamReader(input))
+        val output = ThisClient.getOutputStream()
+        var writer = PrintWriter(output, true)
+        while(e==null)
+        {
+            Thread.sleep(1000)
+        }
+        writer.println(e)
+        while(true)
+        {
+            Log.v("test",reader.readLine())
+        }
+
+    }.start()
+}
 interface send{
     var NowList:Array<TextView?>
     var ThisTableNumber:String?
@@ -47,7 +70,7 @@ interface send{
         Thread{
 
             Log.v("CLICK","TRUE")
-            var ThisClient=Socket("192.168.43.114",5004)
+            var ThisClient=Socket(ip,5004)
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
@@ -173,3 +196,4 @@ fun recive(arr:Array<TextView?>,intent:Intent)
 
 var toast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
+val ip="192.168.1.102"
