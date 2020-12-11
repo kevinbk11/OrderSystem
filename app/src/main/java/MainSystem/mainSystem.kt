@@ -2,23 +2,18 @@ package MainSystem
 
 import FoodClass.Food
 import FoodClass.Foodarr
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.text.InputFilter
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_noodles_menu.*
-import org.w3c.dom.Text
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.io.OutputStream
 import java.io.PrintWriter
 import java.net.Socket
-import kotlin.concurrent.thread
+
 
 interface deleteListItem {
     fun delete(textView: TextView?,foodArr:Map<String, Food>)
@@ -43,14 +38,39 @@ interface deleteListItem {
         return -1
     }
 }
+fun waitReturn(e:String?)
+{
+    Thread{
+        var ThisClient=Socket(ip,5006)
+        Log.v("connect","success")
+        val input = ThisClient!!.getInputStream()
+        val reader = BufferedReader(InputStreamReader(input))
+        val output = ThisClient.getOutputStream()
+        var writer = PrintWriter(output, true)
+        while(e==null)
+        {
+            Thread.sleep(1000)
+        }
+        writer.println(e)
+        while(true)
+        {
+            Log.v("test",reader.readLine())
+        }
+
+    }.start()
+}
 interface send{
     var NowList:Array<TextView?>
     var ThisTableNumber:String?
+    var app: Context?
     fun sendBuyList(view:View)
     {
+        val a = app as Context
+        Toast.makeText(a,"已送餐",Toast.LENGTH_SHORT).show()
         Thread{
+
             Log.v("CLICK","TRUE")
-            var ThisClient=Socket("192.168.1.101",5004)
+            var ThisClient=Socket(ip,5004)
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
@@ -82,6 +102,7 @@ interface send{
                     writer.println(Cost)
                 }
             }
+
             view.post{
                 NowList[0]!!.text="None"
                 NowList[1]!!.text="None"
@@ -175,3 +196,4 @@ fun recive(arr:Array<TextView?>,intent:Intent)
 
 var toast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
+val ip="192.168.1.102"

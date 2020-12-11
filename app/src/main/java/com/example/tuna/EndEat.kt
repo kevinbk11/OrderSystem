@@ -1,14 +1,11 @@
 package com.example.tuna
 
-import MainSystem.SendTextToActivity
+import MainSystem.ip
 import android.content.Intent
 import android.os.Bundle
-import android.renderscript.ScriptGroup
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_end_eat.*
-import kotlinx.android.synthetic.main.activity_light_food_menu.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
@@ -19,7 +16,7 @@ class EndEat : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_end_eat)
         Thread{
-            var ThisClient= Socket("192.168.1.101",5004)
+            var ThisClient= Socket(ip,5004)
             val input = ThisClient!!.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
             val output = ThisClient.getOutputStream()
@@ -27,7 +24,7 @@ class EndEat : AppCompatActivity() {
             writer.println(2)
             val tableNumber=reader.readLine()
             wait.text="感謝您的消費,該次用餐共消費了${reader.readLine()}元"
-            var back =Socket("192.168.1.101",5008)
+            var back =Socket(ip,5008)
             val i=back.getInputStream()
             val r=BufferedReader(InputStreamReader(i))
             r.readLine()

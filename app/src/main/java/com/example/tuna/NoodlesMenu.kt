@@ -2,6 +2,7 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,14 +21,14 @@ import java.net.Socket
 
 class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
     var arr:Array<TextView?> = arrayOf()
-
+    override var app: Context?=null
     override var NowList: Array<TextView?> = arrayOf()
     var e:String?=null
     override var ThisTableNumber:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles_menu)
-
+        app=applicationContext
         arr = arrayOf(A1,B1,C1,D1)
         recive(arr,intent)
         e=intent.getStringExtra("E")
@@ -35,24 +36,7 @@ class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
         updata(arr)
         ThisTableNumber=e
 
-        Thread{
-            var ThisClient=Socket("192.168.1.101",5006)
-            Log.v("connect","success")
-            val input = ThisClient!!.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output = ThisClient.getOutputStream()
-            var writer = PrintWriter(output, true)
-            while(e==null)
-            {
-                Thread.sleep(1000)
-            }
-            writer.println(e)
-            while(true)
-            {
-                Log.v("test",reader.readLine())
-            }
-
-        }.start()
+        waitReturn(e)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
