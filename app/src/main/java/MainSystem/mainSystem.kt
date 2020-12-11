@@ -62,6 +62,7 @@ interface send{
                     }
                     Cost=0
                 }
+                Log.v(FoodText?.text.toString(),"??")
                 writer.println(FoodText?.text.toString())
                 if(Cost==0)
                 {
@@ -72,10 +73,14 @@ interface send{
                     writer.println(Cost)
                 }
             }
-            NowList[0]!!.text="None"
-            NowList[1]!!.text="None"
-            NowList[2]!!.text="None"
-            NowList[3]!!.text="None"
+
+            view.post{
+                NowList[0]!!.text="None"
+                NowList[1]!!.text="None"
+                NowList[2]!!.text="None"
+                NowList[3]!!.text="None"
+            }
+
         }.start()
     }
     fun updata(FoodArray:Array<TextView?>)
@@ -121,14 +126,34 @@ fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:
         D.text=d
     }
 }
-fun SendTextToActivity(A: TextView,B: TextView,C: TextView,D: TextView,E:String?,i:Intent)
+fun <T> SendTextToActivity(A: T,B: T,C: T,D: T,E:String?,i:Intent)
 {
     val bundle = Bundle()
-    bundle.putString("A",A.text.toString())
-    bundle.putString("B",B.text.toString())
-    bundle.putString("C",C.text.toString())
-    bundle.putString("D",D.text.toString())
-    bundle.putString("E",E)
+    when(A)
+    {
+        is TextView->
+        {
+            val b = B as TextView
+            val c = C as TextView
+            val d = D as TextView
+            bundle.putString("A",A.text.toString())
+            bundle.putString("B",b.text.toString())
+            bundle.putString("C",C.text.toString())
+            bundle.putString("D",D.text.toString())
+            bundle.putString("E",E)
+        }
+        is String->
+        {
+            val b = B as String
+            val c = C as String
+            val d = D as String
+            bundle.putString("A",A)
+            bundle.putString("B",b)
+            bundle.putString("C",C)
+            bundle.putString("D",D)
+            bundle.putString("E",E)
+        }
+    }
     i.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION)
     i.putExtras(bundle)
 }

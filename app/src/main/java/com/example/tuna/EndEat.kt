@@ -1,7 +1,8 @@
 package com.example.tuna
 
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_end_eat.*
 import java.io.BufferedReader
@@ -20,14 +21,21 @@ class EndEat : AppCompatActivity() {
             val output = ThisClient.getOutputStream()
             var writer = PrintWriter(output, true)
             writer.println(2)
-            var tablenumber=reader.readLine()
-            Log.v("HI",tablenumber)
+            val tableNumber=reader.readLine()
             wait.text="感謝您的消費,該次用餐共消費了${reader.readLine()}元"
-            Log.v("TEST","HI")
+            var back =Socket("192.168.1.101",5008)
+            val i=back.getInputStream()
+            val r=BufferedReader(InputStreamReader(i))
+            r.readLine()
+            var intent= Intent(this,MainActivity::class.java)
+            val bundle = Bundle()
+            bundle.putString("E",(tableNumber.toInt()-1).toString())
+            intent.putExtras(bundle)
+            startActivity(intent)
         }.start()
     }
 
     override fun onBackPressed() {
-
+        val t= Toast.makeText(applicationContext,"請至櫃台結帳",Toast.LENGTH_LONG).show()
     }
 }

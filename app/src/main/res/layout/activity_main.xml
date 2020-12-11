@@ -216,6 +216,13 @@
                     android:onClick="end"
                     tools:ignore="OnClick"
                     android:layout_alignParentRight="true"/>
+            <Button
+                    android:text="清單"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:onClick="Check"
+                    android:layout_height="61dp" android:id="@+id/button2" android:textSize="20dp"/>
         </RelativeLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
 

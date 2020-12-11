@@ -45,7 +45,12 @@
 
         </LinearLayout>
         <!--△△△△△△△△△△類別列△△△△△△△△△△-->
-
-
+<LinearLayout android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:layout_below="@id/menu_name">
+    <ListView android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#99FFFFFF" android:id="@+id/LV"/>
+    </LinearLayout>
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
