@@ -93,7 +93,7 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
     }
     fun end(view:View)
     {
-        val builder = AlertDialog.Builder(this)
+        val builder = AlertDialog.Buildger(this)
         builder.setTitle("結帳")
             .setCancelable(false)
             .setPositiveButton("確定",DialogInterface.OnClickListener{dialog,i->
