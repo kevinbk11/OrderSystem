@@ -45,15 +45,15 @@ class FoodRecord : AppCompatActivity() {
             for(times in 0..ItemCount)
             {
                 var text=reader.readLine()
-                text=text.replace("<br>","")
+                Log.v(text,"SS")
                 Log.v("??",text.length.toString())
                 if(text.length!=0)
                 {
-                    text=text.substring(3,text.length)
                     var textList=text.split(":")
                     Log.v("TEST",textList[0])
                     var name=textList[0]
                     var count=textList[1].toInt()
+                    var show=textList[2]
                     var price=0
                     for((key,food) in Foodarr)
                     {
@@ -62,7 +62,7 @@ class FoodRecord : AppCompatActivity() {
                             price=food.price*count
                         }
                     }
-                    val item=FoodListItem(name,count,price)
+                    val item=FoodListItem(name+show,count,price)
                     listData.add(item)
                 }
             }

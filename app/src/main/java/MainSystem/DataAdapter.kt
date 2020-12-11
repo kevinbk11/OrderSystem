@@ -1,5 +1,7 @@
 package MainSystem
 
+import android.graphics.Paint
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -21,6 +23,15 @@ class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        if("Y" in mData[position].Name)
+        {
+            holder.nameView.paintFlags=(holder.nameView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG)
+            mData[position].Name=mData[position].Name.replace("Y","")
+        }
+        else
+        {
+            mData[position].Name=mData[position].Name.replace("N","")
+        }
         holder.nameView.text = mData[position].Name
         holder.countView.text =mData[position].Count.toString()
         holder.priceView.text=mData[position].Price.toString()
