@@ -2,13 +2,14 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_soup_menu.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -17,14 +18,14 @@ import java.net.Socket
 
 class SoupMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
-
+    override var app: Context?=null
     var e:String?=null
     override var ThisTableNumber:String?=null
     override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_soup_menu)
-
+        app=applicationContext
         arr = arrayOf(A2,B2,C2,D2)
 
         recive(arr,intent)

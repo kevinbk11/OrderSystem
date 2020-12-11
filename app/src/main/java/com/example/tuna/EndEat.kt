@@ -23,7 +23,7 @@ class EndEat : AppCompatActivity() {
             writer.println(2)
             val tableNumber=reader.readLine()
             wait.text="感謝您的消費,該次用餐共消費了${reader.readLine()}元"
-            var back =Socket("192.168.1.101",5008)
+            var back =Socket("192.168.43.114",5008)
             val i=back.getInputStream()
             val r=BufferedReader(InputStreamReader(i))
             r.readLine()

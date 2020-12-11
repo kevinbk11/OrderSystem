@@ -2,6 +2,7 @@ package MainSystem
 
 import FoodClass.Food
 import FoodClass.Foodarr
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -10,6 +11,7 @@ import android.widget.TextView
 import android.widget.Toast
 import java.io.PrintWriter
 import java.net.Socket
+
 
 interface deleteListItem {
     fun delete(textView: TextView?,foodArr:Map<String, Food>)
@@ -37,9 +39,13 @@ interface deleteListItem {
 interface send{
     var NowList:Array<TextView?>
     var ThisTableNumber:String?
+    var app: Context?
     fun sendBuyList(view:View)
     {
+        val a = app as Context
+        Toast.makeText(a,"已送餐",Toast.LENGTH_SHORT).show()
         Thread{
+
             Log.v("CLICK","TRUE")
             var ThisClient=Socket("192.168.43.114",5004)
             val input = ThisClient.getInputStream()

@@ -2,6 +2,7 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -17,14 +18,14 @@ import java.net.Socket
 
 class DrinkMenu : AppCompatActivity(), deleteListItem,send {
     var arr:Array<TextView?> = arrayOf()
-
+    override var app: Context?=null
     var e:String?=null
     override var ThisTableNumber:String?=null
     override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_drink_menu)
-
+        app=applicationContext
         arr = arrayOf(A5,B5,C5,D5)
 
         recive(arr,intent)

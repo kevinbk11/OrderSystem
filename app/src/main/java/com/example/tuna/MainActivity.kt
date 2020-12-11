@@ -5,6 +5,7 @@ import MainSystem.CheckNull
 import MainSystem.SendTextToActivity
 import MainSystem.deleteListItem
 import MainSystem.send
+import android.content.Context
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -21,13 +22,14 @@ import java.net.Socket
 
 class MainActivity : AppCompatActivity(),deleteListItem,send{
     var arr:Array<TextView?> = arrayOf()
-
+    override var app: Context?=null
     override var NowList: Array<TextView?> = arrayOf()
     var e:String?=null
     override var ThisTableNumber:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        app=applicationContext
         var a=intent.getStringExtra("A")
         var b=intent.getStringExtra("B")
         var c=intent.getStringExtra("C")
@@ -56,7 +58,7 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
             D.text="None"
         }
         Thread{
-            var ThisClient=Socket("192.168.1.101",5006)
+            var ThisClient=Socket("192.168.43.114",5006)
             Log.v("connect","success")
             val input = ThisClient!!.getInputStream()
             val reader = BufferedReader(InputStreamReader(input))
@@ -69,7 +71,7 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
             writer.println(e)
             while(true)
             {
-                Log.v("test",reader.readLine())
+
             }
 
         }.start()

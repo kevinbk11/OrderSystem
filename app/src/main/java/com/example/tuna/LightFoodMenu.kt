@@ -2,14 +2,14 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.TextureView
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_light_food_menu.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -18,7 +18,7 @@ import java.net.Socket
 
 class LightFoodMenu : AppCompatActivity(), deleteListItem,send{
     var arr:Array<TextView?> = arrayOf()
-
+    override var app: Context?=null
     override var NowList: Array<TextView?> = arrayOf()
     var e:String?=null
     override var ThisTableNumber:String?=null
@@ -28,7 +28,7 @@ class LightFoodMenu : AppCompatActivity(), deleteListItem,send{
 
         arr = arrayOf(A3,B3,C3,D3)
 
-
+        app=applicationContext
         recive(arr,intent)
 
         e=intent.getStringExtra("E")
