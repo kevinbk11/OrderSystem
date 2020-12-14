@@ -23,6 +23,7 @@ class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        Log.v("TESTTT",mData[position].Name)
         if("Y" in mData[position].Name)
         {
             holder.nameView.paintFlags=(holder.nameView.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG)
@@ -31,6 +32,7 @@ class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<
         else
         {
             mData[position].Name=mData[position].Name.replace("N","")
+            holder.nameView.paintFlags=(holder.nameView.paintFlags or Paint.START_HYPHEN_EDIT_NO_EDIT)
         }
         holder.nameView.text = mData[position].Name
         holder.countView.text =mData[position].Count.toString()

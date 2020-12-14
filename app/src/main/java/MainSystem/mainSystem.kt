@@ -5,6 +5,7 @@ import FoodClass.Foodarr
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -49,13 +50,16 @@ interface WaitReturn
             val output = ThisClient.getOutputStream()
             var writer = PrintWriter(output, true)
             while (e == null) {
+                Log.v("WHY I AM HERE","XD")
                 Thread.sleep(1000)
             }
+            Log.v("before","writer")
             writer.println(e)
+            Log.v("after","writer")
             while (true)
             {
-                Log.v("HIsadw",reader.readLine())
-                toast!!.show()
+                Log.v("HI",reader.readLine())
+                Runnable { toast!!.show() }.run()
             }
         }.start()
     }
