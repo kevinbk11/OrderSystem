@@ -16,29 +16,27 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
-class RiceMenu : AppCompatActivity(), deleteListItem,send {
-    var arr:Array<TextView?> = arrayOf()
-
+class RiceMenu : AppCompatActivity(), deleteListItem,send,WaitReturn {
     override var app: Context?=null
-    override var NowList: Array<TextView?> = arrayOf()
-    var e:String?=null
+    var arr:Array<TextView?> = arrayOf()
     override var ThisTableNumber:String?=null
+    var e:String?=null
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rice_menu)
-        app=applicationContext
-        arr = arrayOf(A1,B1,C1,D1)
 
+        arr = arrayOf(A1,B1,C1,D1)
+        app=applicationContext
         recive(arr,intent)
 
         e=intent.getStringExtra("E")
-        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
 
-        ThisTableNumber=e
-
+        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_SHORT)
         updata(arr)
-
-        waitReturn(e)
+        ThisTableNumber=e
+        sendToast= Toast.makeText(app,sended,Toast.LENGTH_LONG)
+        waitReturn(e,app, sendToast)
     }
 
     override fun onBackPressed() {

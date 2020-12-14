@@ -9,6 +9,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_end_eat.*
@@ -18,7 +19,7 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
-class MainActivity : AppCompatActivity(),deleteListItem,send{
+class MainActivity : AppCompatActivity(),deleteListItem,send,WaitReturn{
     var arr:Array<TextView?> = arrayOf()
     override var app: Context?=null
     override var NowList: Array<TextView?> = arrayOf()
@@ -55,7 +56,8 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
             C.text="None"
             D.text="None"
         }
-        waitReturn(e)
+        sendToast= Toast.makeText(app,sended,Toast.LENGTH_SHORT)
+        waitReturn(e,app, sendToast)
         TableNumber.text=e
         ThisTableNumber=e
         arr=arrayOf(A,B,C,D)

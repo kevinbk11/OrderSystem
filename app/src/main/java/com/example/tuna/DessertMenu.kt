@@ -16,8 +16,7 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
-
-class DessertMenu : AppCompatActivity(), deleteListItem,send{
+class DessertMenu : AppCompatActivity(), deleteListItem,send,WaitReturn{
     override var app: Context?=null
     var arr:Array<TextView?> = arrayOf()
     override var ThisTableNumber:String?=null
@@ -26,6 +25,7 @@ class DessertMenu : AppCompatActivity(), deleteListItem,send{
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dessert_menu)
+
         arr = arrayOf(A4,B4,C4,D4)
         app=applicationContext
         recive(arr,intent)
@@ -35,8 +35,8 @@ class DessertMenu : AppCompatActivity(), deleteListItem,send{
         toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
         ThisTableNumber=e
-
-        waitReturn(e)
+        sendToast= Toast.makeText(app,sended,Toast.LENGTH_SHORT)
+        waitReturn(e,app, sendToast)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)

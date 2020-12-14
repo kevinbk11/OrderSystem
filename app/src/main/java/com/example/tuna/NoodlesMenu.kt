@@ -19,7 +19,7 @@ import java.io.PrintWriter
 import java.io.Serializable
 import java.net.Socket
 
-class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
+class NoodlesMenu : AppCompatActivity(), deleteListItem,send,WaitReturn{
     var arr:Array<TextView?> = arrayOf()
     override var app: Context?=null
     override var NowList: Array<TextView?> = arrayOf()
@@ -30,13 +30,16 @@ class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
         setContentView(R.layout.activity_noodles_menu)
         app=applicationContext
         arr = arrayOf(A1,B1,C1,D1)
+        app=applicationContext
         recive(arr,intent)
+
         e=intent.getStringExtra("E")
-        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
+
+        toast = Toast.makeText(applicationContext, full,Toast.LENGTH_SHORT)
         updata(arr)
         ThisTableNumber=e
-
-        waitReturn(e)
+        sendToast= Toast.makeText(app,sended,Toast.LENGTH_LONG)
+        waitReturn(e,app, sendToast)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)
