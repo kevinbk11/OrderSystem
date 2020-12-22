@@ -15,10 +15,14 @@ class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     val priceView:TextView=v.findViewById(R.id.info_money)
     val foodNumberView:TextView=v.findViewById(R.id.info_number)
 }
+
 class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val v = LayoutInflater.from(parent.context).inflate(R.layout.item, parent, false)
-        return ViewHolder(v) }
+
+        return ViewHolder(v)
+    }
+
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         Log.v("TESTTT",mData[position].Name)
         if("Y" in mData[position].Name)
@@ -32,12 +36,12 @@ class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<
             holder.nameView.paintFlags=(holder.nameView.paintFlags or Paint.START_HYPHEN_EDIT_NO_EDIT)
         }
         holder.nameView.text = mData[position].Name
-        holder.countView.text = mData[position].Count.toString()
-        holder.priceView.text = "NT$" + mData[position].Price.toString()
-        holder.foodNumberView.text = mData[position].Number.toString()
+        holder.countView.text =mData[position].Count.toString()
+        holder.priceView.text=mData[position].Price.toString()
+        holder.foodNumberView.text=mData[position].Number.toString()
     }
+
     override fun getItemCount(): Int {
         return mData.size
     }
 }
-
