@@ -54,7 +54,7 @@ fun waitReturn(e:String?)
         writer.println(e)
         while(true)
         {
-            Log.v("test",reader.readLine())
+            reader.readLine()
         }
 
     }.start()
@@ -196,4 +196,4 @@ fun recive(arr:Array<TextView?>,intent:Intent)
 
 var toast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
-val ip="192.168.1.102"
+val ip="192.168.43.114"

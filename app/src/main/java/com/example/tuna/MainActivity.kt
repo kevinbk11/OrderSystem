@@ -11,7 +11,6 @@ import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_end_eat.*
 import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
@@ -79,6 +78,9 @@ class MainActivity : AppCompatActivity(),deleteListItem,send{
             .setCancelable(false)
             .setPositiveButton("確定",DialogInterface.OnClickListener{dialog,i->
                 val intent = Intent(this@MainActivity, EndEat::class.java)
+                val bundle=Bundle()
+                bundle.putString("tableNumber",e)
+                intent.putExtras(bundle)
                 startActivity(intent)
             })
             .setNeutralButton("取消",DialogInterface.OnClickListener{dialog,i->
