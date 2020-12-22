@@ -13,6 +13,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
+import java.text.DecimalFormat
 
 
 interface deleteListItem {
@@ -193,7 +194,12 @@ fun recive(arr:Array<TextView?>,intent:Intent)
     arr[2]?.text=intent.getStringExtra("C")
     arr[3]?.text=intent.getStringExtra("D")
 }
-
+fun tran(Number:String):String
+{
+    val number=Number.toInt()
+    var turn = DecimalFormat(",###")
+    return turn.format(number).toString()
+}
 var toast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
 val ip="192.168.43.114"

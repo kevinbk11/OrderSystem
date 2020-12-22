@@ -1,6 +1,7 @@
 package com.example.tuna
 
 import MainSystem.ip
+import MainSystem.tran
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
@@ -25,7 +26,18 @@ class EndEat : AppCompatActivity() {
             writer.println(2)
             writer.println(tableNumber)
             reader.readLine()
-            wait.text="感謝您的消費,該次用餐共消費了${reader.readLine()}元"
+            val Money=reader.readLine()
+            runOnUiThread {
+                val money=tran(Money)
+                wait.text="感謝您的消費,該次用餐共消費了${money}元"
+            }
+            var message=reader.readLine()
+            if(message!="N")
+            {
+                runOnUiThread{
+                    payoff.text=message
+                }
+            }
             var back =Socket(ip,5008)
             val i=back.getInputStream()
             val r=BufferedReader(InputStreamReader(i))

@@ -14,6 +14,13 @@
                     android:text="@string/waitting"
                     android:textSize="18sp"
                     android:id="@+id/wait"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/payoff"
+                  android:layout_below="@+id/wait"
+                  android:layout_centerInParent="true"
+                  android:text=" "
+                  android:textSize="18sp"/>
     </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
