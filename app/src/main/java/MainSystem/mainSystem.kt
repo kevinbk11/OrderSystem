@@ -14,6 +14,7 @@ import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
+import java.text.DecimalFormat
 
 interface deleteListItem {
     fun delete(textView: TextView?,foodArr:Map<String, Food>)
@@ -40,6 +41,7 @@ interface deleteListItem {
 }
 interface WaitReturn
 {
+<<<<<<< HEAD
     fun waitReturn(e:String?,app: Context?,toast: Toast?)
     {
         Thread {
@@ -63,6 +65,26 @@ interface WaitReturn
             }
         }.start()
     }
+=======
+    Thread{
+        var ThisClient=Socket(ip,5006)
+        Log.v("connect","success")
+        val input = ThisClient!!.getInputStream()
+        val reader = BufferedReader(InputStreamReader(input))
+        val output = ThisClient.getOutputStream()
+        var writer = PrintWriter(output, true)
+        while(e==null)
+        {
+            Thread.sleep(1000)
+        }
+        writer.println(e)
+        while(true)
+        {
+            reader.readLine()
+        }
+
+    }.start()
+>>>>>>> ae67e7e3bd59ac7904953dfd6ecfe272b219a435
 }
 
 interface send{
@@ -199,9 +221,18 @@ fun recive(arr:Array<TextView?>,intent:Intent)
     arr[2]?.text=intent.getStringExtra("C")
     arr[3]?.text=intent.getStringExtra("D")
 }
-
+fun tran(Number:String):String
+{
+    val number=Number.toInt()
+    var turn = DecimalFormat(",###")
+    return turn.format(number).toString()
+}
 var toast:Toast? = null
 var sendToast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
+<<<<<<< HEAD
 val sended="已送達"
 val ip="192.168.1.102"
+=======
+val ip="192.168.43.114"
+>>>>>>> ae67e7e3bd59ac7904953dfd6ecfe272b219a435

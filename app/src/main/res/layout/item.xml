@@ -12,11 +12,7 @@
             android:id="@+id/info_number"
             android:text="0"
             android:textSize="12sp"/>
-    <ImageView android:layout_width="42dp"
-               android:layout_height="42dp"
-               android:id="@+id/item_food"
-               android:src="@drawable/nd_3"
-               android:layout_gravity="center"/>
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
