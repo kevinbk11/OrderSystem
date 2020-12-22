@@ -41,7 +41,7 @@ interface deleteListItem {
 }
 interface WaitReturn
 {
-<<<<<<< HEAD
+
     fun waitReturn(e:String?,app: Context?,toast: Toast?)
     {
         Thread {
@@ -65,26 +65,7 @@ interface WaitReturn
             }
         }.start()
     }
-=======
-    Thread{
-        var ThisClient=Socket(ip,5006)
-        Log.v("connect","success")
-        val input = ThisClient!!.getInputStream()
-        val reader = BufferedReader(InputStreamReader(input))
-        val output = ThisClient.getOutputStream()
-        var writer = PrintWriter(output, true)
-        while(e==null)
-        {
-            Thread.sleep(1000)
-        }
-        writer.println(e)
-        while(true)
-        {
-            reader.readLine()
-        }
 
-    }.start()
->>>>>>> ae67e7e3bd59ac7904953dfd6ecfe272b219a435
 }
 
 interface send{
@@ -230,9 +211,8 @@ fun tran(Number:String):String
 var toast:Toast? = null
 var sendToast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
-<<<<<<< HEAD
+
 val sended="已送達"
 val ip="192.168.1.102"
-=======
-val ip="192.168.43.114"
->>>>>>> ae67e7e3bd59ac7904953dfd6ecfe272b219a435
+
+
