@@ -1,5 +1,3 @@
-@file:Suppress("DEPRECATION")
-
 package MainSystem
 
 import FoodClass.Food
@@ -7,6 +5,7 @@ import FoodClass.Foodarr
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -42,6 +41,7 @@ interface deleteListItem {
 }
 interface WaitReturn
 {
+
     fun waitReturn(e:String?,app: Context?,toast: Toast?)
     {
         Thread {
@@ -52,12 +52,18 @@ interface WaitReturn
             var output = ThisClient.getOutputStream()
             var writer = PrintWriter(output, true)
             while (e == null) {
+                Log.v("WHY I AM HERE",e.toString())
                 Thread.sleep(1000)
             }
+            Log.v("before","writer")
             writer.println(e)
-            while (true) {
-                if(reader.readLine()!!.toBoolean()) { Runnable { toast!!.show() }.run() }
-                Thread.sleep(1000)
+            Log.v("after","writer")
+            while (true)
+            {
+                if(reader.readLine().toBoolean())
+                {
+                    Runnable { toast!!.show() }.run()
+                }
                 ThisClient = Socket(ip, 5020)
                 input = ThisClient!!.getInputStream()
                 reader = BufferedReader(InputStreamReader(input))
@@ -67,6 +73,7 @@ interface WaitReturn
             }
         }.start()
     }
+
 }
 
 interface send{
@@ -133,15 +140,35 @@ fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:
     if(a==null)
     {
         A.text="None"
-        B.text="None"
-        C.text="None"
-        D.text="None"
     }
     else
     {
         A.text=a
+    }
+    if(b==null)
+    {
+        B.text="None"
+    }
+    else
+    {
         B.text=b
+    }
+
+    if(c==null)
+    {
+        C.text="None"
+    }
+    else
+    {
         C.text=c
+    }
+
+    if(d==null)
+    {
+        D.text="None"
+    }
+    else
+    {
         D.text=d
     }
 }
@@ -194,6 +221,6 @@ var sendToast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
 
 val sended="已送達"
-val ip="192.168.43.114"
+val ip="192.168.1.102"
 
 
