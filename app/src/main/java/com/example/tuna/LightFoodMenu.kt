@@ -28,11 +28,12 @@ class LightFoodMenu : AppCompatActivity(), deleteListItem,send,WaitReturn{
 
         arr = arrayOf(A3,B3,C3,D3)
         app=applicationContext
+
+
+        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         recive(arr,intent)
 
         e=intent.getStringExtra("E")
-
-        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
         ThisTableNumber=e
         sendToast= Toast.makeText(app,sended,Toast.LENGTH_SHORT)

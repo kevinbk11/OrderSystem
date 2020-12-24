@@ -18,6 +18,7 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.io.Serializable
 import java.net.Socket
+import java.time.LocalTime
 
 class NoodlesMenu : AppCompatActivity(), deleteListItem,send,WaitReturn{
     var arr:Array<TextView?> = arrayOf()
@@ -29,13 +30,11 @@ class NoodlesMenu : AppCompatActivity(), deleteListItem,send,WaitReturn{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles_menu)
         app=applicationContext
-        arr = arrayOf(A1,B1,C1,D1)
-        app=applicationContext
-        recive(arr,intent)
-
         e=intent.getStringExtra("E")
 
         toast = Toast.makeText(applicationContext, full,Toast.LENGTH_SHORT)
+        arr = arrayOf(A1,B1,C1,D1)
+        recive(arr,intent)
         updata(arr)
         ThisTableNumber=e
         sendToast= Toast.makeText(app,sended,Toast.LENGTH_LONG)
