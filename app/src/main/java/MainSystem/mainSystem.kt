@@ -5,7 +5,6 @@ import FoodClass.Foodarr
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.TextView
@@ -213,6 +212,6 @@ var sendToast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
 
 val sended="已送達"
-val ip="192.168.1.102"
+val ip="192.168.43.114"
 
 
