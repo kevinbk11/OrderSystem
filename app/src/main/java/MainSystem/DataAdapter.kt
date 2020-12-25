@@ -13,6 +13,7 @@ class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
     val nameView: TextView = v.findViewById(R.id.item_text)
     val countView:TextView=v.findViewById(R.id.info_count)
     val priceView:TextView=v.findViewById(R.id.info_money)
+    val foodNumberView:TextView=v.findViewById(R.id.info_number)
 }
 
 class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<ViewHolder>() {
@@ -37,6 +38,7 @@ class DataAdapter(private val mData: List<FoodListItem>) : RecyclerView.Adapter<
         holder.nameView.text = mData[position].Name
         holder.countView.text =mData[position].Count.toString()
         holder.priceView.text=mData[position].Price.toString()
+        holder.foodNumberView.text=mData[position].Number.toString()
     }
 
     override fun getItemCount(): Int {

@@ -62,7 +62,7 @@ class FoodRecord : AppCompatActivity() {
                             price=food.price*count
                         }
                     }
-                    val item=FoodListItem(name+show,count,price)
+                    val item=FoodListItem(times+1,name+show,count,price)
                     listData.add(item)
                 }
             }

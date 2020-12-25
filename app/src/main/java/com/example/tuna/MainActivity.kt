@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity(),deleteListItem,send,WaitReturn{
         var a=intent.getStringExtra("A")
         var b=intent.getStringExtra("B")
         var c=intent.getStringExtra("C")
-        var d=intent.getStringExtra("D")
+        var d=intent.getStringExtra("D")//第一次運行時為null 其餘時間非None就是餐點名稱
         e=intent.getStringExtra("E")
         CheckNull(A,B,C,D,a,b,c,d)
         Log.v("test",e.toString())
@@ -56,6 +56,10 @@ class MainActivity : AppCompatActivity(),deleteListItem,send,WaitReturn{
             D.text="None"
         }
         sendToast= Toast.makeText(app,sended,Toast.LENGTH_SHORT)
+        while(e==null)
+        {
+
+        }
         waitReturn(e,app, sendToast)
         TableNumber.text=e
         ThisTableNumber=e
@@ -142,6 +146,12 @@ class MainActivity : AppCompatActivity(),deleteListItem,send,WaitReturn{
     fun ToDessert(view:View)
     {
         val intent = Intent(this@MainActivity, DessertMenu::class.java)
+        SendTextToActivity(A,B,C,D,e,intent)
+        startActivity(intent)
+    }
+    fun ToFfd(view:View)
+    {
+        val intent = Intent(this@MainActivity, FfdMemu::class.java)
         SendTextToActivity(A,B,C,D,e,intent)
         startActivity(intent)
     }

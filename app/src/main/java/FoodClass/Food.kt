@@ -6,12 +6,11 @@ import FoodClass.LightFood.*
 import FoodClass.Noodles.*
 import FoodClass.Rice.*
 import FoodClass.Soup.*
+import FoodClass.ffd.ffd_1
+import FoodClass.ffd.ffd_2
 import MainSystem.deleteListItem
-import MainSystem.send
-import android.util.Log
 import android.widget.TextView
 import android.widget.Toast
-import org.w3c.dom.Text
 open class Food(Name:String,Price:Int):deleteListItem {
     val originName=Name
     val price=Price
@@ -112,5 +111,8 @@ var Foodarr= mapOf<String,Food>(
     "Drink6" to Drink_6,
     "Drink7" to Drink_7,
     "Drink8" to Drink_8,
+
+    "Ffd1" to ffd_1,
+    "Ffd2" to ffd_2,
 )
 

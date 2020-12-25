@@ -44,14 +44,14 @@ interface WaitReturn
     fun waitReturn(e:String?,app: Context?,toast: Toast?)
     {
         Thread {
-            var ThisClient = Socket(ip, 5006)
+            var ThisClient = Socket(ip, 5020)
             Log.v("connect", "success")
-            val input = ThisClient!!.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output = ThisClient.getOutputStream()
+            var input = ThisClient!!.getInputStream()
+            var reader = BufferedReader(InputStreamReader(input))
+            var output = ThisClient.getOutputStream()
             var writer = PrintWriter(output, true)
             while (e == null) {
-                Log.v("WHY I AM HERE","XD")
+                Log.v("WHY I AM HERE",e.toString())
                 Thread.sleep(1000)
             }
             Log.v("before","writer")
@@ -59,8 +59,17 @@ interface WaitReturn
             Log.v("after","writer")
             while (true)
             {
-                Log.v("HI",reader.readLine())
-                Runnable { toast!!.show() }.run()
+                if(reader.readLine().toBoolean())
+                {
+                    Runnable { toast!!.show() }.run()
+                }
+                Thread.sleep(1000)
+                ThisClient = Socket(ip, 5020)
+                input = ThisClient!!.getInputStream()
+                reader = BufferedReader(InputStreamReader(input))
+                output = ThisClient.getOutputStream()
+                writer = PrintWriter(output, true)
+                writer.println(e)
             }
         }.start()
     }
