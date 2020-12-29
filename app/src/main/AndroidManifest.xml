@@ -13,22 +13,17 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".DessertMenu2">
-        </activity>
+
         <activity android:name=".FfdMemu">
         </activity>
         <activity
                 android:name=".EndEat"
                 android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".End_Eat">
-        </activity>
+
         <activity android:name=".FoodRecord">
         </activity>
-        <activity
-                android:name=".Food_Record"
-                android:screenOrientation="portrait">
-        </activity>
+
         <activity
                 android:name=".DessertMenu"
                 android:screenOrientation="portrait">
