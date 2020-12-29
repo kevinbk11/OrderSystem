@@ -210,11 +210,27 @@ fun recive(arr:Array<TextView?>,intent:Intent)
     arr[2]?.text=intent.getStringExtra("C")
     arr[3]?.text=intent.getStringExtra("D")
 }
-fun tran(Number:String):String
+fun <T>tran(Number:T):String
 {
-    val number=Number.toInt()
-    var turn = DecimalFormat(",###")
-    return turn.format(number).toString()
+    when(Number)
+    {
+        is Int->
+        {
+            var turn = DecimalFormat(",###")
+            return turn.format(Number).toString()
+        }
+        is String->
+        {
+            val number=Number.toInt()
+            var turn = DecimalFormat(",###")
+            return turn.format(number).toString()
+        }
+        else->
+        {
+            return ""
+        }
+    }
+
 }
 var toast:Toast? = null
 var sendToast:Toast? = null

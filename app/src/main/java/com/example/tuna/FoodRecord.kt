@@ -1,10 +1,7 @@
 package com.example.tuna
 
 import FoodClass.Foodarr
-import MainSystem.DataAdapter
-import MainSystem.FoodListItem
-import MainSystem.SendTextToActivity
-import MainSystem.ip
+import MainSystem.*
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -62,12 +59,13 @@ class FoodRecord : AppCompatActivity() {
                             price=food.price*count
                         }
                     }
-                    val item=FoodListItem(times+1,name+show,count,price)
+                    var Price=tran(price)
+                    val item=FoodListItem(times+1,name+show,count,Price)
                     listData.add(item)
                 }
             }
             runOnUiThread{
-                Food_Total.text= reader.readLine()
+                Food_Total.text= tran(reader.readLine())
 
                 val layoutManager = LinearLayoutManager(this)
                 layoutManager.orientation = LinearLayoutManager.VERTICAL
