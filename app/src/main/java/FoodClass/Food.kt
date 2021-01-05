@@ -21,7 +21,7 @@ open class Food(Name:String,Price:Int):deleteListItem {
     {
         count++
         name = "${originName}:${count}"
-        Text?.text = name
+        Text?.text = this.name
     }
     fun append(BuyList:Array<TextView?>,toast: Toast?):Boolean
     {
