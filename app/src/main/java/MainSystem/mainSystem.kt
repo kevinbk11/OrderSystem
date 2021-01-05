@@ -1,3 +1,5 @@
+@file:Suppress("DEPRECATION")
+
 package MainSystem
 
 import FoodClass.Food
@@ -40,7 +42,6 @@ interface deleteListItem {
 }
 interface WaitReturn
 {
-
     fun waitReturn(e:String?,app: Context?,toast: Toast?)
     {
         Thread {
@@ -51,18 +52,11 @@ interface WaitReturn
             var output = ThisClient.getOutputStream()
             var writer = PrintWriter(output, true)
             while (e == null) {
-                Log.v("WHY I AM HERE",e.toString())
                 Thread.sleep(1000)
             }
-            Log.v("before","writer")
             writer.println(e)
-            Log.v("after","writer")
-            while (true)
-            {
-                if(reader.readLine().toBoolean())
-                {
-                    Runnable { toast!!.show() }.run()
-                }
+            while (true) {
+                if(reader.readLine()!!.toBoolean()) { Runnable { toast!!.show() }.run() }
                 Thread.sleep(1000)
                 ThisClient = Socket(ip, 5020)
                 input = ThisClient!!.getInputStream()
@@ -73,7 +67,6 @@ interface WaitReturn
             }
         }.start()
     }
-
 }
 
 interface send{
@@ -140,35 +133,15 @@ fun CheckNull(A:TextView,B:TextView,C:TextView,D:TextView,a:String?,b:String?,c:
     if(a==null)
     {
         A.text="None"
-    }
-    else
-    {
-        A.text=a
-    }
-    if(b==null)
-    {
         B.text="None"
-    }
-    else
-    {
-        B.text=b
-    }
-
-    if(c==null)
-    {
         C.text="None"
-    }
-    else
-    {
-        C.text=c
-    }
-
-    if(d==null)
-    {
         D.text="None"
     }
     else
     {
+        A.text=a
+        B.text=b
+        C.text=c
         D.text=d
     }
 }

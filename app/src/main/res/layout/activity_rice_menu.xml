@@ -115,7 +115,6 @@
 
                         <TextView style="@style/MenuLittle_Text_style"
                                   android:text="@string/rc_5"/>
-
                         <TextView style="@style/MenuLittle_Text_style"
                                   android:text="@string/rc_6"/>
                     </LinearLayout>
@@ -188,12 +187,9 @@
 
 
         <!--▽▽▽▽▽▽▽▽▽▽點餐清單▽▽▽▽▽▽▽▽▽▽-->
-        <RelativeLayout style="@style/DownMenu"
-                        android:id="@+id/bottom_title">
-            <LinearLayout android:layout_width="wrap_content"
-                          android:layout_height="wrap_content"
-                          android:orientation="vertical"
-                          android:layout_centerVertical="true">
+        <RelativeLayout style="@style/DownMenu" android:id="@+id/bottom_title">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content"
+                          android:orientation="vertical" android:layout_centerVertical="true">
                 <RelativeLayout style="@style/foodamount"
                                 android:id="@+id/food_amount1"
                                 android:layout_centerVertical="true"
@@ -231,7 +227,6 @@
                             android:onClick="D3"
                             android:layout_toRightOf="@id/C1"/>
                 </RelativeLayout>
-
                 <RelativeLayout style="@style/foodamount"
                                 android:id="@+id/food_amount4"
                                 android:layout_centerVertical="true"
@@ -247,15 +242,11 @@
                 </RelativeLayout>
             </LinearLayout>
             <!--送餐按鈕-->
-            <Button android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+            <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
                     android:id="@+id/givefood"
-                    android:text="@string/give_food"
-                    android:textSize="22sp"
-                    android:onClick="sendBuyList"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    tools:ignore="OnClick"/>
+                    android:text="@string/give_food" android:textSize="22sp"
+                    android:layout_alignParentBottom="true" android:layout_alignParentRight="true"
+                    android:onClick="sendBuyList" tools:ignore="OnClick"/>
         </RelativeLayout>
         <!--△△△△△△△△△△點餐清單△△△△△△△△△△-->
 

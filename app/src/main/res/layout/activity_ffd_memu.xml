@@ -55,19 +55,18 @@
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/ffd_1"
-                                     android:src="@drawable/ffd_1"
+                                     android:src="@drawable/test1"
                                      android:onClick="make1"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:id="@+id/ffd_2"
-                                     android:src="@drawable/ffd_2"
+                                     android:src="@drawable/test2"
                                      android:onClick="make2"
                                      android:clickable="true" android:focusable="true"/>
 
                         <ImageButton style="@style/MenuBtn_style"
                                      android:clickable="true" android:focusable="true"/>
-
                     </LinearLayout>
                     <!--第一行名稱-->
                     <LinearLayout style="@style/max_width_style">
@@ -81,7 +80,6 @@
                         <TextView android:layout_width="0dp"
                                   android:layout_height="wrap_content"
                                   android:layout_weight="1"/>
-
                     </LinearLayout>
 
                 </LinearLayout>

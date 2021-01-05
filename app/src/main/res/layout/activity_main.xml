@@ -42,7 +42,6 @@
                       android:text="0"
                       android:textSize="18sp"
                       android:textColor="@color/colorDown"/>
-
         </LinearLayout>
         <!--△△△△△△△△△△類別列△△△△△△△△△△-->
 
@@ -55,7 +54,6 @@
             <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-
                     android:scrollbarStyle="insideOverlay"
                     android:scrollbars="vertical"
                     tools:layout_editor_absoluteY="2dp"

@@ -42,17 +42,49 @@
                       android:text="0"
                       android:textSize="18sp"
                       android:textColor="@color/colorDown"/>
-
         </LinearLayout>
         <!--△△△△△△△△△△類別列△△△△△△△△△△-->
-        
+
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:layout_below="@id/menu_name"
+                      android:id="@+id/project">
+            <TextView
+                    android:layout_width="16sp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center_vertical"/>
+
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:text="    品項"
+                    android:textSize="18sp"
+                    android:layout_weight="7"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="數量"
+                    android:textSize="20sp"
+                    android:layout_weight="2"/>
+            <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="價格"
+                    android:textSize="20sp"
+                    android:layout_weight="4"/>
+        </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_below="@id/menu_name"
-                android:id="@+id/test" android:layout_marginTop="0dp">
-
+                android:layout_below="@id/project"
+                android:id="@+id/test" android:layout_marginTop="2dp">
         </androidx.recyclerview.widget.RecyclerView>
-
     </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
