@@ -1,12 +1,14 @@
 package com.example.tuna
 
-import MainSystem.SendTextToActivity
+import FoodClass.Foodarr
+import MainSystem.*
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_food_record.*
-import kotlinx.android.synthetic.main.activity_main.*
 import java.io.BufferedReader
 import java.io.InputStreamReader
 import java.io.PrintWriter
@@ -27,7 +29,7 @@ class FoodRecord : AppCompatActivity() {
         C=intent.getStringExtra("C")
         D=intent.getStringExtra("D")
         Thread{
-            val client= Socket("192.168.1.101",5010)
+            val client= Socket(ip,5010)
             Log.v("e",e)
             val output = client.getOutputStream()
             val writer = PrintWriter(output,true)
@@ -36,12 +38,45 @@ class FoodRecord : AppCompatActivity() {
             writer.println(e)
             val ItemCount=reader.readLine().toInt()
             Log.v("ee",ItemCount.toString())
+            val listData = ArrayList<FoodListItem>()
             for(times in 0..ItemCount)
             {
                 var text=reader.readLine()
-                Log.v("test",text)
+                Log.v(text,"SS")
+                Log.v("??",text.length.toString())
+                if(text.length!=0)
+                {
+                    var textList=text.split(":")
+                    Log.v("TEST",textList[0])
+                    var name=textList[0]
+                    var count=textList[1].toInt()
+                    var show=textList[2]
+                    var price=0
+                    for((key,food) in Foodarr)
+                    {
+                        if(food.originName==name)
+                        {
+                            price=food.price*count
+                        }
+                    }
+                    var Price=tran(price)
+                    val item=FoodListItem(times+1,name+show,count,Price)
+                    listData.add(item)
+                }
             }
-            Food_Total.text= reader.readLine()
+            runOnUiThread{
+                Food_Total.text= tran(reader.readLine())
+
+                val layoutManager = LinearLayoutManager(this)
+                layoutManager.orientation = LinearLayoutManager.VERTICAL
+                val dataList=test
+                dataList.layoutManager = layoutManager
+                dataList.addItemDecoration(DividerItemDecoration(this,DividerItemDecoration.VERTICAL))
+                var Adapter=DataAdapter(listData)
+                dataList.adapter=Adapter
+            }
+
+
         }.start()
     }
 

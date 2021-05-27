@@ -2,6 +2,7 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -15,47 +16,27 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.net.Socket
 
-class RiceMenu : AppCompatActivity(), deleteListItem,send {
+class RiceMenu : AppCompatActivity(), deleteListItem,send,WaitReturn {
+    override var app: Context?=null
     var arr:Array<TextView?> = arrayOf()
-
-
-    override var NowList: Array<TextView?> = arrayOf()
-    var e:String?=null
     override var ThisTableNumber:String?=null
-
+    var e:String?=null
+    override var NowList: Array<TextView?> = arrayOf()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_rice_menu)
 
         arr = arrayOf(A1,B1,C1,D1)
-
+        app=applicationContext
         recive(arr,intent)
 
         e=intent.getStringExtra("E")
-        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
 
-        ThisTableNumber=e
-
+        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_SHORT)
         updata(arr)
-
-        Thread{
-            var ThisClient=Socket("192.168.1.101",5006)
-            Log.v("connect","success")
-            val input = ThisClient!!.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output = ThisClient.getOutputStream()
-            var writer = PrintWriter(output, true)
-            while(e==null)
-            {
-                Thread.sleep(1000)
-            }
-            writer.println(e)
-            while(true)
-            {
-                Log.v("test",reader.readLine())
-            }
-
-        }.start()
+        ThisTableNumber=e
+        sendToast= Toast.makeText(app,sended,Toast.LENGTH_LONG)
+        waitReturn(e,app, sendToast)
     }
 
     override fun onBackPressed() {

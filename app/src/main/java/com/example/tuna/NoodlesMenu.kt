@@ -2,6 +2,7 @@ package com.example.tuna
 
 import FoodClass.Foodarr
 import MainSystem.*
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,42 +18,27 @@ import java.io.InputStreamReader
 import java.io.PrintWriter
 import java.io.Serializable
 import java.net.Socket
+import java.time.LocalTime
 
-class NoodlesMenu : AppCompatActivity(), deleteListItem,send{
+class NoodlesMenu : AppCompatActivity(), deleteListItem,send,WaitReturn{
     var arr:Array<TextView?> = arrayOf()
-
+    override var app: Context?=null
     override var NowList: Array<TextView?> = arrayOf()
     var e:String?=null
     override var ThisTableNumber:String?=null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_noodles_menu)
+        app=applicationContext
+        e=intent.getStringExtra("E")
 
+        toast = Toast.makeText(applicationContext, full,Toast.LENGTH_SHORT)
         arr = arrayOf(A1,B1,C1,D1)
         recive(arr,intent)
-        e=intent.getStringExtra("E")
-        toast = Toast.makeText(applicationContext, full, Toast.LENGTH_LONG)
         updata(arr)
         ThisTableNumber=e
-
-        Thread{
-            var ThisClient=Socket("192.168.1.101",5006)
-            Log.v("connect","success")
-            val input = ThisClient!!.getInputStream()
-            val reader = BufferedReader(InputStreamReader(input))
-            val output = ThisClient.getOutputStream()
-            var writer = PrintWriter(output, true)
-            while(e==null)
-            {
-                Thread.sleep(1000)
-            }
-            writer.println(e)
-            while(true)
-            {
-                Log.v("test",reader.readLine())
-            }
-
-        }.start()
+        sendToast= Toast.makeText(app,sended,Toast.LENGTH_LONG)
+        waitReturn(e,app, sendToast)
     }
     override fun onBackPressed() {
         var intent= Intent(this,MainActivity::class.java)

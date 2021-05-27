@@ -14,34 +14,39 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme.NoActionBar">
 
-        <activity android:name=".EndEat"
-                  android:screenOrientation="portrait">
+        <activity android:name=".FfdMemu">
         </activity>
-        <activity android:name=".End_Eat">
+        <activity
+                android:name=".EndEat"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".FoodRecord">
 
+        <activity android:name=".FoodRecord">
         </activity>
-        <activity android:name=".Food_Record"
-            android:screenOrientation="portrait">
+
+        <activity
+                android:name=".DessertMenu"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DessertMenu"
-            android:screenOrientation="portrait">
+        <activity
+                android:name=".LightFoodMenu"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".LightFoodMenu"
-            android:screenOrientation="portrait">
+        <activity
+                android:name=".SoupMenu"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".SoupMenu"
-            android:screenOrientation="portrait">
+        <activity
+                android:name=".DrinkMenu"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".DrinkMenu"
-            android:screenOrientation="portrait">
+        <activity
+                android:name=".RiceMenu"
+                android:screenOrientation="portrait">
         </activity>
-        <activity android:name=".RiceMenu"
-            android:screenOrientation="portrait">
-        </activity>
-        <activity android:name=".NoodlesMenu"
-            android:screenOrientation="portrait">
+        <activity
+                android:name=".NoodlesMenu"
+                android:screenOrientation="portrait">
         </activity>
         <activity
                 android:name=".MainActivity"

@@ -6,12 +6,21 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".EndEat">
-    <RelativeLayout android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout android:layout_width="match_parent"
+                    android:layout_height="match_parent">
         <TextView android:layout_width="wrap_content"
                   android:layout_height="wrap_content"
                   android:layout_centerInParent="true"
-                  android:text="請稍後..."
+                  android:text="@string/waitting"
                   android:textSize="18sp"
                   android:id="@+id/wait"/>
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/payoff"
+                  android:layout_below="@+id/wait"
+                  android:layout_centerInParent="true"
+                  android:text=" "
+                  android:textSize="18sp"/>
     </RelativeLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

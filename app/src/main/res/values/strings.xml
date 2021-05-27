@@ -7,8 +7,11 @@
     <string name="menu_lf" translatable="false">單點</string>
     <string name="menu_ds" translatable="false">甜點</string>
     <string name="menu_dk" translatable="false">飲品</string>
-    <string name="give_food" translatable="false">送餐</string>
+    <string name="menu_ffd" translatable="false">前菜</string>
     <string name="end_eat" translatable="false">結帳</string>
+    <string name="waitting" translatable="false">請稍後...</string>
+    <string name="give_food" translatable="false">送餐</string>
+
 
     <!--麵系列-->
     <string name="nd_1" translatable="false">鹽味拉麵\nNT$80</string>
@@ -67,4 +70,7 @@
     <string name="ds_6" translatable="false">薄荷巧克力蛋糕\nNT$80</string>
     <string name="ds_7" translatable="false">奶油千層蛋糕\nNT$90</string>
     <string name="ds_8" translatable="false">長崎牛奶冰沙\nNT$100</string>
+
+    <string name="ffd_1" translatable="false">前菜一\nNT$50</string>
+    <string name="ffd_2" translatable="false">前菜二\nNT$60</string>
 </resources>

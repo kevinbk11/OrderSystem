@@ -2,23 +2,19 @@ package MainSystem
 
 import FoodClass.Food
 import FoodClass.Foodarr
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.text.InputFilter
+import android.os.Handler
 import android.util.Log
 import android.view.View
 import android.widget.TextView
 import android.widget.Toast
-import androidx.core.content.ContextCompat.startActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_noodles_menu.*
-import org.w3c.dom.Text
 import java.io.BufferedReader
 import java.io.InputStreamReader
-import java.io.OutputStream
 import java.io.PrintWriter
 import java.net.Socket
-import kotlin.concurrent.thread
+import java.text.DecimalFormat
 
 interface deleteListItem {
     fun delete(textView: TextView?,foodArr:Map<String, Food>)
@@ -43,14 +39,55 @@ interface deleteListItem {
         return -1
     }
 }
+interface WaitReturn
+{
+
+    fun waitReturn(e:String?,app: Context?,toast: Toast?)
+    {
+        Thread {
+            var ThisClient = Socket(ip, 5020)
+            Log.v("connect", "success")
+            var input = ThisClient!!.getInputStream()
+            var reader = BufferedReader(InputStreamReader(input))
+            var output = ThisClient.getOutputStream()
+            var writer = PrintWriter(output, true)
+            while (e == null) {
+                Log.v("WHY I AM HERE",e.toString())
+                Thread.sleep(1000)
+            }
+            Log.v("before","writer")
+            writer.println(e)
+            Log.v("after","writer")
+            while (true)
+            {
+                if(reader.readLine().toBoolean())
+                {
+                    Runnable { toast!!.show() }.run()
+                }
+                ThisClient = Socket(ip, 5020)
+                input = ThisClient!!.getInputStream()
+                reader = BufferedReader(InputStreamReader(input))
+                output = ThisClient.getOutputStream()
+                writer = PrintWriter(output, true)
+                writer.println(e)
+            }
+        }.start()
+    }
+
+}
+
 interface send{
     var NowList:Array<TextView?>
     var ThisTableNumber:String?
+    var app: Context?
     fun sendBuyList(view:View)
     {
+        val a = app as Context
+        Toast.makeText(a,"已送餐",Toast.LENGTH_SHORT).show()
         Thread{
+
             Log.v("CLICK","TRUE")
-            var ThisClient=Socket("192.168.1.101",5004)
+            var ThisClient=Socket(ip,5004)
             val input = ThisClient.getInputStream()
             var output=ThisClient.getOutputStream()
             val writer = PrintWriter(output,true)
@@ -82,6 +119,7 @@ interface send{
                     writer.println(Cost)
                 }
             }
+
             view.post{
                 NowList[0]!!.text="None"
                 NowList[1]!!.text="None"
@@ -172,6 +210,33 @@ fun recive(arr:Array<TextView?>,intent:Intent)
     arr[2]?.text=intent.getStringExtra("C")
     arr[3]?.text=intent.getStringExtra("D")
 }
+fun <T>tran(Number:T):String
+{
+    when(Number)
+    {
+        is Int->
+        {
+            var turn = DecimalFormat(",###")
+            return turn.format(Number).toString()
+        }
+        is String->
+        {
+            val number=Number.toInt()
+            var turn = DecimalFormat(",###")
+            return turn.format(number).toString()
+        }
+        else->
+        {
+            return ""
+        }
+    }
 
+}
 var toast:Toast? = null
+var sendToast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
+
+val sended="已送達"
+val ip="192.168.1.101"
+
+
