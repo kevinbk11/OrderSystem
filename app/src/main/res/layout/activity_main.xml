@@ -134,12 +134,6 @@
                     <!--第3行圖示-->
                     <LinearLayout style="@style/max_width_style">
 
-                        <ImageButton style="@style/MenuBtn_style"
-                                     android:id="@+id/btm_ffd"
-                                     android:onClick="ToFfd"
-                                     android:src="@drawable/ffd"
-                                     android:clickable="true" android:focusable="true"/>
-
                         <ImageButton style="@style/MenuBtn_style"/>
                         <ImageButton style="@style/MenuBtn_style"/>
 
@@ -147,8 +141,6 @@
                     <!--第3行名稱-->
                     <LinearLayout style="@style/max_width_style">
                         <!--單-->
-                        <TextView style="@style/MenuText_style"
-                                  android:text="@string/menu_ffd"/>
                         <TextView android:layout_width="0dp"
                                   android:layout_height="wrap_content"
                                   android:layout_weight="1"/>

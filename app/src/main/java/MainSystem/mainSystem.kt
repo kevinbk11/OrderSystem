@@ -237,6 +237,6 @@ var sendToast:Toast? = null
 val full="購物車已滿!請刪除其他食物"
 
 val sended="已送達"
-val ip="192.168.1.102"
+val ip="192.168.1.101"
 
 
